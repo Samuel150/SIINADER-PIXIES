@@ -33,14 +33,4 @@ app.get('/api/estudiantes/:id?', (req, res) => {
             }
         });
 });
-// app.post('/api/estudiantes',(req, res) => {
-//     return res.send(req.body.nombre);
-//     // connection.query('INSERT INTO estudiantes (nombre,apellido_1,apellido_2,ci,fecha_nacimiento,username,password) VALUES ('Weimar','Torres','Herrera',654321,'1998-03-08','Weimar98','123456');', (err, results) => {
-//     //     if (err) {
-//     //         return res.send(err);
-//     //     } else {
-//     //         return res.send(results);
-//     //     }
-//     // });
-// });
 app.listen(app.get('port'), () => console.log('Start server on port ' + app.get('port')));
