@@ -76,4 +76,23 @@ app.delete('/api/estudiantes/:id', (req, res) => {
         }
     });
 });
+app.get('/api/docentes/:id?', (req, res) => {
+    var id = req.params.id;
+    id ?
+        connection.query('SELECT * FROM docentes WHERE idDocente= ' + id, (err, results) => {
+            if (err) {
+                return res.send(err);
+            } else {
+                return res.send(results);
+            }
+        })
+        :
+        connection.query('SELECT * FROM docentes', (err, results) => {
+            if (err) {
+                return res.send(err);
+            } else {
+                return res.send(results);
+            }
+        });
+});
 app.listen(app.get('port'), () => console.log('Start server on port ' + app.get('port')));
