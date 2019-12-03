@@ -50,7 +50,7 @@ app.post('/api/estudiantes', (req, res) => {
     });
 });
 app.put('/api/estudiantes/:id', (req, res) => {
-    var id = req.body.id;
+    var id = req.params.id;
     var nombre = req.body.nombre;
     var apellido_1 = req.body.apellido_1;
     var apellido_2 = req.body.apellido_2;
@@ -58,7 +58,17 @@ app.put('/api/estudiantes/:id', (req, res) => {
     var fecha_nacimiento = req.body.fecha_nacimiento;
     var username = req.body.username;
     var password = req.body.password;
-    connection.query('UPDATE estudiantes SET nombre = ' + "'" + nombre + "'" + ',apellido_1 =' + "'" + apellido_1 + "'" + ', apellido_2 = ' + "'" + apellido_2 + "'" + ', ci = ' + "'" + ci + "'" + ', fecha_nacimiento = ' + "'" + fecha_nacimiento + "'" + ', username = ' + "'" + username + "'" + ', password  = ' + "'" + password + "'" + ' WHERE idEstudiante = ' + id, (err, results) => {
+    connection.query('UPDATE estudiantes SET nombre = ' + "'" + nombre + "'" + ',apellido_1 =' + "'" + apellido_1 + "'" + ', apellido_2 = ' + "'" + apellido_2 + "'" + ', fecha_nacimiento = ' + "'" + fecha_nacimiento + "'" + ', password  = ' + "'" + password + "'" + ' WHERE idEstudiante = ' + id, (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
+});
+app.delete('/api/estudiantes/:id', (req, res) => {
+    var id = req.params.id;
+    connection.query('DELETE FROM estudiantes WHERE idEstudiante = ' + id, (err, results) => {
         if (err) {
             return res.send(err);
         } else {
