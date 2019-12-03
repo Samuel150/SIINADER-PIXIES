@@ -161,19 +161,34 @@ app.get('/api/materias/:id?', (req, res) => {
 //para ver materias, notas estudiante
 app.get('/api/estudiantes/:id/materias', (req, res) => {
     var id = req.params.id;
-        connection.query('SELECT nombre,idMateria,nota1er,nota2do,nota3er FROM estudiante_has_materia,materias WHERE estudiante_idEstudiante = '+id+' && materia_idMateria=idMateria', (err, results) => {
-            if (err) {
-                return res.send(err);
-            } else {
-                return res.send(results);
-            }
-        });
+    connection.query('SELECT nombre,idMateria,nota1er,nota2do,nota3er FROM estudiante_has_materia,materias WHERE estudiante_idEstudiante = ' + id + ' && materia_idMateria=idMateria', (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
 });
 //añadir materia a estudiante
 app.post('/api/estudiantes/materias', (req, res) => {
     var estudiante_idEstudiante = req.body.estudiante_idEstudiante;
     var materia_idMateria = req.body.materia_idMateria;
-    connection.query('INSERT INTO estudiante_has_materia (estudiante_idEstudiante,materia_idMateria) VALUES (' + "'" + estudiante_idEstudiante + "','" + materia_idMateria +"'"+')', (err, results) => {
+    connection.query('INSERT INTO estudiante_has_materia (estudiante_idEstudiante,materia_idMateria) VALUES (' + "'" + estudiante_idEstudiante + "','" + materia_idMateria + "'" + ')', (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
+});
+//para ingresar notas al estudiante
+app.put('/api/estudiantes/:idEstudiante/:idMateria', (req, res) => {
+    var idEstudiante = req.params.idEstudiante;
+    var idMateria = req.params.idMateria;
+    var nota1er = req.body.nota1er;
+    var nota2do = req.body.nota2do;
+    var nota3er = req.body.nota3er;
+    connection.query('UPDATE estudiante_has_materia SET nota1er = ' + "'" + nota1er + "'" + ',nota2do =' + "'" + nota2do + "'" + ', nota3er = ' + "'" + nota3er + "'" + ' WHERE estudiante_idEstudiante = ' + idEstudiante + '&& materia_idMateria = ' + idMateria, (err, results) => {
         if (err) {
             return res.send(err);
         } else {
