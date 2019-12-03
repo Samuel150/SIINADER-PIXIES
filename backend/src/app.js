@@ -17,7 +17,7 @@ app.get('/api', (req, res) => res.send('SIINADER'));
 app.get('/api/estudiantes/:id?', (req, res) => {
     var id = req.params.id;
     id ?
-        connection.query('SELECT * FROM estudiantes WHERE idEstudiante = ' + id, (err, results) => {
+        connection.query('SELECT * FROM estudiantes WHERE idEstudiante = ?', [id], (err, results) => {
             if (err) {
                 return res.send(err);
             } else {
@@ -41,7 +41,7 @@ app.post('/api/estudiantes', (req, res) => {
     var fecha_nacimiento = req.body.fecha_nacimiento;
     var username = req.body.username;
     var password = req.body.password;
-    connection.query('INSERT INTO estudiantes (nombre,apellido_1,apellido_2,ci,fecha_nacimiento,username,password) VALUES (' + "'" + nombre + "','" + apellido_1 + "','" + apellido_2 + "','" + ci + "','" + fecha_nacimiento + "','" + username + "','" + password + "'" + ')', (err, results) => {
+    connection.query('INSERT INTO estudiantes (nombre,apellido_1,apellido_2,ci,fecha_nacimiento,username,password) VALUES (?,?,?,?,?,?,?)', [nombre, apellido_1, apellido_2, ci, fecha_nacimiento, username, password], (err, results) => {
         if (err) {
             return res.send(err);
         } else {
@@ -54,9 +54,7 @@ app.put('/api/estudiantes/:id', (req, res) => {
     var nombre = req.body.nombre;
     var apellido_1 = req.body.apellido_1;
     var apellido_2 = req.body.apellido_2;
-    var ci = req.body.ci;
     var fecha_nacimiento = req.body.fecha_nacimiento;
-    var username = req.body.username;
     var password = req.body.password;
     connection.query('UPDATE estudiantes SET nombre = ' + "'" + nombre + "'" + ',apellido_1 =' + "'" + apellido_1 + "'" + ', apellido_2 = ' + "'" + apellido_2 + "'" + ', fecha_nacimiento = ' + "'" + fecha_nacimiento + "'" + ', password  = ' + "'" + password + "'" + ' WHERE idEstudiante = ' + id, (err, results) => {
         if (err) {
@@ -68,7 +66,7 @@ app.put('/api/estudiantes/:id', (req, res) => {
 });
 app.delete('/api/estudiantes/:id', (req, res) => {
     var id = req.params.id;
-    connection.query('DELETE FROM estudiantes WHERE idEstudiante = ' + id, (err, results) => {
+    connection.query('DELETE FROM estudiantes WHERE idEstudiante = ?' [id], (err, results) => {
         if (err) {
             return res.send(err);
         } else {
@@ -79,7 +77,7 @@ app.delete('/api/estudiantes/:id', (req, res) => {
 app.get('/api/docentes/:id?', (req, res) => {
     var id = req.params.id;
     id ?
-        connection.query('SELECT * FROM docentes WHERE idDocente= ' + id, (err, results) => {
+        connection.query('SELECT * FROM docentes WHERE idDocente = ?' ,[id], (err, results) => {
             if (err) {
                 return res.send(err);
             } else {
@@ -103,7 +101,7 @@ app.post('/api/docentes', (req, res) => {
     var fecha_nacimiento = req.body.fecha_nacimiento;
     var username = req.body.username;
     var password = req.body.password;
-    connection.query('INSERT INTO docentes (nombre,apellido_1,apellido_2,ci,fecha_nacimiento,username,password) VALUES (' + "'" + nombre + "','" + apellido_1 + "','" + apellido_2 + "','" + ci + "','" + fecha_nacimiento + "','" + username + "','" + password + "'" + ')', (err, results) => {
+    connection.query('INSERT INTO docentes (nombre,apellido_1,apellido_2,ci,fecha_nacimiento,username,password) VALUES (?,?,?,?,?,?,?)',[nombre,apellido_1,apellido_2,ci,fecha_nacimiento,username,password], (err, results) => {
         if (err) {
             return res.send(err);
         } else {
@@ -130,7 +128,7 @@ app.put('/api/docentes/:id', (req, res) => {
 });
 app.delete('/api/docentes/:id', (req, res) => {
     var id = req.params.id;
-    connection.query('DELETE FROM docentes WHERE idDocente = ' + id, (err, results) => {
+    connection.query('DELETE FROM docentes WHERE idDocente = ?',[id], (err, results) => {
         if (err) {
             return res.send(err);
         } else {
@@ -142,7 +140,7 @@ app.delete('/api/docentes/:id', (req, res) => {
 app.get('/api/materias/:id?', (req, res) => {
     var id = req.params.id;
     id ?
-        connection.query('SELECT * FROM materias WHERE idMateria = ' + id, (err, results) => {
+        connection.query('SELECT * FROM materias WHERE idMateria = ?',[id], (err, results) => {
             if (err) {
                 return res.send(err);
             } else {
@@ -173,7 +171,7 @@ app.get('/api/estudiantes/:id/materias', (req, res) => {
 app.post('/api/estudiantes/materias', (req, res) => {
     var estudiante_idEstudiante = req.body.estudiante_idEstudiante;
     var materia_idMateria = req.body.materia_idMateria;
-    connection.query('INSERT INTO estudiante_has_materia (estudiante_idEstudiante,materia_idMateria) VALUES (' + "'" + estudiante_idEstudiante + "','" + materia_idMateria + "'" + ')', (err, results) => {
+    connection.query('INSERT INTO estudiante_has_materia (estudiante_idEstudiante,materia_idMateria) VALUES (?,?)',[estudiante_idEstudiante,materia_idMateria], (err, results) => {
         if (err) {
             return res.send(err);
         } else {
@@ -199,7 +197,7 @@ app.put('/api/estudiantes/:idEstudiante/:idMateria', (req, res) => {
 //para ver que docente dicta una materia especifica
 app.get('/api/docentes/materias/:id', (req, res) => {
     var id = req.params.id;
-    connection.query('SELECT nombre, apellido_1 FROM docente_has_materia,docentes WHERE materias_idMateria ='+id +' && idDocente=docente_idDocente', (err, results) => {
+    connection.query('SELECT nombre, apellido_1 FROM docente_has_materia,docentes WHERE materias_idMateria =' + id + ' && idDocente=docente_idDocente', (err, results) => {
         if (err) {
             return res.send(err);
         } else {
