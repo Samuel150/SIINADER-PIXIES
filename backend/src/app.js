@@ -196,4 +196,15 @@ app.put('/api/estudiantes/:idEstudiante/:idMateria', (req, res) => {
         }
     });
 });
+//para ver que docente dicta una materia especifica
+app.get('/api/docentes/materias/:id', (req, res) => {
+    var id = req.params.id;
+    connection.query('SELECT nombre, apellido_1 FROM docente_has_materia,docentes WHERE materias_idMateria ='+id +' && idDocente=docente_idDocente', (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
+});
 app.listen(app.get('port'), () => console.log('Start server on port ' + app.get('port')));
