@@ -138,6 +138,7 @@ app.delete('/api/docentes/:id', (req, res) => {
         }
     });
 });
+// para ver todas las materias o una en especifico
 app.get('/api/materias/:id?', (req, res) => {
     var id = req.params.id;
     id ?
@@ -157,6 +158,7 @@ app.get('/api/materias/:id?', (req, res) => {
             }
         });
 });
+//para ver materias, notas estudiante
 app.get('/api/estudiantes/:id/materias', (req, res) => {
     var id = req.params.id;
         connection.query('SELECT nombre,idMateria,nota1er,nota2do,nota3er FROM estudiante_has_materia,materias WHERE estudiante_idEstudiante = '+id+' && materia_idMateria=idMateria', (err, results) => {
@@ -166,5 +168,17 @@ app.get('/api/estudiantes/:id/materias', (req, res) => {
                 return res.send(results);
             }
         });
+});
+//añadir materia a estudiante
+app.post('/api/estudiantes/materias', (req, res) => {
+    var estudiante_idEstudiante = req.body.estudiante_idEstudiante;
+    var materia_idMateria = req.body.materia_idMateria;
+    connection.query('INSERT INTO estudiante_has_materia (estudiante_idEstudiante,materia_idMateria) VALUES (' + "'" + estudiante_idEstudiante + "','" + materia_idMateria +"'"+')', (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
 });
 app.listen(app.get('port'), () => console.log('Start server on port ' + app.get('port')));
