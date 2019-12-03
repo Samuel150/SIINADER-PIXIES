@@ -95,4 +95,47 @@ app.get('/api/docentes/:id?', (req, res) => {
             }
         });
 });
+app.post('/api/docentes', (req, res) => {
+    var nombre = req.body.nombre;
+    var apellido_1 = req.body.apellido_1;
+    var apellido_2 = req.body.apellido_2;
+    var ci = req.body.ci;
+    var fecha_nacimiento = req.body.fecha_nacimiento;
+    var username = req.body.username;
+    var password = req.body.password;
+    connection.query('INSERT INTO docentes (nombre,apellido_1,apellido_2,ci,fecha_nacimiento,username,password) VALUES (' + "'" + nombre + "','" + apellido_1 + "','" + apellido_2 + "','" + ci + "','" + fecha_nacimiento + "','" + username + "','" + password + "'" + ')', (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
+});
+app.put('/api/docentes/:id', (req, res) => {
+    var id = req.params.id;
+    var nombre = req.body.nombre;
+    var apellido_1 = req.body.apellido_1;
+    var apellido_2 = req.body.apellido_2;
+    var ci = req.body.ci;
+    var fecha_nacimiento = req.body.fecha_nacimiento;
+    var username = req.body.username;
+    var password = req.body.password;
+    connection.query('UPDATE docentes SET nombre = ' + "'" + nombre + "'" + ',apellido_1 =' + "'" + apellido_1 + "'" + ', apellido_2 = ' + "'" + apellido_2 + "'" + ', fecha_nacimiento = ' + "'" + fecha_nacimiento + "'" + ', password  = ' + "'" + password + "'" + ' WHERE idDocente = ' + id, (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
+});
+app.delete('/api/docentes/:id', (req, res) => {
+    var id = req.params.id;
+    connection.query('DELETE FROM docentes WHERE idDocente = ' + id, (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
+});
 app.listen(app.get('port'), () => console.log('Start server on port ' + app.get('port')));
