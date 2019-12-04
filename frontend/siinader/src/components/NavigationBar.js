@@ -8,7 +8,7 @@ export const NavigationBar = () => (
         <Navbar.Brand href="/">SIINADER</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="justify-content-end">
+            <Nav className="ml-auto">
                 <Nav.Link href="/">Inicio</Nav.Link>
                 <Nav.Link href="/Materias">Materias</Nav.Link>
                 <Nav.Link href="/Estudios">Estudios</Nav.Link>
