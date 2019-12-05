@@ -1,6 +1,7 @@
 const express = require('express');
 const mysql = require('mysql');
 const app = express();
+const cors = require('cors');
 const connection = mysql.createConnection({ host: 'localhost', user: 'root', password: '123456789', database: 'siinader' });
 connection.connect(err => {
     if (err) {
@@ -12,7 +13,7 @@ connection.connect(err => {
 
 app.set('port', 3000);
 app.use(express.json());
-
+app.use(cors({origin: true, credentials: true}));
 app.get('/api', (req, res) => res.send('SIINADER'));
 app.get('/api/estudiantes/:id?', (req, res) => {
     var id = req.params.id;
