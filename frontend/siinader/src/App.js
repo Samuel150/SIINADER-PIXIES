@@ -9,6 +9,8 @@ import { Login } from './Login';
 import { NoMatch } from './NoMatch';
 import { NavigationBar } from './components/NavigationBar';
 import { Layout } from './components/Layout';
+import { Perfil } from './Perfil';
+
 
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
             <Route path="/estudios" component={Estudios} />
             <Route path="/notas" component={Notas} />
             <Route path="/login" component={Login} />
+            <Route path="/perfil" component={Perfil} />
             <Route component={NoMatch} />
           </Switch>
         </Router>
