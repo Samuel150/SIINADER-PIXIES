@@ -160,7 +160,7 @@ app.get('/api/materias/:id?', (req, res) => {
 //para ver materias, notas estudiante
 app.get('/api/estudiantes/:id/materias', (req, res) => {
     var id = req.params.id;
-    connection.query('SELECT nombre,idMateria,nota1er,nota2do,nota3er FROM estudiante_has_materia,materias WHERE estudiante_idEstudiante = ' + id + ' && materia_idMateria=idMateria', (err, results) => {
+    connection.query('SELECT nombre,idMateria,nota1er,nota2do,nota3er,semestre_cursada,aula,hora_inicio FROM estudiante_has_materia,materias WHERE estudiante_idEstudiante = ' + id + ' && materia_idMateria=idMateria', (err, results) => {
         if (err) {
             return res.send(err);
         } else {

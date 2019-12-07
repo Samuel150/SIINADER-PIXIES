@@ -3,7 +3,7 @@ import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
-export default class MateriaList extends React.Component {
+export default class EstudiosList extends React.Component {
   state = {
     materias: []
   }
