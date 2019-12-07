@@ -1,6 +1,7 @@
 const express = require('express');
 const mysql = require('mysql');
 const app = express();
+const cors = require('cors');
 const connection = mysql.createConnection({ host: 'localhost', user: 'root', password: '123456789', database: 'siinader' });
 connection.connect(err => {
     if (err) {
@@ -12,7 +13,7 @@ connection.connect(err => {
 
 app.set('port', 3000);
 app.use(express.json());
-
+app.use(cors({origin: true, credentials: true}));
 app.get('/api', (req, res) => res.send('SIINADER'));
 app.get('/api/estudiantes/:id?', (req, res) => {
     var id = req.params.id;
@@ -159,7 +160,7 @@ app.get('/api/materias/:id?', (req, res) => {
 //para ver materias, notas estudiante
 app.get('/api/estudiantes/:id/materias', (req, res) => {
     var id = req.params.id;
-    connection.query('SELECT nombre,idMateria,nota1er,nota2do,nota3er FROM estudiante_has_materia,materias WHERE estudiante_idEstudiante = ' + id + ' && materia_idMateria=idMateria', (err, results) => {
+    connection.query('SELECT nombre,idMateria,nota1er,nota2do,nota3er,semestre_cursada,aula,hora_inicio FROM estudiante_has_materia,materias WHERE estudiante_idEstudiante = ' + id + ' && materia_idMateria=idMateria', (err, results) => {
         if (err) {
             return res.send(err);
         } else {
