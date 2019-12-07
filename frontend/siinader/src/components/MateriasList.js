@@ -4,10 +4,9 @@ import Carousel from 'react-bootstrap/Carousel';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import ListGroup from 'react-bootstrap/ListGroup';
-export default class EstudiosList extends React.Component {
+export default class MateriasList extends React.Component {
     state = {
         materias: [],
-        semestre: 1,
     }
     componentDidMount() {
         axios.get('http://localhost:3000/api/estudiantes/1/materias')
