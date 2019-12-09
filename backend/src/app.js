@@ -1,6 +1,7 @@
 const express = require('express');
 const mysql = require('mysql');
 const app = express();
+const cors = require('cors');
 const connection = mysql.createConnection({ host: 'localhost', user: 'root', password: '123456789', database: 'siinader' });
 connection.connect(err => {
     if (err) {
@@ -12,7 +13,7 @@ connection.connect(err => {
 
 app.set('port', 3000);
 app.use(express.json());
-
+app.use(cors({origin: true, credentials: true}));
 app.get('/api', (req, res) => res.send('SIINADER'));
 app.get('/api/estudiantes/:id?', (req, res) => {
     var id = req.params.id;
@@ -159,7 +160,7 @@ app.get('/api/materias/:id?', (req, res) => {
 //para ver materias, notas estudiante
 app.get('/api/estudiantes/:id/materias', (req, res) => {
     var id = req.params.id;
-    connection.query('SELECT nombre,idMateria,nota1er,nota2do,nota3er FROM estudiante_has_materia,materias WHERE estudiante_idEstudiante = ' + id + ' && materia_idMateria=idMateria', (err, results) => {
+    connection.query('SELECT nombre,idMateria,nota1er,nota2do,nota3er,semestre_cursada,aula,hora_inicio FROM estudiante_has_materia,materias WHERE estudiante_idEstudiante = ' + id + ' && materia_idMateria=idMateria', (err, results) => {
         if (err) {
             return res.send(err);
         } else {
@@ -180,13 +181,13 @@ app.post('/api/estudiantes/materias', (req, res) => {
     });
 });
 //para ingresar notas al estudiante
-app.put('/api/estudiantes/:idEstudiante/:idMateria', (req, res) => {
-    var idEstudiante = req.params.idEstudiante;
+app.put('/api/estudiantes/:id/:idMateria', (req, res) => {
+    var id = req.params.id;
     var idMateria = req.params.idMateria;
     var nota1er = req.body.nota1er;
     var nota2do = req.body.nota2do;
     var nota3er = req.body.nota3er;
-    connection.query('UPDATE estudiante_has_materia SET nota1er = ' + "'" + nota1er + "'" + ',nota2do =' + "'" + nota2do + "'" + ', nota3er = ' + "'" + nota3er + "'" + ' WHERE estudiante_idEstudiante = ' + idEstudiante + '&& materia_idMateria = ' + idMateria, (err, results) => {
+    connection.query('UPDATE estudiante_has_materia SET nota1er = ' + "'" + nota1er + "'" + ',nota2do =' + "'" + nota2do + "'" + ', nota3er = ' + "'" + nota3er + "'" + ' WHERE estudiante_idEstudiante = ' + id + '&& materia_idMateria = ' + idMateria, (err, results) => {
         if (err) {
             return res.send(err);
         } else {
@@ -194,10 +195,20 @@ app.put('/api/estudiantes/:idEstudiante/:idMateria', (req, res) => {
         }
     });
 });
-//para ver que docente dicta una materia especifica
-app.get('/api/docentes/materias/:id', (req, res) => {
+//para ver las materias que el docente dicta
+app.get('/api/docentes/:id/materias', (req, res) => {
     var id = req.params.id;
-    connection.query('SELECT nombre, apellido_1 FROM docente_has_materia,docentes WHERE materias_idMateria =' + id + ' && idDocente=docente_idDocente', (err, results) => {
+    connection.query('SELECT idDocente,idMateria, materias.nombre,docentes.nombre as docente_nombre ,docentes.apellido_1,docentes.apellido_2 FROM docente_has_materia,materias,docentes WHERE docente_idDocente ='+ id +' && idMateria=materias_idMateria && idDocente=docente_idDocente', (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
+});
+//para ver las todas las materias que los docentes dictan
+app.get('/api/kardex/materias', (req, res) => {
+    connection.query('SELECT idDocente,idMateria, materias.nombre,docentes.nombre as docente_nombre ,docentes.apellido_1,docentes.apellido_2 FROM docente_has_materia,materias,docentes WHERE idMateria=materias_idMateria && idDocente=docente_idDocente', (err, results) => {
         if (err) {
             return res.send(err);
         } else {
