@@ -57,273 +57,275 @@ export default class NotasList extends React.Component {
             }
         });
         return (
-            <Carousel>
-                <Carousel.Item>
-                    <Col>
-                        <Row>
-                            <h5 className="text-center">PRIMER SEMESTRE</h5>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <h5 className="text-center">MATERIA</h5>
-                                <ListGroup>
-                                    {semestre1.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nombre}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">1P</h5>
-                                <ListGroup>
-                                    {semestre1.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota1er}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">2P</h5>
-                                <ListGroup>
-                                    {semestre1.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota2do}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">3P</h5>
-                                <ListGroup>
-                                    {semestre1.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota3er}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                        </Row>
-                    </Col>
-                </Carousel.Item>
-                <Carousel.Item>
-                <Col>
-                        <Row>
-                            <h5 className="text-center">SEGUNDO SEMESTRE</h5>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <h5 className="text-center">MATERIA</h5>
-                                <ListGroup>
-                                    {semestre2.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nombre}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">1P</h5>
-                                <ListGroup>
-                                    {semestre2.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota1er}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">2P</h5>
-                                <ListGroup>
-                                    {semestre2.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota2do}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">3P</h5>
-                                <ListGroup>
-                                    {semestre2.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota3er}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                        </Row>
-                    </Col>
-                </Carousel.Item>
-                <Carousel.Item>
-                <Col>
-                        <Row>
-                            <h5 className="text-center">TERCER SEMESTRE</h5>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <h5 className="text-center">MATERIA</h5>
-                                <ListGroup>
-                                    {semestre3.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nombre}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">1P</h5>
-                                <ListGroup>
-                                    {semestre3.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota1er}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">2P</h5>
-                                <ListGroup>
-                                    {semestre3.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota2do}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">3P</h5>
-                                <ListGroup>
-                                    {semestre3.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota3er}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                        </Row>
-                    </Col>
-                </Carousel.Item>
-                <Carousel.Item>
-                <Col>
-                        <Row>
-                            <h5 className="text-center">CUARTO SEMESTRE</h5>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <h5 className="text-center">MATERIA</h5>
-                                <ListGroup>
-                                    {semestre4.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nombre}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">1P</h5>
-                                <ListGroup>
-                                    {semestre4.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota1er}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">2P</h5>
-                                <ListGroup>
-                                    {semestre4.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota2do}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">3P</h5>
-                                <ListGroup>
-                                    {semestre4.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota3er}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                        </Row>
-                    </Col>
-                </Carousel.Item>
-                <Carousel.Item>
-                <Col>
-                        <Row>
-                            <h5 className="text-center">QUINTO SEMESTRE</h5>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <h5 className="text-center">MATERIA</h5>
-                                <ListGroup>
-                                    {semestre5.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nombre}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">1P</h5>
-                                <ListGroup>
-                                    {semestre5.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota1er}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">2P</h5>
-                                <ListGroup>
-                                    {semestre5.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota2do}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">3P</h5>
-                                <ListGroup>
-                                    {semestre5.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota3er}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                        </Row>
-                    </Col>
-                </Carousel.Item>
-                <Carousel.Item>
-                <Col>
-                        <Row>
-                            <h5 className="text-center">SEXTO SEMESTRE</h5>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <h5 className="text-center">MATERIA</h5>
-                                <ListGroup>
-                                    {semestre6.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nombre}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">1P</h5>
-                                <ListGroup>
-                                    {semestre6.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota1er}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">2P</h5>
-                                <ListGroup>
-                                    {semestre6.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota2do}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">3P</h5>
-                                <ListGroup>
-                                    {semestre6.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota3er}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                        </Row>
-                    </Col>
-                </Carousel.Item>
-                <Carousel.Item>
-                <Col>
-                        <Row>
-                            <h5 className="text-center">SÉPTIMO SEMESTRE</h5>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <h5 className="text-center">MATERIA</h5>
-                                <ListGroup>
-                                    {semestre7.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nombre}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">1P</h5>
-                                <ListGroup>
-                                    {semestre7.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota1er}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">2P</h5>
-                                <ListGroup>
-                                    {semestre7.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota2do}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">3P</h5>
-                                <ListGroup>
-                                    {semestre7.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota3er}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                        </Row>
-                    </Col>
-                </Carousel.Item>
-                <Carousel.Item>
-                <Col>
-                        <Row>
-                            <h5 className="text-center">OCTAVO SEMESTRE</h5>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <h5 className="text-center">MATERIA</h5>
-                                <ListGroup>
-                                    {semestre8.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nombre}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">1P</h5>
-                                <ListGroup>
-                                    {semestre8.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota1er}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">2P</h5>
-                                <ListGroup>
-                                    {semestre8.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota2do}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                            <Col>
-                                <h5 className="text-center">3P</h5>
-                                <ListGroup>
-                                    {semestre8.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota3er}</ListGroup.Item>)}
-                                </ListGroup>
-                            </Col>
-                        </Row>
-                    </Col>
-                </Carousel.Item>
-            </Carousel>
-
+            <Col>
+                <h2 className="text-center">MIS NOTAS</h2>
+                <Carousel>
+                    <Carousel.Item>
+                        <Col>
+                            <Row>
+                                <h5 className="text-center">PRIMER SEMESTRE</h5>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <h5 className="text-center">MATERIA</h5>
+                                    <ListGroup>
+                                        {semestre1.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nombre}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">1P</h5>
+                                    <ListGroup>
+                                        {semestre1.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota1er}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">2P</h5>
+                                    <ListGroup>
+                                        {semestre1.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota2do}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">3P</h5>
+                                    <ListGroup>
+                                        {semestre1.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota3er}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <Col>
+                            <Row>
+                                <h5 className="text-center">SEGUNDO SEMESTRE</h5>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <h5 className="text-center">MATERIA</h5>
+                                    <ListGroup>
+                                        {semestre2.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nombre}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">1P</h5>
+                                    <ListGroup>
+                                        {semestre2.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota1er}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">2P</h5>
+                                    <ListGroup>
+                                        {semestre2.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota2do}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">3P</h5>
+                                    <ListGroup>
+                                        {semestre2.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota3er}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <Col>
+                            <Row>
+                                <h5 className="text-center">TERCER SEMESTRE</h5>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <h5 className="text-center">MATERIA</h5>
+                                    <ListGroup>
+                                        {semestre3.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nombre}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">1P</h5>
+                                    <ListGroup>
+                                        {semestre3.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota1er}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">2P</h5>
+                                    <ListGroup>
+                                        {semestre3.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota2do}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">3P</h5>
+                                    <ListGroup>
+                                        {semestre3.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota3er}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <Col>
+                            <Row>
+                                <h5 className="text-center">CUARTO SEMESTRE</h5>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <h5 className="text-center">MATERIA</h5>
+                                    <ListGroup>
+                                        {semestre4.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nombre}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">1P</h5>
+                                    <ListGroup>
+                                        {semestre4.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota1er}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">2P</h5>
+                                    <ListGroup>
+                                        {semestre4.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota2do}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">3P</h5>
+                                    <ListGroup>
+                                        {semestre4.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota3er}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <Col>
+                            <Row>
+                                <h5 className="text-center">QUINTO SEMESTRE</h5>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <h5 className="text-center">MATERIA</h5>
+                                    <ListGroup>
+                                        {semestre5.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nombre}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">1P</h5>
+                                    <ListGroup>
+                                        {semestre5.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota1er}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">2P</h5>
+                                    <ListGroup>
+                                        {semestre5.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota2do}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">3P</h5>
+                                    <ListGroup>
+                                        {semestre5.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota3er}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <Col>
+                            <Row>
+                                <h5 className="text-center">SEXTO SEMESTRE</h5>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <h5 className="text-center">MATERIA</h5>
+                                    <ListGroup>
+                                        {semestre6.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nombre}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">1P</h5>
+                                    <ListGroup>
+                                        {semestre6.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota1er}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">2P</h5>
+                                    <ListGroup>
+                                        {semestre6.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota2do}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">3P</h5>
+                                    <ListGroup>
+                                        {semestre6.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota3er}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <Col>
+                            <Row>
+                                <h5 className="text-center">SÉPTIMO SEMESTRE</h5>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <h5 className="text-center">MATERIA</h5>
+                                    <ListGroup>
+                                        {semestre7.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nombre}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">1P</h5>
+                                    <ListGroup>
+                                        {semestre7.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota1er}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">2P</h5>
+                                    <ListGroup>
+                                        {semestre7.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota2do}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">3P</h5>
+                                    <ListGroup>
+                                        {semestre7.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota3er}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <Col>
+                            <Row>
+                                <h5 className="text-center">OCTAVO SEMESTRE</h5>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <h5 className="text-center">MATERIA</h5>
+                                    <ListGroup>
+                                        {semestre8.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nombre}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">1P</h5>
+                                    <ListGroup>
+                                        {semestre8.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota1er}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">2P</h5>
+                                    <ListGroup>
+                                        {semestre8.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota2do}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                                <Col>
+                                    <h5 className="text-center">3P</h5>
+                                    <ListGroup>
+                                        {semestre8.map(materia => <ListGroup.Item key={materia.idMateria}>{materia.nota3er}</ListGroup.Item>)}
+                                    </ListGroup>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Carousel.Item>
+                </Carousel>
+            </Col>
         )
     }
 }
