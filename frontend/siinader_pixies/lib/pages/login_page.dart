@@ -281,7 +281,7 @@ class _LoginPageState extends State<LoginPage> {
                               context,
                               MaterialPageRoute(
                                 builder: (BuildContext context) => HomePage(
-                                    rol: 'docentes', id: id, name: 'Mateo'),
+                                    rol: 'kardex', id: id, name: 'Mateo'),
                               ),
                             );
                           }

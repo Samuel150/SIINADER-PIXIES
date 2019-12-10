@@ -1,1 +1,1 @@
-{"isEntrypoint":true,"deps":["flutter|lib/material.dart","http|lib/http.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":["convert"],"hasMain":false}
+{"isEntrypoint":true,"deps":["flutter|lib/material.dart","http|lib/http.dart","siinader_pixies|lib/pages/ingresar_notas.dart","siinader_pixies|lib/pages/ver_notas_page.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":["convert"],"hasMain":false}

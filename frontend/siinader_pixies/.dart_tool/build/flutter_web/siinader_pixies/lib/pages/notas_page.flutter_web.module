@@ -1,1 +1,1 @@
-{"p":["siinader_pixies","lib/pages/notas_page.dart"],"s":[["siinader_pixies","lib/pages/notas_page.dart"]],"d":[["flutter","lib/material.dart"],["http","lib/http.dart"]],"m":false,"is":true,"pf":"flutter_web"}
+{"p":["siinader_pixies","lib/pages/notas_page.dart"],"s":[["siinader_pixies","lib/pages/notas_page.dart"]],"d":[["flutter","lib/material.dart"],["http","lib/http.dart"],["siinader_pixies","lib/pages/ingresar_notas.dart"],["siinader_pixies","lib/pages/ver_notas_page.dart"]],"m":false,"is":true,"pf":"flutter_web"}
