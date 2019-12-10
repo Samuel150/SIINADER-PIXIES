@@ -1,1 +1,1 @@
-{"isEntrypoint":true,"deps":["flutter|lib/material.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":[],"hasMain":false}
+{"isEntrypoint":true,"deps":["flutter|lib/material.dart","siinader_pixies|lib/pages/anadir_usuario_page.dart","siinader_pixies|lib/pages/eliminar_usuario.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":[],"hasMain":false}

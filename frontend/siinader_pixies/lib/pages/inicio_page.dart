@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:siinader_pixies/pages/anadir_usuario_page.dart';
+import 'package:siinader_pixies/pages/eliminar_usuario.dart';
 
 class InicioPage extends StatefulWidget {
   InicioPage({Key key, this.rol, this.id}) : super(key: key);
@@ -16,13 +18,13 @@ class _InicioPageState extends State<InicioPage> {
       case 'estudiantes':
         rol = 'ESTUDIANTIL';
         break;
-        case 'docentes':
+      case 'docentes':
         rol = 'DE DOCENTES';
         break;
-        case 'kardex':
+      case 'kardex':
         rol = 'DE KARDEX';
         break;
-        case 'jefeCarrera':
+      case 'jefeCarrera':
         rol = 'DE JEFE DE CARRERA';
         break;
     }
@@ -30,9 +32,40 @@ class _InicioPageState extends State<InicioPage> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text('BIENVENIDO A TU PLATAFORMA '+rol),
+          Text('BIENVENIDO A TU PLATAFORMA ' + rol),
+          widget.rol == 'kardex'
+              ? Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    RaisedButton(
+                      child: Text('AÑADIR USUARIO'),
+                      onPressed: () =>anadir(context),
+                    ),
+                    RaisedButton(
+                      child: Text('ELIMINAR USUARIO'),
+                      onPressed: () => eliminar(context),
+                    ),
+                  ],
+                )
+              : Container(),
         ],
       ),
     );
   }
+}
+anadir(BuildContext context) {
+  return showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AnadirUsuarioPage();
+    },
+  );
+}
+eliminar(BuildContext context) {
+  return showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return EliminarUsuarioPage();
+    },
+  );
 }
