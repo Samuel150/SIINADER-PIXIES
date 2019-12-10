@@ -2,6 +2,44 @@ const express = require('express');
 const mysql = require('mysql');
 const app = express();
 const cors = require('cors');
+const swaggerJsDoc = require('swagger-jsdoc')
+const swaggerUi = require('swagger-ui-express')
+const swaggerOptions = {
+    swaggerDefinition: {
+        info: {
+            version: "1.0.0",
+            title: 'Siinader API',
+            description: "Documentación de la API usada para el sistema Siinader",
+            servers: ["http://localhost:3000"]
+        },
+        definitions: {
+            Estudiante: {
+                properties: {
+                    nombre: {
+                        type: "String"
+                    }
+                }
+            },
+            Docente: {
+                properties: {
+                    nombre: {
+                        type: "String"
+                    }
+                }
+            },
+            Materia: {
+                properties: {
+                    nombre: {
+                        type: "String"
+                    }
+                }
+            },
+        }
+    },
+    apis: ["app.js"]
+};
+const swaggerDocs = swaggerJsDoc(swaggerOptions);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 const connection = mysql.createConnection({ host: 'localhost', user: 'root', password: '123456789', database: 'siinader' });
 connection.connect(err => {
     if (err) {
