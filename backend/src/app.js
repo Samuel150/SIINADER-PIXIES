@@ -197,13 +197,13 @@ app.post('/api/jefeCarrera/asignacion', (req, res) => {
     });
 });
 //para ingresar notas al estudiante
-app.put('/api/estudiantes/:id/:idMateria', (req, res) => {
-    var id = req.params.id;
-    var idMateria = req.params.idMateria;
+app.put('/api/docentes/materias/notas', (req, res) => {
+    var idEstudiante = req.body.idEstudiante;
+    var idMateria = req.body.idMateria;
     var nota1er = req.body.nota1er;
     var nota2do = req.body.nota2do;
     var nota3er = req.body.nota3er;
-    connection.query('UPDATE estudiante_has_materia SET nota1er = ' + "'" + nota1er + "'" + ',nota2do =' + "'" + nota2do + "'" + ', nota3er = ' + "'" + nota3er + "'" + ' WHERE estudiante_idEstudiante = ' + id + '&& materia_idMateria = ' + idMateria, (err, results) => {
+    connection.query('UPDATE estudiante_has_materia SET nota1er = ' + "'" + nota1er + "'" + ',nota2do =' + "'" + nota2do + "'" + ', nota3er = ' + "'" + nota3er + "'" + ' WHERE estudiante_idEstudiante = ' + idEstudiante + '&& materia_idMateria = ' + idMateria, (err, results) => {
         if (err) {
             return res.send(err);
         } else {
