@@ -19,7 +19,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "data",
         [_Location_column]: 45,
-        [_Location_line]: 30,
+        [_Location_line]: 33,
         [_Location_file]: null
       });
     },
@@ -32,7 +32,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C1 || CT.C1,
         [_Location_name]: null,
         [_Location_column]: 11,
-        [_Location_line]: 30,
+        [_Location_line]: 33,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/inicio_page.dart"
       });
     },
@@ -42,7 +42,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "mainAxisAlignment",
         [_Location_column]: 9,
-        [_Location_line]: 28,
+        [_Location_line]: 31,
         [_Location_file]: null
       });
     },
@@ -52,7 +52,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "children",
         [_Location_column]: 9,
-        [_Location_line]: 29,
+        [_Location_line]: 32,
         [_Location_file]: null
       });
     },
@@ -65,7 +65,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C4 || CT.C4,
         [_Location_name]: null,
         [_Location_column]: 14,
-        [_Location_line]: 27,
+        [_Location_line]: 30,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/inicio_page.dart"
       });
     },
@@ -75,7 +75,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 7,
-        [_Location_line]: 27,
+        [_Location_line]: 30,
         [_Location_file]: null
       });
     },
@@ -88,7 +88,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C8 || CT.C8,
         [_Location_name]: null,
         [_Location_column]: 12,
-        [_Location_line]: 26,
+        [_Location_line]: 29,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/inicio_page.dart"
       });
     }
@@ -167,6 +167,11 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
           rol = "DE KARDEX";
           break;
         }
+        case "jefeCarrera":
+        {
+          rol = "DE JEFE DE CARRERA";
+          break;
+        }
       }
       return new basic.Center.new({child: new basic.Column.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: JSArrayOfWidget().of([new text.Text.new("BIENVENIDO A TU PLATAFORMA " + dart.notNull(rol), {$creationLocationd_0dea112b090073317d4: C0 || CT.C0})]), $creationLocationd_0dea112b090073317d4: C3 || CT.C3}), $creationLocationd_0dea112b090073317d4: C7 || CT.C7});
     }
@@ -184,7 +189,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
   dart.trackLibraries("packages/siinader_pixies/pages/inicio_page", {
     "package:siinader_pixies/pages/inicio_page.dart": inicio_page
   }, {
-  }, '{"version":3,"sourceRoot":"","sources":["inicio_page.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAIe;;;;;;IACA;;;;;;;AAEqB;IAAkB;;;QAJpC;QAAU;QAAU;;IAAV;IAAU;AAAO,0DAAW,GAAG;;EAAC;;;;;;;;;;;;;;;;;;;;;;;;;;;;UAShC;AACjB;AACP,cAAQ,AAAO;;;AAEQ,UAAnB,MAAM;AACN;;;;AAEmB,UAAnB,MAAM;AACN;;;;AAEiB,UAAjB,MAAM;AACN;;;AAEJ,YAAO,8BACE,yCACgC,yCACnB,sBAChB,kBAAK,AAA6B,6CAAC,GAAG;IAI9C;;;;;EACF","file":"inicio_page.ddc.js"}');
+  }, '{"version":3,"sourceRoot":"","sources":["inicio_page.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAIe;;;;;;IACA;;;;;;;AAEqB;IAAkB;;;QAJpC;QAAU;QAAU;;IAAV;IAAU;AAAO,0DAAW,GAAG;;EAAC;;;;;;;;;;;;;;;;;;;;;;;;;;;;UAShC;AACjB;AACP,cAAQ,AAAO;;;AAEQ,UAAnB,MAAM;AACN;;;;AAEmB,UAAnB,MAAM;AACN;;;;AAEiB,UAAjB,MAAM;AACN;;;;AAE0B,UAA1B,MAAM;AACN;;;AAEJ,YAAO,8BACE,yCACgC,yCACnB,sBAChB,kBAAK,AAA6B,6CAAC,GAAG;IAI9C;;;;;EACF","file":"inicio_page.ddc.js"}');
   // Exports:
   return {
     pages__inicio_page: inicio_page

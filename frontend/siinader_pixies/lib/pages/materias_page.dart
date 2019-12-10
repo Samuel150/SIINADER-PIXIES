@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:siinader_pixies/pages/asignar_docente_page.dart';
 import 'dart:convert';
+
+import 'package:siinader_pixies/pages/inscribir_page.dart';
 
 class MateriasPage extends StatefulWidget {
   MateriasPage({Key key, this.rol, this.id}) : super(key: key);
@@ -131,7 +134,9 @@ class _MateriasPageState extends State<MateriasPage> {
                   semestre(_semestreValue, context, widget.id),
                 ],
               )
-            : widget.rol == 'docentes' || widget.rol == 'kardex'
+            : widget.rol == 'docentes' ||
+                    widget.rol == 'kardex' ||
+                    widget.rol == 'jefeCarrera'
                 ? Column(
                     children: <Widget>[
                       Text(
@@ -345,18 +350,45 @@ Future<List<Widget>> getMateriasDocente(BuildContext context, String id) async {
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Container(
-            width: 500,
-            height: 40.0,
-            child: Center(
-              child: Text(
-                materia['nombre'],
+          Padding(
+            padding:
+                const EdgeInsets.only(bottom: 2.0, left: 100.0, right: 25.0),
+            child: Container(
+              width: 500,
+              height: 40.0,
+              child: Center(
+                child: Text(
+                  materia['nombre'],
+                ),
+              ),
+              decoration: BoxDecoration(
+                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.circular(2.0),
+                color: Colors.blue,
               ),
             ),
-            decoration: BoxDecoration(
-              shape: BoxShape.rectangle,
-              borderRadius: BorderRadius.circular(2.0),
-              color: Colors.blue,
+          ),
+          Padding(
+            padding:
+                const EdgeInsets.only(bottom: 2.0, left: 25.0, right: 100.0),
+            child: Container(
+              width: 500,
+              height: 40.0,
+              child: Center(
+                child: Text(
+                  materia['aula'] +
+                      ' ' +
+                      materia['hora_inicio'].toString() +
+                      ':00 - ' +
+                      (materia['hora_inicio'] + 2).toString() +
+                      ':00',
+                ),
+              ),
+              decoration: BoxDecoration(
+                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.circular(2.0),
+                color: Colors.blue,
+              ),
             ),
           ),
         ],
@@ -444,16 +476,109 @@ Widget materias(BuildContext context, String id, String rol) {
                 : CircularProgressIndicator();
           },
         )
-      : materias = FutureBuilder(
-          future: getMateriasKardex(context),
-          builder: (BuildContext context, AsyncSnapshot snapshot) {
-            return snapshot.hasData
-                ? Column(
-                    children: snapshot.data,
-                  )
-                : CircularProgressIndicator();
-          },
-        );
-
+      : rol == 'kardex'
+          ? materias = FutureBuilder(
+              future: getMateriasKardex(context),
+              builder: (BuildContext context, AsyncSnapshot snapshot) {
+                return snapshot.hasData
+                    ? Column(
+                        children: snapshot.data,
+                      )
+                    : CircularProgressIndicator();
+              },
+            )
+          : materias = Column(
+              children: <Widget>[
+                RaisedButton(
+                  child: Text('INSCRIBIR ESTUDIANTE A MATERIA'),
+                  onPressed: () => inscribir(context),
+                ),
+                RaisedButton(
+                  child: Text('ASIGNAR DOCENTE A MATERIA'),
+                  onPressed: () => asignar(context),
+                ),
+              ],
+            );
   return materias;
+}
+
+inscribir(BuildContext context) {
+  return showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return InscribirPage();
+    },
+  );
+}
+asignar(BuildContext context) {
+  return showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AsignarPage();
+    },
+  );
+}
+Future<List<Widget>> asignarMaterias(BuildContext context) async {
+  String url = 'http://localhost:3000/api/kardex/materias';
+  List data;
+  http.Response response;
+  try {
+    response = await http.get(url);
+    data = jsonDecode(response.body);
+  } catch (e) {
+    print(e);
+  }
+  print(data);
+
+  List<Widget> list = [];
+  data.forEach(
+    (materia) => list.add(
+      Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Padding(
+            padding:
+                const EdgeInsets.only(left: 25.0, right: 10.0, bottom: 2.0),
+            child: Container(
+              width: 500,
+              height: 40.0,
+              child: Center(
+                child: Text(
+                  materia['docente_nombre'] +
+                      ' ' +
+                      materia['apellido_1'] +
+                      ' ' +
+                      materia['apellido_2'],
+                ),
+              ),
+              decoration: BoxDecoration(
+                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.circular(2.0),
+                color: Colors.blue,
+              ),
+            ),
+          ),
+          Padding(
+            padding:
+                const EdgeInsets.only(right: 25.0, left: 10.0, bottom: 2.0),
+            child: Container(
+              width: 500,
+              height: 40.0,
+              child: Center(
+                child: Text(
+                  materia['nombre'],
+                ),
+              ),
+              decoration: BoxDecoration(
+                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.circular(2.0),
+                color: Colors.blue,
+              ),
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+  return list;
 }

@@ -157,7 +157,7 @@ app.get('/api/materias/:id?', (req, res) => {
             }
         });
 });
-//para ver materias, notas estudiante
+//para ver materias, notas, estudiante
 app.get('/api/estudiantes/:id/materias', (req, res) => {
     var id = req.params.id;
     connection.query('SELECT nombre,idMateria,nota1er,nota2do,nota3er,semestre_cursada,aula,hora_inicio FROM estudiante_has_materia,materias WHERE estudiante_idEstudiante = ' + id + ' && materia_idMateria=idMateria', (err, results) => {
@@ -168,11 +168,27 @@ app.get('/api/estudiantes/:id/materias', (req, res) => {
         }
     });
 });
-//añadir materia a estudiante
-app.post('/api/estudiantes/materias', (req, res) => {
+//inscribir estudiante a materia
+app.post('/api/jefeCarrera/inscripcion', (req, res) => {
     var estudiante_idEstudiante = req.body.estudiante_idEstudiante;
     var materia_idMateria = req.body.materia_idMateria;
-    connection.query('INSERT INTO estudiante_has_materia (estudiante_idEstudiante,materia_idMateria) VALUES (?,?)',[estudiante_idEstudiante,materia_idMateria], (err, results) => {
+    var semestre_cursada = req.body.semestre_cursada;
+    var aula = req.body.aula;
+    var hora_inicio = req.body.hora_inicio;
+    connection.query('INSERT INTO estudiante_has_materia (estudiante_idEstudiante,materia_idMateria,semestre_cursada,aula,hora_inicio) VALUES ("'+estudiante_idEstudiante+'","'+materia_idMateria+'","'+semestre_cursada+'","'+aula+'","'+hora_inicio+'")', (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
+});
+app.post('/api/jefeCarrera/asignacion', (req, res) => {
+    var docente_idDocente = req.body.docente_idDocente;
+    var materias_idMateria = req.body.materias_idMateria;
+    var aula = req.body.aula;
+    var hora_inicio = req.body.hora_inicio;
+    connection.query('INSERT INTO docente_has_materia (docente_idDocente,materias_idMateria,aula,hora_inicio) VALUES ("'+docente_idDocente+'","'+materias_idMateria+'","'+aula+'","'+hora_inicio+'")', (err, results) => {
         if (err) {
             return res.send(err);
         } else {
@@ -198,7 +214,7 @@ app.put('/api/estudiantes/:id/:idMateria', (req, res) => {
 //para ver las materias que el docente dicta
 app.get('/api/docentes/:id/materias', (req, res) => {
     var id = req.params.id;
-    connection.query('SELECT idDocente,idMateria, materias.nombre,docentes.nombre as docente_nombre ,docentes.apellido_1,docentes.apellido_2 FROM docente_has_materia,materias,docentes WHERE docente_idDocente ='+ id +' && idMateria=materias_idMateria && idDocente=docente_idDocente', (err, results) => {
+    connection.query('SELECT idDocente,idMateria,aula,hora_inicio, materias.nombre,docentes.nombre as docente_nombre ,docentes.apellido_1,docentes.apellido_2 FROM docente_has_materia,materias,docentes WHERE docente_idDocente ='+ id +' && idMateria=materias_idMateria && idDocente=docente_idDocente', (err, results) => {
         if (err) {
             return res.send(err);
         } else {

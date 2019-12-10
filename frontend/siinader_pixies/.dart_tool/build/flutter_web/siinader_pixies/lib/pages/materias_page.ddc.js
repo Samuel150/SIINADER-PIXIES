@@ -1,4 +1,4 @@
-define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/src/painting/_network_image_web', 'packages/flutter/material', 'packages/http/http', 'packages/flutter/src/rendering/animated_size'], function(dart_sdk, packages__flutter__src__widgets__actions, packages__flutter__src__painting___network_image_web, packages__flutter__material, packages__http__http, packages__flutter__src__rendering__animated_size) {
+define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/src/painting/_network_image_web', 'packages/flutter/material', 'packages/http/http', 'packages/flutter/src/rendering/animated_size', 'packages/siinader_pixies/pages/inscribir_page', 'packages/siinader_pixies/pages/asignar_docente_page'], function(dart_sdk, packages__flutter__src__widgets__actions, packages__flutter__src__painting___network_image_web, packages__flutter__material, packages__http__http, packages__flutter__src__rendering__animated_size, packages__siinader_pixies__pages__inscribir_page, packages__siinader_pixies__pages__asignar_docente_page) {
   'use strict';
   const core = dart_sdk.core;
   const ui = dart_sdk.ui;
@@ -22,8 +22,12 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
   const dropdown = packages__flutter__material.src__material__dropdown;
   const colors = packages__flutter__material.src__material__colors;
   const progress_indicator = packages__flutter__material.src__material__progress_indicator;
+  const raised_button = packages__flutter__material.src__material__raised_button;
+  const dialog = packages__flutter__material.src__material__dialog;
   const http = packages__http__http.http;
   const flex = packages__flutter__src__rendering__animated_size.src__rendering__flex;
+  const inscribir_page = packages__siinader_pixies__pages__inscribir_page.pages__inscribir_page;
+  const asignar_docente_page = packages__siinader_pixies__pages__asignar_docente_page.pages__asignar_docente_page;
   const materias_page = Object.create(dart.library);
   const $toString = dartx.toString;
   const $add = dartx.add;
@@ -38,6 +42,9 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
   let ListOfWidget = () => (ListOfWidget = dart.constFn(core.List$(framework.Widget)))();
   let FutureBuilderOfListOfWidget = () => (FutureBuilderOfListOfWidget = dart.constFn(async$.FutureBuilder$(ListOfWidget())))();
   let BuildContextAndAsyncSnapshotToWidget = () => (BuildContextAndAsyncSnapshotToWidget = dart.constFn(dart.fnType(framework.Widget, [framework.BuildContext, async$.AsyncSnapshot])))();
+  let VoidTodynamic = () => (VoidTodynamic = dart.constFn(dart.fnType(dart.dynamic, [])))();
+  let BuildContextToInscribirPage = () => (BuildContextToInscribirPage = dart.constFn(dart.fnType(inscribir_page.InscribirPage, [framework.BuildContext])))();
+  let BuildContextToAsignarPage = () => (BuildContextToAsignarPage = dart.constFn(dart.fnType(asignar_docente_page.AsignarPage, [framework.BuildContext])))();
   const CT = Object.create(null);
   dart.defineLazy(CT, {
     get C2() {
@@ -46,7 +53,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "name",
         [_Location_column]: 11,
-        [_Location_line]: 20,
+        [_Location_line]: 23,
         [_Location_file]: null
       });
     },
@@ -56,7 +63,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "height",
         [_Location_column]: 11,
-        [_Location_line]: 21,
+        [_Location_line]: 24,
         [_Location_file]: null
       });
     },
@@ -69,7 +76,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C1 || CT.C1,
         [_Location_name]: null,
         [_Location_column]: 15,
-        [_Location_line]: 19,
+        [_Location_line]: 22,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -79,7 +86,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "data",
         [_Location_column]: 21,
-        [_Location_line]: 27,
+        [_Location_line]: 30,
         [_Location_file]: null
       });
     },
@@ -89,7 +96,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "style",
         [_Location_column]: 21,
-        [_Location_line]: 28,
+        [_Location_line]: 31,
         [_Location_file]: null
       });
     },
@@ -102,7 +109,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C5 || CT.C5,
         [_Location_name]: null,
         [_Location_column]: 19,
-        [_Location_line]: 26,
+        [_Location_line]: 29,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -112,7 +119,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "data",
         [_Location_column]: 27,
-        [_Location_line]: 35,
+        [_Location_line]: 38,
         [_Location_file]: null
       });
     },
@@ -122,7 +129,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "style",
         [_Location_column]: 27,
-        [_Location_line]: 36,
+        [_Location_line]: 39,
         [_Location_file]: null
       });
     },
@@ -135,7 +142,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C9 || CT.C9,
         [_Location_name]: null,
         [_Location_column]: 32,
-        [_Location_line]: 34,
+        [_Location_line]: 37,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -145,7 +152,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "value",
         [_Location_column]: 25,
-        [_Location_line]: 33,
+        [_Location_line]: 36,
         [_Location_file]: null
       });
     },
@@ -155,7 +162,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 25,
-        [_Location_line]: 34,
+        [_Location_line]: 37,
         [_Location_file]: null
       });
     },
@@ -168,7 +175,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C13 || CT.C13,
         [_Location_name]: null,
         [_Location_column]: 23,
-        [_Location_line]: 32,
+        [_Location_line]: 35,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -178,7 +185,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "data",
         [_Location_column]: 27,
-        [_Location_line]: 46,
+        [_Location_line]: 49,
         [_Location_file]: null
       });
     },
@@ -188,7 +195,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "style",
         [_Location_column]: 27,
-        [_Location_line]: 47,
+        [_Location_line]: 50,
         [_Location_file]: null
       });
     },
@@ -201,7 +208,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C17 || CT.C17,
         [_Location_name]: null,
         [_Location_column]: 32,
-        [_Location_line]: 45,
+        [_Location_line]: 48,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -211,7 +218,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "value",
         [_Location_column]: 25,
-        [_Location_line]: 44,
+        [_Location_line]: 47,
         [_Location_file]: null
       });
     },
@@ -221,7 +228,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 25,
-        [_Location_line]: 45,
+        [_Location_line]: 48,
         [_Location_file]: null
       });
     },
@@ -234,7 +241,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C21 || CT.C21,
         [_Location_name]: null,
         [_Location_column]: 23,
-        [_Location_line]: 43,
+        [_Location_line]: 46,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -244,7 +251,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "data",
         [_Location_column]: 27,
-        [_Location_line]: 57,
+        [_Location_line]: 60,
         [_Location_file]: null
       });
     },
@@ -254,7 +261,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "style",
         [_Location_column]: 27,
-        [_Location_line]: 58,
+        [_Location_line]: 61,
         [_Location_file]: null
       });
     },
@@ -267,7 +274,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C25 || CT.C25,
         [_Location_name]: null,
         [_Location_column]: 32,
-        [_Location_line]: 56,
+        [_Location_line]: 59,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -277,7 +284,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "value",
         [_Location_column]: 25,
-        [_Location_line]: 55,
+        [_Location_line]: 58,
         [_Location_file]: null
       });
     },
@@ -287,7 +294,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 25,
-        [_Location_line]: 56,
+        [_Location_line]: 59,
         [_Location_file]: null
       });
     },
@@ -300,7 +307,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C29 || CT.C29,
         [_Location_name]: null,
         [_Location_column]: 23,
-        [_Location_line]: 54,
+        [_Location_line]: 57,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -310,7 +317,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "data",
         [_Location_column]: 27,
-        [_Location_line]: 68,
+        [_Location_line]: 71,
         [_Location_file]: null
       });
     },
@@ -320,7 +327,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "style",
         [_Location_column]: 27,
-        [_Location_line]: 69,
+        [_Location_line]: 72,
         [_Location_file]: null
       });
     },
@@ -333,7 +340,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C33 || CT.C33,
         [_Location_name]: null,
         [_Location_column]: 32,
-        [_Location_line]: 67,
+        [_Location_line]: 70,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -343,7 +350,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "value",
         [_Location_column]: 25,
-        [_Location_line]: 66,
+        [_Location_line]: 69,
         [_Location_file]: null
       });
     },
@@ -353,7 +360,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 25,
-        [_Location_line]: 67,
+        [_Location_line]: 70,
         [_Location_file]: null
       });
     },
@@ -366,7 +373,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C37 || CT.C37,
         [_Location_name]: null,
         [_Location_column]: 23,
-        [_Location_line]: 65,
+        [_Location_line]: 68,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -376,7 +383,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "data",
         [_Location_column]: 27,
-        [_Location_line]: 79,
+        [_Location_line]: 82,
         [_Location_file]: null
       });
     },
@@ -386,7 +393,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "style",
         [_Location_column]: 27,
-        [_Location_line]: 80,
+        [_Location_line]: 83,
         [_Location_file]: null
       });
     },
@@ -399,7 +406,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C41 || CT.C41,
         [_Location_name]: null,
         [_Location_column]: 32,
-        [_Location_line]: 78,
+        [_Location_line]: 81,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -409,7 +416,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "value",
         [_Location_column]: 25,
-        [_Location_line]: 77,
+        [_Location_line]: 80,
         [_Location_file]: null
       });
     },
@@ -419,7 +426,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 25,
-        [_Location_line]: 78,
+        [_Location_line]: 81,
         [_Location_file]: null
       });
     },
@@ -432,7 +439,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C45 || CT.C45,
         [_Location_name]: null,
         [_Location_column]: 23,
-        [_Location_line]: 76,
+        [_Location_line]: 79,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -442,7 +449,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "data",
         [_Location_column]: 27,
-        [_Location_line]: 90,
+        [_Location_line]: 93,
         [_Location_file]: null
       });
     },
@@ -452,7 +459,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "style",
         [_Location_column]: 27,
-        [_Location_line]: 91,
+        [_Location_line]: 94,
         [_Location_file]: null
       });
     },
@@ -465,7 +472,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C49 || CT.C49,
         [_Location_name]: null,
         [_Location_column]: 32,
-        [_Location_line]: 89,
+        [_Location_line]: 92,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -475,7 +482,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "value",
         [_Location_column]: 25,
-        [_Location_line]: 88,
+        [_Location_line]: 91,
         [_Location_file]: null
       });
     },
@@ -485,7 +492,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 25,
-        [_Location_line]: 89,
+        [_Location_line]: 92,
         [_Location_file]: null
       });
     },
@@ -498,7 +505,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C53 || CT.C53,
         [_Location_name]: null,
         [_Location_column]: 23,
-        [_Location_line]: 87,
+        [_Location_line]: 90,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -508,7 +515,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "data",
         [_Location_column]: 27,
-        [_Location_line]: 101,
+        [_Location_line]: 104,
         [_Location_file]: null
       });
     },
@@ -518,7 +525,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "style",
         [_Location_column]: 27,
-        [_Location_line]: 102,
+        [_Location_line]: 105,
         [_Location_file]: null
       });
     },
@@ -531,7 +538,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C57 || CT.C57,
         [_Location_name]: null,
         [_Location_column]: 32,
-        [_Location_line]: 100,
+        [_Location_line]: 103,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -541,7 +548,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "value",
         [_Location_column]: 25,
-        [_Location_line]: 99,
+        [_Location_line]: 102,
         [_Location_file]: null
       });
     },
@@ -551,7 +558,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 25,
-        [_Location_line]: 100,
+        [_Location_line]: 103,
         [_Location_file]: null
       });
     },
@@ -564,7 +571,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C61 || CT.C61,
         [_Location_name]: null,
         [_Location_column]: 23,
-        [_Location_line]: 98,
+        [_Location_line]: 101,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -574,7 +581,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "data",
         [_Location_column]: 27,
-        [_Location_line]: 112,
+        [_Location_line]: 115,
         [_Location_file]: null
       });
     },
@@ -584,7 +591,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "style",
         [_Location_column]: 27,
-        [_Location_line]: 113,
+        [_Location_line]: 116,
         [_Location_file]: null
       });
     },
@@ -597,7 +604,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C65 || CT.C65,
         [_Location_name]: null,
         [_Location_column]: 32,
-        [_Location_line]: 111,
+        [_Location_line]: 114,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -607,7 +614,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "value",
         [_Location_column]: 25,
-        [_Location_line]: 110,
+        [_Location_line]: 113,
         [_Location_file]: null
       });
     },
@@ -617,7 +624,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 25,
-        [_Location_line]: 111,
+        [_Location_line]: 114,
         [_Location_file]: null
       });
     },
@@ -630,7 +637,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C69 || CT.C69,
         [_Location_name]: null,
         [_Location_column]: 23,
-        [_Location_line]: 109,
+        [_Location_line]: 112,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -640,7 +647,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "data",
         [_Location_column]: 23,
-        [_Location_line]: 127,
+        [_Location_line]: 130,
         [_Location_file]: null
       });
     },
@@ -653,7 +660,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C73 || CT.C73,
         [_Location_name]: null,
         [_Location_column]: 27,
-        [_Location_line]: 126,
+        [_Location_line]: 129,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -663,7 +670,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "items",
         [_Location_column]: 21,
-        [_Location_line]: 31,
+        [_Location_line]: 34,
         [_Location_file]: null
       });
     },
@@ -673,7 +680,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "onChanged",
         [_Location_column]: 21,
-        [_Location_line]: 121,
+        [_Location_line]: 124,
         [_Location_file]: null
       });
     },
@@ -683,7 +690,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "hint",
         [_Location_column]: 21,
-        [_Location_line]: 126,
+        [_Location_line]: 129,
         [_Location_file]: null
       });
     },
@@ -693,7 +700,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "value",
         [_Location_column]: 21,
-        [_Location_line]: 129,
+        [_Location_line]: 132,
         [_Location_file]: null
       });
     },
@@ -706,7 +713,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C76 || CT.C76,
         [_Location_name]: null,
         [_Location_column]: 19,
-        [_Location_line]: 30,
+        [_Location_line]: 33,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -716,7 +723,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "children",
         [_Location_column]: 17,
-        [_Location_line]: 25,
+        [_Location_line]: 28,
         [_Location_file]: null
       });
     },
@@ -729,7 +736,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C82 || CT.C82,
         [_Location_name]: null,
         [_Location_column]: 15,
-        [_Location_line]: 24,
+        [_Location_line]: 27,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -739,7 +746,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "data",
         [_Location_column]: 25,
-        [_Location_line]: 138,
+        [_Location_line]: 143,
         [_Location_file]: null
       });
     },
@@ -749,7 +756,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "style",
         [_Location_column]: 25,
-        [_Location_line]: 139,
+        [_Location_line]: 144,
         [_Location_file]: null
       });
     },
@@ -762,7 +769,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C85 || CT.C85,
         [_Location_name]: null,
         [_Location_column]: 23,
-        [_Location_line]: 137,
+        [_Location_line]: 142,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -772,7 +779,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "children",
         [_Location_column]: 21,
-        [_Location_line]: 136,
+        [_Location_line]: 141,
         [_Location_file]: null
       });
     },
@@ -785,7 +792,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C89 || CT.C89,
         [_Location_name]: null,
         [_Location_column]: 19,
-        [_Location_line]: 135,
+        [_Location_line]: 140,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -798,7 +805,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C92 || CT.C92,
         [_Location_name]: null,
         [_Location_column]: 19,
-        [_Location_line]: 144,
+        [_Location_line]: 149,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -808,7 +815,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "children",
         [_Location_column]: 7,
-        [_Location_line]: 18,
+        [_Location_line]: 21,
         [_Location_file]: null
       });
     },
@@ -821,7 +828,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C94 || CT.C94,
         [_Location_name]: null,
         [_Location_column]: 12,
-        [_Location_line]: 17,
+        [_Location_line]: 20,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -840,7 +847,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "data",
         [_Location_column]: 30,
-        [_Location_line]: 175,
+        [_Location_line]: 180,
         [_Location_file]: null
       });
     },
@@ -853,7 +860,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C98 || CT.C98,
         [_Location_name]: null,
         [_Location_column]: 28,
-        [_Location_line]: 174,
+        [_Location_line]: 179,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -863,7 +870,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 21,
-        [_Location_line]: 174,
+        [_Location_line]: 179,
         [_Location_file]: null
       });
     },
@@ -876,7 +883,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C101 || CT.C101,
         [_Location_name]: null,
         [_Location_column]: 26,
-        [_Location_line]: 173,
+        [_Location_line]: 178,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -886,7 +893,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "width",
         [_Location_column]: 19,
-        [_Location_line]: 171,
+        [_Location_line]: 176,
         [_Location_file]: null
       });
     },
@@ -896,7 +903,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "height",
         [_Location_column]: 19,
-        [_Location_line]: 172,
+        [_Location_line]: 177,
         [_Location_file]: null
       });
     },
@@ -906,7 +913,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 19,
-        [_Location_line]: 173,
+        [_Location_line]: 178,
         [_Location_file]: null
       });
     },
@@ -916,7 +923,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "decoration",
         [_Location_column]: 19,
-        [_Location_line]: 178,
+        [_Location_line]: 183,
         [_Location_file]: null
       });
     },
@@ -929,7 +936,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C104 || CT.C104,
         [_Location_name]: null,
         [_Location_column]: 24,
-        [_Location_line]: 170,
+        [_Location_line]: 175,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -939,7 +946,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "padding",
         [_Location_column]: 17,
-        [_Location_line]: 168,
+        [_Location_line]: 173,
         [_Location_file]: null
       });
     },
@@ -949,7 +956,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 17,
-        [_Location_line]: 170,
+        [_Location_line]: 175,
         [_Location_file]: null
       });
     },
@@ -962,7 +969,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C110 || CT.C110,
         [_Location_name]: null,
         [_Location_column]: 15,
-        [_Location_line]: 167,
+        [_Location_line]: 172,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -981,7 +988,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "data",
         [_Location_column]: 67,
-        [_Location_line]: 197,
+        [_Location_line]: 202,
         [_Location_file]: null
       });
     },
@@ -994,7 +1001,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C115 || CT.C115,
         [_Location_name]: null,
         [_Location_column]: 28,
-        [_Location_line]: 192,
+        [_Location_line]: 197,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1004,7 +1011,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 21,
-        [_Location_line]: 192,
+        [_Location_line]: 197,
         [_Location_file]: null
       });
     },
@@ -1017,7 +1024,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C118 || CT.C118,
         [_Location_name]: null,
         [_Location_column]: 26,
-        [_Location_line]: 191,
+        [_Location_line]: 196,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1027,7 +1034,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "width",
         [_Location_column]: 19,
-        [_Location_line]: 189,
+        [_Location_line]: 194,
         [_Location_file]: null
       });
     },
@@ -1037,7 +1044,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "height",
         [_Location_column]: 19,
-        [_Location_line]: 190,
+        [_Location_line]: 195,
         [_Location_file]: null
       });
     },
@@ -1047,7 +1054,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 19,
-        [_Location_line]: 191,
+        [_Location_line]: 196,
         [_Location_file]: null
       });
     },
@@ -1057,7 +1064,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "decoration",
         [_Location_column]: 19,
-        [_Location_line]: 201,
+        [_Location_line]: 206,
         [_Location_file]: null
       });
     },
@@ -1070,7 +1077,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C121 || CT.C121,
         [_Location_name]: null,
         [_Location_column]: 24,
-        [_Location_line]: 188,
+        [_Location_line]: 193,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1080,7 +1087,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "padding",
         [_Location_column]: 17,
-        [_Location_line]: 186,
+        [_Location_line]: 191,
         [_Location_file]: null
       });
     },
@@ -1090,7 +1097,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 17,
-        [_Location_line]: 188,
+        [_Location_line]: 193,
         [_Location_file]: null
       });
     },
@@ -1103,7 +1110,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C127 || CT.C127,
         [_Location_name]: null,
         [_Location_column]: 15,
-        [_Location_line]: 185,
+        [_Location_line]: 190,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1113,7 +1120,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "mainAxisAlignment",
         [_Location_column]: 13,
-        [_Location_line]: 165,
+        [_Location_line]: 170,
         [_Location_file]: null
       });
     },
@@ -1123,7 +1130,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "children",
         [_Location_column]: 13,
-        [_Location_line]: 166,
+        [_Location_line]: 171,
         [_Location_file]: null
       });
     },
@@ -1136,7 +1143,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C131 || CT.C131,
         [_Location_name]: null,
         [_Location_column]: 11,
-        [_Location_line]: 164,
+        [_Location_line]: 169,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1146,7 +1153,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "children",
         [_Location_column]: 19,
-        [_Location_line]: 224,
+        [_Location_line]: 229,
         [_Location_file]: null
       });
     },
@@ -1159,7 +1166,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C135 || CT.C135,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 223,
+        [_Location_line]: 228,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1169,7 +1176,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C92 || CT.C92,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 226,
+        [_Location_line]: 231,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1179,7 +1186,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "future",
         [_Location_column]: 9,
-        [_Location_line]: 220,
+        [_Location_line]: 225,
         [_Location_file]: null
       });
     },
@@ -1189,7 +1196,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "builder",
         [_Location_column]: 9,
-        [_Location_line]: 221,
+        [_Location_line]: 226,
         [_Location_file]: null
       });
     },
@@ -1202,7 +1209,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C139 || CT.C139,
         [_Location_name]: null,
         [_Location_column]: 18,
-        [_Location_line]: 219,
+        [_Location_line]: 224,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1212,7 +1219,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "children",
         [_Location_column]: 19,
-        [_Location_line]: 236,
+        [_Location_line]: 241,
         [_Location_file]: null
       });
     },
@@ -1225,7 +1232,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C143 || CT.C143,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 235,
+        [_Location_line]: 240,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1235,7 +1242,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C92 || CT.C92,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 238,
+        [_Location_line]: 243,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1245,7 +1252,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "future",
         [_Location_column]: 9,
-        [_Location_line]: 232,
+        [_Location_line]: 237,
         [_Location_file]: null
       });
     },
@@ -1255,7 +1262,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "builder",
         [_Location_column]: 9,
-        [_Location_line]: 233,
+        [_Location_line]: 238,
         [_Location_file]: null
       });
     },
@@ -1268,7 +1275,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C147 || CT.C147,
         [_Location_name]: null,
         [_Location_column]: 18,
-        [_Location_line]: 231,
+        [_Location_line]: 236,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1278,7 +1285,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "children",
         [_Location_column]: 19,
-        [_Location_line]: 248,
+        [_Location_line]: 253,
         [_Location_file]: null
       });
     },
@@ -1291,7 +1298,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C151 || CT.C151,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 247,
+        [_Location_line]: 252,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1301,7 +1308,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C92 || CT.C92,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 250,
+        [_Location_line]: 255,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1311,7 +1318,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "future",
         [_Location_column]: 9,
-        [_Location_line]: 244,
+        [_Location_line]: 249,
         [_Location_file]: null
       });
     },
@@ -1321,7 +1328,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "builder",
         [_Location_column]: 9,
-        [_Location_line]: 245,
+        [_Location_line]: 250,
         [_Location_file]: null
       });
     },
@@ -1334,7 +1341,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C155 || CT.C155,
         [_Location_name]: null,
         [_Location_column]: 18,
-        [_Location_line]: 243,
+        [_Location_line]: 248,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1344,7 +1351,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "children",
         [_Location_column]: 19,
-        [_Location_line]: 260,
+        [_Location_line]: 265,
         [_Location_file]: null
       });
     },
@@ -1357,7 +1364,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C159 || CT.C159,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 259,
+        [_Location_line]: 264,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1367,7 +1374,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C92 || CT.C92,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 262,
+        [_Location_line]: 267,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1377,7 +1384,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "future",
         [_Location_column]: 9,
-        [_Location_line]: 256,
+        [_Location_line]: 261,
         [_Location_file]: null
       });
     },
@@ -1387,7 +1394,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "builder",
         [_Location_column]: 9,
-        [_Location_line]: 257,
+        [_Location_line]: 262,
         [_Location_file]: null
       });
     },
@@ -1400,7 +1407,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C163 || CT.C163,
         [_Location_name]: null,
         [_Location_column]: 18,
-        [_Location_line]: 255,
+        [_Location_line]: 260,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1410,7 +1417,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "children",
         [_Location_column]: 19,
-        [_Location_line]: 272,
+        [_Location_line]: 277,
         [_Location_file]: null
       });
     },
@@ -1423,7 +1430,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C167 || CT.C167,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 271,
+        [_Location_line]: 276,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1433,7 +1440,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C92 || CT.C92,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 274,
+        [_Location_line]: 279,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1443,7 +1450,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "future",
         [_Location_column]: 9,
-        [_Location_line]: 268,
+        [_Location_line]: 273,
         [_Location_file]: null
       });
     },
@@ -1453,7 +1460,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "builder",
         [_Location_column]: 9,
-        [_Location_line]: 269,
+        [_Location_line]: 274,
         [_Location_file]: null
       });
     },
@@ -1466,7 +1473,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C171 || CT.C171,
         [_Location_name]: null,
         [_Location_column]: 18,
-        [_Location_line]: 267,
+        [_Location_line]: 272,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1476,7 +1483,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "children",
         [_Location_column]: 19,
-        [_Location_line]: 284,
+        [_Location_line]: 289,
         [_Location_file]: null
       });
     },
@@ -1489,7 +1496,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C175 || CT.C175,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 283,
+        [_Location_line]: 288,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1499,7 +1506,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C92 || CT.C92,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 286,
+        [_Location_line]: 291,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1509,7 +1516,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "future",
         [_Location_column]: 9,
-        [_Location_line]: 280,
+        [_Location_line]: 285,
         [_Location_file]: null
       });
     },
@@ -1519,7 +1526,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "builder",
         [_Location_column]: 9,
-        [_Location_line]: 281,
+        [_Location_line]: 286,
         [_Location_file]: null
       });
     },
@@ -1532,7 +1539,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C179 || CT.C179,
         [_Location_name]: null,
         [_Location_column]: 18,
-        [_Location_line]: 279,
+        [_Location_line]: 284,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1542,7 +1549,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "children",
         [_Location_column]: 19,
-        [_Location_line]: 296,
+        [_Location_line]: 301,
         [_Location_file]: null
       });
     },
@@ -1555,7 +1562,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C183 || CT.C183,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 295,
+        [_Location_line]: 300,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1565,7 +1572,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C92 || CT.C92,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 298,
+        [_Location_line]: 303,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1575,7 +1582,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "future",
         [_Location_column]: 9,
-        [_Location_line]: 292,
+        [_Location_line]: 297,
         [_Location_file]: null
       });
     },
@@ -1585,7 +1592,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "builder",
         [_Location_column]: 9,
-        [_Location_line]: 293,
+        [_Location_line]: 298,
         [_Location_file]: null
       });
     },
@@ -1598,7 +1605,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C187 || CT.C187,
         [_Location_name]: null,
         [_Location_column]: 18,
-        [_Location_line]: 291,
+        [_Location_line]: 296,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1608,7 +1615,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "children",
         [_Location_column]: 19,
-        [_Location_line]: 308,
+        [_Location_line]: 313,
         [_Location_file]: null
       });
     },
@@ -1621,7 +1628,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C191 || CT.C191,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 307,
+        [_Location_line]: 312,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1631,7 +1638,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C92 || CT.C92,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 310,
+        [_Location_line]: 315,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1641,7 +1648,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "future",
         [_Location_column]: 9,
-        [_Location_line]: 304,
+        [_Location_line]: 309,
         [_Location_file]: null
       });
     },
@@ -1651,7 +1658,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "builder",
         [_Location_column]: 9,
-        [_Location_line]: 305,
+        [_Location_line]: 310,
         [_Location_file]: null
       });
     },
@@ -1664,7 +1671,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C195 || CT.C195,
         [_Location_name]: null,
         [_Location_column]: 18,
-        [_Location_line]: 303,
+        [_Location_line]: 308,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1674,7 +1681,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "children",
         [_Location_column]: 19,
-        [_Location_line]: 320,
+        [_Location_line]: 325,
         [_Location_file]: null
       });
     },
@@ -1687,7 +1694,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C199 || CT.C199,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 319,
+        [_Location_line]: 324,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1697,7 +1704,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C92 || CT.C92,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 322,
+        [_Location_line]: 327,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1707,7 +1714,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "future",
         [_Location_column]: 9,
-        [_Location_line]: 316,
+        [_Location_line]: 321,
         [_Location_file]: null
       });
     },
@@ -1717,7 +1724,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "builder",
         [_Location_column]: 9,
-        [_Location_line]: 317,
+        [_Location_line]: 322,
         [_Location_file]: null
       });
     },
@@ -1730,7 +1737,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C203 || CT.C203,
         [_Location_name]: null,
         [_Location_column]: 18,
-        [_Location_line]: 315,
+        [_Location_line]: 320,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1739,8 +1746,8 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
         [_Location_name]: "data",
-        [_Location_column]: 24,
-        [_Location_line]: 353,
+        [_Location_column]: 26,
+        [_Location_line]: 361,
         [_Location_file]: null
       });
     },
@@ -1752,8 +1759,8 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: C207 || CT.C207,
         [_Location_name]: null,
-        [_Location_column]: 22,
-        [_Location_line]: 352,
+        [_Location_column]: 24,
+        [_Location_line]: 360,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1762,8 +1769,8 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
-        [_Location_column]: 15,
-        [_Location_line]: 352,
+        [_Location_column]: 17,
+        [_Location_line]: 360,
         [_Location_file]: null
       });
     },
@@ -1775,8 +1782,8 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: C210 || CT.C210,
         [_Location_name]: null,
-        [_Location_column]: 20,
-        [_Location_line]: 351,
+        [_Location_column]: 22,
+        [_Location_line]: 359,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1785,8 +1792,8 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
         [_Location_name]: "width",
-        [_Location_column]: 13,
-        [_Location_line]: 349,
+        [_Location_column]: 15,
+        [_Location_line]: 357,
         [_Location_file]: null
       });
     },
@@ -1795,8 +1802,8 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
         [_Location_name]: "height",
-        [_Location_column]: 13,
-        [_Location_line]: 350,
+        [_Location_column]: 15,
+        [_Location_line]: 358,
         [_Location_file]: null
       });
     },
@@ -1805,8 +1812,8 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
-        [_Location_column]: 13,
-        [_Location_line]: 351,
+        [_Location_column]: 15,
+        [_Location_line]: 359,
         [_Location_file]: null
       });
     },
@@ -1815,8 +1822,8 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
         [_Location_name]: "decoration",
-        [_Location_column]: 13,
-        [_Location_line]: 356,
+        [_Location_column]: 15,
+        [_Location_line]: 364,
         [_Location_file]: null
       });
     },
@@ -1828,8 +1835,8 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: C213 || CT.C213,
         [_Location_name]: null,
-        [_Location_column]: 11,
-        [_Location_line]: 348,
+        [_Location_column]: 20,
+        [_Location_line]: 356,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -1837,9 +1844,9 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
       return C220 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "mainAxisAlignment",
-        [_Location_column]: 9,
-        [_Location_line]: 346,
+        [_Location_name]: "padding",
+        [_Location_column]: 13,
+        [_Location_line]: 354,
         [_Location_file]: null
       });
     },
@@ -1847,9 +1854,9 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
       return C221 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "children",
-        [_Location_column]: 9,
-        [_Location_line]: 347,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 356,
         [_Location_file]: null
       });
     },
@@ -1861,73 +1868,74 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: C219 || CT.C219,
         [_Location_name]: null,
-        [_Location_column]: 7,
-        [_Location_line]: 345,
+        [_Location_column]: 11,
+        [_Location_line]: 353,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
-      });
-    },
-    get C222() {
-      return C222 = dart.const({
-        __proto__: edge_insets.EdgeInsets.prototype,
-        [EdgeInsets_bottom]: 2,
-        [EdgeInsets_right]: 10,
-        [EdgeInsets_top]: 0,
-        [EdgeInsets_left]: 25
-      });
-    },
-    get C225() {
-      return C225 = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "data",
-        [_Location_column]: 27,
-        [_Location_line]: 398,
-        [_Location_file]: null
       });
     },
     get C224() {
-      return C224 = dart.constList([C225 || CT.C225], widget_inspector._Location);
+      return C224 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 63,
+        [_Location_line]: 383,
+        [_Location_file]: null
+      });
     },
     get C223() {
-      return C223 = dart.const({
+      return C223 = dart.constList([C224 || CT.C224], widget_inspector._Location);
+    },
+    get C222() {
+      return C222 = dart.const({
         __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C224 || CT.C224,
+        [_Location_parameterLocations]: C223 || CT.C223,
         [_Location_name]: null,
         [_Location_column]: 24,
-        [_Location_line]: 394,
+        [_Location_line]: 378,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
-    get C228() {
-      return C228 = dart.const({
+    get C227() {
+      return C227 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 17,
-        [_Location_line]: 394,
+        [_Location_line]: 378,
         [_Location_file]: null
       });
     },
-    get C227() {
-      return C227 = dart.constList([C228 || CT.C228], widget_inspector._Location);
-    },
     get C226() {
-      return C226 = dart.const({
+      return C226 = dart.constList([C227 || CT.C227], widget_inspector._Location);
+    },
+    get C225() {
+      return C225 = dart.const({
         __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C227 || CT.C227,
+        [_Location_parameterLocations]: C226 || CT.C226,
         [_Location_name]: null,
         [_Location_column]: 22,
-        [_Location_line]: 393,
+        [_Location_line]: 377,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C230() {
+      return C230 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 15,
+        [_Location_line]: 375,
+        [_Location_file]: null
       });
     },
     get C231() {
       return C231 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "width",
+        [_Location_name]: "height",
         [_Location_column]: 15,
-        [_Location_line]: 391,
+        [_Location_line]: 376,
         [_Location_file]: null
       });
     },
@@ -1935,9 +1943,9 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
       return C232 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "height",
+        [_Location_name]: "child",
         [_Location_column]: 15,
-        [_Location_line]: 392,
+        [_Location_line]: 377,
         [_Location_file]: null
       });
     },
@@ -1945,107 +1953,107 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
       return C233 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "child",
-        [_Location_column]: 15,
-        [_Location_line]: 393,
-        [_Location_file]: null
-      });
-    },
-    get C234() {
-      return C234 = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
         [_Location_name]: "decoration",
         [_Location_column]: 15,
-        [_Location_line]: 402,
+        [_Location_line]: 387,
         [_Location_file]: null
       });
     },
-    get C230() {
-      return C230 = dart.constList([C231 || CT.C231, C232 || CT.C232, C233 || CT.C233, C234 || CT.C234], widget_inspector._Location);
-    },
     get C229() {
-      return C229 = dart.const({
+      return C229 = dart.constList([C230 || CT.C230, C231 || CT.C231, C232 || CT.C232, C233 || CT.C233], widget_inspector._Location);
+    },
+    get C228() {
+      return C228 = dart.const({
         __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C230 || CT.C230,
+        [_Location_parameterLocations]: C229 || CT.C229,
         [_Location_name]: null,
         [_Location_column]: 20,
-        [_Location_line]: 390,
+        [_Location_line]: 374,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C236() {
+      return C236 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 13,
+        [_Location_line]: 372,
+        [_Location_file]: null
       });
     },
     get C237() {
       return C237 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "padding",
-        [_Location_column]: 13,
-        [_Location_line]: 388,
-        [_Location_file]: null
-      });
-    },
-    get C238() {
-      return C238 = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 13,
-        [_Location_line]: 390,
+        [_Location_line]: 374,
         [_Location_file]: null
       });
-    },
-    get C236() {
-      return C236 = dart.constList([C237 || CT.C237, C238 || CT.C238], widget_inspector._Location);
     },
     get C235() {
-      return C235 = dart.const({
+      return C235 = dart.constList([C236 || CT.C236, C237 || CT.C237], widget_inspector._Location);
+    },
+    get C234() {
+      return C234 = dart.const({
         __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C236 || CT.C236,
+        [_Location_parameterLocations]: C235 || CT.C235,
         [_Location_name]: null,
         [_Location_column]: 11,
-        [_Location_line]: 387,
+        [_Location_line]: 371,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
-    },
-    get C239() {
-      return C239 = dart.const({
-        __proto__: edge_insets.EdgeInsets.prototype,
-        [EdgeInsets_bottom]: 2,
-        [EdgeInsets_right]: 25,
-        [EdgeInsets_top]: 0,
-        [EdgeInsets_left]: 10
-      });
-    },
-    get C242() {
-      return C242 = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "data",
-        [_Location_column]: 26,
-        [_Location_line]: 417,
-        [_Location_file]: null
-      });
-    },
-    get C241() {
-      return C241 = dart.constList([C242 || CT.C242], widget_inspector._Location);
     },
     get C240() {
       return C240 = dart.const({
         __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C241 || CT.C241,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 9,
+        [_Location_line]: 351,
+        [_Location_file]: null
+      });
+    },
+    get C241() {
+      return C241 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 9,
+        [_Location_line]: 352,
+        [_Location_file]: null
+      });
+    },
+    get C239() {
+      return C239 = dart.constList([C240 || CT.C240, C241 || CT.C241], widget_inspector._Location);
+    },
+    get C238() {
+      return C238 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C239 || CT.C239,
         [_Location_name]: null,
-        [_Location_column]: 24,
-        [_Location_line]: 416,
+        [_Location_column]: 7,
+        [_Location_line]: 350,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C242() {
+      return C242 = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 2,
+        [EdgeInsets_right]: 10,
+        [EdgeInsets_top]: 0,
+        [EdgeInsets_left]: 25
       });
     },
     get C245() {
       return C245 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "child",
-        [_Location_column]: 17,
-        [_Location_line]: 416,
+        [_Location_name]: "data",
+        [_Location_column]: 27,
+        [_Location_line]: 430,
         [_Location_file]: null
       });
     },
@@ -2057,8 +2065,8 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: C244 || CT.C244,
         [_Location_name]: null,
-        [_Location_column]: 22,
-        [_Location_line]: 415,
+        [_Location_column]: 24,
+        [_Location_line]: 426,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -2066,128 +2074,127 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
       return C248 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "width",
-        [_Location_column]: 15,
-        [_Location_line]: 413,
-        [_Location_file]: null
-      });
-    },
-    get C249() {
-      return C249 = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "height",
-        [_Location_column]: 15,
-        [_Location_line]: 414,
-        [_Location_file]: null
-      });
-    },
-    get C250() {
-      return C250 = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
         [_Location_name]: "child",
-        [_Location_column]: 15,
-        [_Location_line]: 415,
-        [_Location_file]: null
-      });
-    },
-    get C251() {
-      return C251 = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "decoration",
-        [_Location_column]: 15,
-        [_Location_line]: 420,
+        [_Location_column]: 17,
+        [_Location_line]: 426,
         [_Location_file]: null
       });
     },
     get C247() {
-      return C247 = dart.constList([C248 || CT.C248, C249 || CT.C249, C250 || CT.C250, C251 || CT.C251], widget_inspector._Location);
+      return C247 = dart.constList([C248 || CT.C248], widget_inspector._Location);
     },
     get C246() {
       return C246 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: C247 || CT.C247,
         [_Location_name]: null,
-        [_Location_column]: 20,
-        [_Location_line]: 412,
+        [_Location_column]: 22,
+        [_Location_line]: 425,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C251() {
+      return C251 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 15,
+        [_Location_line]: 423,
+        [_Location_file]: null
+      });
+    },
+    get C252() {
+      return C252 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 15,
+        [_Location_line]: 424,
+        [_Location_file]: null
+      });
+    },
+    get C253() {
+      return C253 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 425,
+        [_Location_file]: null
       });
     },
     get C254() {
       return C254 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "padding",
-        [_Location_column]: 13,
-        [_Location_line]: 410,
+        [_Location_name]: "decoration",
+        [_Location_column]: 15,
+        [_Location_line]: 434,
         [_Location_file]: null
       });
     },
-    get C255() {
-      return C255 = dart.const({
+    get C250() {
+      return C250 = dart.constList([C251 || CT.C251, C252 || CT.C252, C253 || CT.C253, C254 || CT.C254], widget_inspector._Location);
+    },
+    get C249() {
+      return C249 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C250 || CT.C250,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 422,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C257() {
+      return C257 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "child",
+        [_Location_name]: "padding",
         [_Location_column]: 13,
-        [_Location_line]: 412,
+        [_Location_line]: 420,
         [_Location_file]: null
-      });
-    },
-    get C253() {
-      return C253 = dart.constList([C254 || CT.C254, C255 || CT.C255], widget_inspector._Location);
-    },
-    get C252() {
-      return C252 = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C253 || CT.C253,
-        [_Location_name]: null,
-        [_Location_column]: 11,
-        [_Location_line]: 409,
-        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
     get C258() {
       return C258 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "mainAxisAlignment",
-        [_Location_column]: 9,
-        [_Location_line]: 385,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 422,
         [_Location_file]: null
+      });
+    },
+    get C256() {
+      return C256 = dart.constList([C257 || CT.C257, C258 || CT.C258], widget_inspector._Location);
+    },
+    get C255() {
+      return C255 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C256 || CT.C256,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 419,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
     get C259() {
       return C259 = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "children",
-        [_Location_column]: 9,
-        [_Location_line]: 386,
-        [_Location_file]: null
-      });
-    },
-    get C257() {
-      return C257 = dart.constList([C258 || CT.C258, C259 || CT.C259], widget_inspector._Location);
-    },
-    get C256() {
-      return C256 = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C257 || CT.C257,
-        [_Location_name]: null,
-        [_Location_column]: 7,
-        [_Location_line]: 384,
-        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 2,
+        [EdgeInsets_right]: 25,
+        [EdgeInsets_top]: 0,
+        [EdgeInsets_left]: 10
       });
     },
     get C262() {
       return C262 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "children",
-        [_Location_column]: 21,
-        [_Location_line]: 442,
+        [_Location_name]: "data",
+        [_Location_column]: 26,
+        [_Location_line]: 449,
         [_Location_file]: null
       });
     },
@@ -2199,84 +2206,84 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: C261 || CT.C261,
         [_Location_name]: null,
-        [_Location_column]: 19,
-        [_Location_line]: 441,
+        [_Location_column]: 24,
+        [_Location_line]: 448,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
+    },
+    get C265() {
+      return C265 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 448,
+        [_Location_file]: null
+      });
+    },
+    get C264() {
+      return C264 = dart.constList([C265 || CT.C265], widget_inspector._Location);
     },
     get C263() {
       return C263 = dart.const({
         __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C92 || CT.C92,
+        [_Location_parameterLocations]: C264 || CT.C264,
         [_Location_name]: null,
-        [_Location_column]: 19,
-        [_Location_line]: 444,
+        [_Location_column]: 22,
+        [_Location_line]: 447,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
-    get C266() {
-      return C266 = dart.const({
+    get C268() {
+      return C268 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "future",
-        [_Location_column]: 11,
-        [_Location_line]: 438,
+        [_Location_name]: "width",
+        [_Location_column]: 15,
+        [_Location_line]: 445,
         [_Location_file]: null
       });
     },
-    get C267() {
-      return C267 = dart.const({
+    get C269() {
+      return C269 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "builder",
-        [_Location_column]: 11,
-        [_Location_line]: 439,
+        [_Location_name]: "height",
+        [_Location_column]: 15,
+        [_Location_line]: 446,
         [_Location_file]: null
-      });
-    },
-    get C265() {
-      return C265 = dart.constList([C266 || CT.C266, C267 || CT.C267], widget_inspector._Location);
-    },
-    get C264() {
-      return C264 = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C265 || CT.C265,
-        [_Location_name]: null,
-        [_Location_column]: 20,
-        [_Location_line]: 437,
-        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
     get C270() {
       return C270 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "children",
-        [_Location_column]: 21,
-        [_Location_line]: 452,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 447,
         [_Location_file]: null
-      });
-    },
-    get C269() {
-      return C269 = dart.constList([C270 || CT.C270], widget_inspector._Location);
-    },
-    get C268() {
-      return C268 = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C269 || CT.C269,
-        [_Location_name]: null,
-        [_Location_column]: 19,
-        [_Location_line]: 451,
-        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
     get C271() {
       return C271 = dart.const({
         __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C92 || CT.C92,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 15,
+        [_Location_line]: 452,
+        [_Location_file]: null
+      });
+    },
+    get C267() {
+      return C267 = dart.constList([C268 || CT.C268, C269 || CT.C269, C270 || CT.C270, C271 || CT.C271], widget_inspector._Location);
+    },
+    get C266() {
+      return C266 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C267 || CT.C267,
         [_Location_name]: null,
-        [_Location_column]: 19,
-        [_Location_line]: 454,
+        [_Location_column]: 20,
+        [_Location_line]: 444,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     },
@@ -2284,9 +2291,9 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
       return C274 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "future",
-        [_Location_column]: 11,
-        [_Location_line]: 448,
+        [_Location_name]: "padding",
+        [_Location_column]: 13,
+        [_Location_line]: 442,
         [_Location_file]: null
       });
     },
@@ -2294,9 +2301,9 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
       return C275 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "builder",
-        [_Location_column]: 11,
-        [_Location_line]: 449,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 444,
         [_Location_file]: null
       });
     },
@@ -2308,8 +2315,625 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: C273 || CT.C273,
         [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 441,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C278() {
+      return C278 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 9,
+        [_Location_line]: 417,
+        [_Location_file]: null
+      });
+    },
+    get C279() {
+      return C279 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 9,
+        [_Location_line]: 418,
+        [_Location_file]: null
+      });
+    },
+    get C277() {
+      return C277 = dart.constList([C278 || CT.C278, C279 || CT.C279], widget_inspector._Location);
+    },
+    get C276() {
+      return C276 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C277 || CT.C277,
+        [_Location_name]: null,
+        [_Location_column]: 7,
+        [_Location_line]: 416,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C282() {
+      return C282 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 21,
+        [_Location_line]: 474,
+        [_Location_file]: null
+      });
+    },
+    get C281() {
+      return C281 = dart.constList([C282 || CT.C282], widget_inspector._Location);
+    },
+    get C280() {
+      return C280 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C281 || CT.C281,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 473,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C283() {
+      return C283 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C92 || CT.C92,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 476,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C286() {
+      return C286 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "future",
+        [_Location_column]: 11,
+        [_Location_line]: 470,
+        [_Location_file]: null
+      });
+    },
+    get C287() {
+      return C287 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "builder",
+        [_Location_column]: 11,
+        [_Location_line]: 471,
+        [_Location_file]: null
+      });
+    },
+    get C285() {
+      return C285 = dart.constList([C286 || CT.C286, C287 || CT.C287], widget_inspector._Location);
+    },
+    get C284() {
+      return C284 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C285 || CT.C285,
+        [_Location_name]: null,
         [_Location_column]: 20,
-        [_Location_line]: 447,
+        [_Location_line]: 469,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C290() {
+      return C290 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 25,
+        [_Location_line]: 485,
+        [_Location_file]: null
+      });
+    },
+    get C289() {
+      return C289 = dart.constList([C290 || CT.C290], widget_inspector._Location);
+    },
+    get C288() {
+      return C288 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C289 || CT.C289,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 484,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C291() {
+      return C291 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C92 || CT.C92,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 487,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C294() {
+      return C294 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "future",
+        [_Location_column]: 15,
+        [_Location_line]: 481,
+        [_Location_file]: null
+      });
+    },
+    get C295() {
+      return C295 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "builder",
+        [_Location_column]: 15,
+        [_Location_line]: 482,
+        [_Location_file]: null
+      });
+    },
+    get C293() {
+      return C293 = dart.constList([C294 || CT.C294, C295 || CT.C295], widget_inspector._Location);
+    },
+    get C292() {
+      return C292 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C293 || CT.C293,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 480,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C298() {
+      return C298 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 31,
+        [_Location_line]: 493,
+        [_Location_file]: null
+      });
+    },
+    get C297() {
+      return C297 = dart.constList([C298 || CT.C298], widget_inspector._Location);
+    },
+    get C296() {
+      return C296 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C297 || CT.C297,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 493,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C301() {
+      return C301 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 19,
+        [_Location_line]: 493,
+        [_Location_file]: null
+      });
+    },
+    get C302() {
+      return C302 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 19,
+        [_Location_line]: 494,
+        [_Location_file]: null
+      });
+    },
+    get C300() {
+      return C300 = dart.constList([C301 || CT.C301, C302 || CT.C302], widget_inspector._Location);
+    },
+    get C299() {
+      return C299 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C300 || CT.C300,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 492,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C305() {
+      return C305 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 31,
+        [_Location_line]: 497,
+        [_Location_file]: null
+      });
+    },
+    get C304() {
+      return C304 = dart.constList([C305 || CT.C305], widget_inspector._Location);
+    },
+    get C303() {
+      return C303 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C304 || CT.C304,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 497,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C308() {
+      return C308 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 19,
+        [_Location_line]: 497,
+        [_Location_file]: null
+      });
+    },
+    get C309() {
+      return C309 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 19,
+        [_Location_line]: 498,
+        [_Location_file]: null
+      });
+    },
+    get C307() {
+      return C307 = dart.constList([C308 || CT.C308, C309 || CT.C309], widget_inspector._Location);
+    },
+    get C306() {
+      return C306 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C307 || CT.C307,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 496,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C312() {
+      return C312 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 15,
+        [_Location_line]: 491,
+        [_Location_file]: null
+      });
+    },
+    get C311() {
+      return C311 = dart.constList([C312 || CT.C312], widget_inspector._Location);
+    },
+    get C310() {
+      return C310 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C311 || CT.C311,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 490,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C313() {
+      return C313 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C92 || CT.C92,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 509,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C314() {
+      return C314 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C92 || CT.C92,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 517,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C317() {
+      return C317 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 27,
+        [_Location_line]: 550,
+        [_Location_file]: null
+      });
+    },
+    get C316() {
+      return C316 = dart.constList([C317 || CT.C317], widget_inspector._Location);
+    },
+    get C315() {
+      return C315 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C316 || CT.C316,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 546,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C320() {
+      return C320 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 546,
+        [_Location_file]: null
+      });
+    },
+    get C319() {
+      return C319 = dart.constList([C320 || CT.C320], widget_inspector._Location);
+    },
+    get C318() {
+      return C318 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C319 || CT.C319,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 545,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C323() {
+      return C323 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 15,
+        [_Location_line]: 543,
+        [_Location_file]: null
+      });
+    },
+    get C324() {
+      return C324 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 15,
+        [_Location_line]: 544,
+        [_Location_file]: null
+      });
+    },
+    get C325() {
+      return C325 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 545,
+        [_Location_file]: null
+      });
+    },
+    get C326() {
+      return C326 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 15,
+        [_Location_line]: 554,
+        [_Location_file]: null
+      });
+    },
+    get C322() {
+      return C322 = dart.constList([C323 || CT.C323, C324 || CT.C324, C325 || CT.C325, C326 || CT.C326], widget_inspector._Location);
+    },
+    get C321() {
+      return C321 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C322 || CT.C322,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 542,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C329() {
+      return C329 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 13,
+        [_Location_line]: 540,
+        [_Location_file]: null
+      });
+    },
+    get C330() {
+      return C330 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 542,
+        [_Location_file]: null
+      });
+    },
+    get C328() {
+      return C328 = dart.constList([C329 || CT.C329, C330 || CT.C330], widget_inspector._Location);
+    },
+    get C327() {
+      return C327 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C328 || CT.C328,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 539,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C333() {
+      return C333 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 26,
+        [_Location_line]: 569,
+        [_Location_file]: null
+      });
+    },
+    get C332() {
+      return C332 = dart.constList([C333 || CT.C333], widget_inspector._Location);
+    },
+    get C331() {
+      return C331 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C332 || CT.C332,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 568,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C336() {
+      return C336 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 568,
+        [_Location_file]: null
+      });
+    },
+    get C335() {
+      return C335 = dart.constList([C336 || CT.C336], widget_inspector._Location);
+    },
+    get C334() {
+      return C334 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C335 || CT.C335,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 567,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C339() {
+      return C339 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 15,
+        [_Location_line]: 565,
+        [_Location_file]: null
+      });
+    },
+    get C340() {
+      return C340 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 15,
+        [_Location_line]: 566,
+        [_Location_file]: null
+      });
+    },
+    get C341() {
+      return C341 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 567,
+        [_Location_file]: null
+      });
+    },
+    get C342() {
+      return C342 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 15,
+        [_Location_line]: 572,
+        [_Location_file]: null
+      });
+    },
+    get C338() {
+      return C338 = dart.constList([C339 || CT.C339, C340 || CT.C340, C341 || CT.C341, C342 || CT.C342], widget_inspector._Location);
+    },
+    get C337() {
+      return C337 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C338 || CT.C338,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 564,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C345() {
+      return C345 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 13,
+        [_Location_line]: 562,
+        [_Location_file]: null
+      });
+    },
+    get C346() {
+      return C346 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 564,
+        [_Location_file]: null
+      });
+    },
+    get C344() {
+      return C344 = dart.constList([C345 || CT.C345, C346 || CT.C346], widget_inspector._Location);
+    },
+    get C343() {
+      return C343 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C344 || CT.C344,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 561,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
+      });
+    },
+    get C349() {
+      return C349 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 9,
+        [_Location_line]: 537,
+        [_Location_file]: null
+      });
+    },
+    get C350() {
+      return C350 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 9,
+        [_Location_line]: 538,
+        [_Location_file]: null
+      });
+    },
+    get C348() {
+      return C348 = dart.constList([C349 || CT.C349, C350 || CT.C350], widget_inspector._Location);
+    },
+    get C347() {
+      return C347 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C348 || CT.C348,
+        [_Location_name]: null,
+        [_Location_column]: 7,
+        [_Location_line]: 536,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/materias_page.dart"
       });
     }
@@ -2462,7 +3086,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
                   this.setState(dart.fn(() => {
                     this[_semestreValue] = value;
                   }, VoidToNull()));
-                }, intToNull()), hint: new text.Text.new("SEMESTRE", {$creationLocationd_0dea112b090073317d4: C72 || CT.C72}), value: this[_semestreValue], $creationLocationd_0dea112b090073317d4: C75 || CT.C75}), materias_page.semestre(this[_semestreValue], context, this.widget.id)]), $creationLocationd_0dea112b090073317d4: C81 || CT.C81}) : this.widget.rol === "docentes" || this.widget.rol === "kardex" ? new basic.Column.new({children: JSArrayOfWidget().of([new text.Text.new("MATERIAS", {style: new text_style.TextStyle.new({fontSize: 24.0}), $creationLocationd_0dea112b090073317d4: C84 || CT.C84}), materias_page.materias(context, this.widget.id, this.widget.rol)]), $creationLocationd_0dea112b090073317d4: C88 || CT.C88}) : new container.Container.new({$creationLocationd_0dea112b090073317d4: C91 || CT.C91})]), $creationLocationd_0dea112b090073317d4: C93 || CT.C93});
+                }, intToNull()), hint: new text.Text.new("SEMESTRE", {$creationLocationd_0dea112b090073317d4: C72 || CT.C72}), value: this[_semestreValue], $creationLocationd_0dea112b090073317d4: C75 || CT.C75}), materias_page.semestre(this[_semestreValue], context, this.widget.id)]), $creationLocationd_0dea112b090073317d4: C81 || CT.C81}) : this.widget.rol === "docentes" || this.widget.rol === "kardex" || this.widget.rol === "jefeCarrera" ? new basic.Column.new({children: JSArrayOfWidget().of([new text.Text.new("MATERIAS", {style: new text_style.TextStyle.new({fontSize: 24.0}), $creationLocationd_0dea112b090073317d4: C84 || CT.C84}), materias_page.materias(context, this.widget.id, this.widget.rol)]), $creationLocationd_0dea112b090073317d4: C88 || CT.C88}) : new container.Container.new({$creationLocationd_0dea112b090073317d4: C91 || CT.C91})]), $creationLocationd_0dea112b090073317d4: C93 || CT.C93});
     }
   };
   (materias_page._MateriasPageState.new = function() {
@@ -2610,60 +3234,135 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
   let C221;
   let C219;
   let C218;
-  let C222;
-  let C225;
   let C224;
   let C223;
-  let C228;
+  let C222;
   let C227;
   let C226;
+  let C225;
+  let C230;
   let C231;
   let C232;
   let C233;
-  let C234;
-  let C230;
   let C229;
-  let C237;
-  let C238;
+  let C228;
   let C236;
+  let C237;
   let C235;
-  let C239;
-  let C242;
-  let C241;
+  let C234;
   let C240;
+  let C241;
+  let C239;
+  let C238;
+  let C242;
   let C245;
   let C244;
   let C243;
   let C248;
-  let C249;
-  let C250;
-  let C251;
   let C247;
   let C246;
-  let C254;
-  let C255;
-  let C253;
+  let C251;
   let C252;
-  let C258;
-  let C259;
+  let C253;
+  let C254;
+  let C250;
+  let C249;
   let C257;
+  let C258;
   let C256;
+  let C255;
+  let C259;
   let C262;
   let C261;
   let C260;
-  let C263;
-  let C266;
-  let C267;
   let C265;
   let C264;
-  let C270;
-  let C269;
+  let C263;
   let C268;
+  let C269;
+  let C270;
   let C271;
+  let C267;
+  let C266;
   let C274;
   let C275;
   let C273;
   let C272;
+  let C278;
+  let C279;
+  let C277;
+  let C276;
+  let C282;
+  let C281;
+  let C280;
+  let C283;
+  let C286;
+  let C287;
+  let C285;
+  let C284;
+  let C290;
+  let C289;
+  let C288;
+  let C291;
+  let C294;
+  let C295;
+  let C293;
+  let C292;
+  let C298;
+  let C297;
+  let C296;
+  let C301;
+  let C302;
+  let C300;
+  let C299;
+  let C305;
+  let C304;
+  let C303;
+  let C308;
+  let C309;
+  let C307;
+  let C306;
+  let C312;
+  let C311;
+  let C310;
+  let C313;
+  let C314;
+  let C317;
+  let C316;
+  let C315;
+  let C320;
+  let C319;
+  let C318;
+  let C323;
+  let C324;
+  let C325;
+  let C326;
+  let C322;
+  let C321;
+  let C329;
+  let C330;
+  let C328;
+  let C327;
+  let C333;
+  let C332;
+  let C331;
+  let C336;
+  let C335;
+  let C334;
+  let C339;
+  let C340;
+  let C341;
+  let C342;
+  let C338;
+  let C337;
+  let C345;
+  let C346;
+  let C344;
+  let C343;
+  let C349;
+  let C350;
+  let C348;
+  let C347;
   materias_page.getMaterias = function getMaterias(semestre, context, id) {
     return async.async(ListOfWidget(), function* getMaterias() {
       let url = "http://localhost:3000/api/estudiantes/" + dart.notNull(id) + "/materias";
@@ -2746,7 +3445,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
       }
       core.print(data);
       let list = JSArrayOfWidget().of([]);
-      data[$forEach](dart.fn(materia => list[$add](new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: JSArrayOfWidget().of([new container.Container.new({width: 500.0, height: 40.0, child: new basic.Center.new({child: new text.Text.new(core.String._check(dart.dsend(materia, '_get', ["nombre"])), {$creationLocationd_0dea112b090073317d4: C206 || CT.C206}), $creationLocationd_0dea112b090073317d4: C209 || CT.C209}), decoration: new box_decoration.BoxDecoration.new({shape: box_border.BoxShape.rectangle, borderRadius: new border_radius.BorderRadius.circular(2.0), color: colors.Colors.blue}), $creationLocationd_0dea112b090073317d4: C212 || CT.C212})]), $creationLocationd_0dea112b090073317d4: C218 || CT.C218})), dynamicTovoid()));
+      data[$forEach](dart.fn(materia => list[$add](new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: JSArrayOfWidget().of([new basic.Padding.new({padding: C96 || CT.C96, child: new container.Container.new({width: 500.0, height: 40.0, child: new basic.Center.new({child: new text.Text.new(core.String._check(dart.dsend(materia, '_get', ["nombre"])), {$creationLocationd_0dea112b090073317d4: C206 || CT.C206}), $creationLocationd_0dea112b090073317d4: C209 || CT.C209}), decoration: new box_decoration.BoxDecoration.new({shape: box_border.BoxShape.rectangle, borderRadius: new border_radius.BorderRadius.circular(2.0), color: colors.Colors.blue}), $creationLocationd_0dea112b090073317d4: C212 || CT.C212}), $creationLocationd_0dea112b090073317d4: C218 || CT.C218}), new basic.Padding.new({padding: C113 || CT.C113, child: new container.Container.new({width: 500.0, height: 40.0, child: new basic.Center.new({child: new text.Text.new(core.String._check(dart.dsend(dart.dsend(dart.dsend(dart.dsend(dart.dsend(dart.dsend(materia, '_get', ["aula"]), '+', [" "]), '+', [dart.toString(dart.dsend(materia, '_get', ["hora_inicio"]))]), '+', [":00 - "]), '+', [dart.toString(dart.dsend(dart.dsend(materia, '_get', ["hora_inicio"]), '+', [2]))]), '+', [":00"])), {$creationLocationd_0dea112b090073317d4: C222 || CT.C222}), $creationLocationd_0dea112b090073317d4: C225 || CT.C225}), decoration: new box_decoration.BoxDecoration.new({shape: box_border.BoxShape.rectangle, borderRadius: new border_radius.BorderRadius.circular(2.0), color: colors.Colors.blue}), $creationLocationd_0dea112b090073317d4: C228 || CT.C228}), $creationLocationd_0dea112b090073317d4: C234 || CT.C234})]), $creationLocationd_0dea112b090073317d4: C238 || CT.C238})), dynamicTovoid()));
       return list;
     });
   };
@@ -2764,19 +3463,43 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
       }
       core.print(data);
       let list = JSArrayOfWidget().of([]);
-      data[$forEach](dart.fn(materia => list[$add](new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: JSArrayOfWidget().of([new basic.Padding.new({padding: C222 || CT.C222, child: new container.Container.new({width: 500.0, height: 40.0, child: new basic.Center.new({child: new text.Text.new(core.String._check(dart.dsend(dart.dsend(dart.dsend(dart.dsend(dart.dsend(materia, '_get', ["docente_nombre"]), '+', [" "]), '+', [dart.dsend(materia, '_get', ["apellido_1"])]), '+', [" "]), '+', [dart.dsend(materia, '_get', ["apellido_2"])])), {$creationLocationd_0dea112b090073317d4: C223 || CT.C223}), $creationLocationd_0dea112b090073317d4: C226 || CT.C226}), decoration: new box_decoration.BoxDecoration.new({shape: box_border.BoxShape.rectangle, borderRadius: new border_radius.BorderRadius.circular(2.0), color: colors.Colors.blue}), $creationLocationd_0dea112b090073317d4: C229 || CT.C229}), $creationLocationd_0dea112b090073317d4: C235 || CT.C235}), new basic.Padding.new({padding: C239 || CT.C239, child: new container.Container.new({width: 500.0, height: 40.0, child: new basic.Center.new({child: new text.Text.new(core.String._check(dart.dsend(materia, '_get', ["nombre"])), {$creationLocationd_0dea112b090073317d4: C240 || CT.C240}), $creationLocationd_0dea112b090073317d4: C243 || CT.C243}), decoration: new box_decoration.BoxDecoration.new({shape: box_border.BoxShape.rectangle, borderRadius: new border_radius.BorderRadius.circular(2.0), color: colors.Colors.blue}), $creationLocationd_0dea112b090073317d4: C246 || CT.C246}), $creationLocationd_0dea112b090073317d4: C252 || CT.C252})]), $creationLocationd_0dea112b090073317d4: C256 || CT.C256})), dynamicTovoid()));
+      data[$forEach](dart.fn(materia => list[$add](new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: JSArrayOfWidget().of([new basic.Padding.new({padding: C242 || CT.C242, child: new container.Container.new({width: 500.0, height: 40.0, child: new basic.Center.new({child: new text.Text.new(core.String._check(dart.dsend(dart.dsend(dart.dsend(dart.dsend(dart.dsend(materia, '_get', ["docente_nombre"]), '+', [" "]), '+', [dart.dsend(materia, '_get', ["apellido_1"])]), '+', [" "]), '+', [dart.dsend(materia, '_get', ["apellido_2"])])), {$creationLocationd_0dea112b090073317d4: C243 || CT.C243}), $creationLocationd_0dea112b090073317d4: C246 || CT.C246}), decoration: new box_decoration.BoxDecoration.new({shape: box_border.BoxShape.rectangle, borderRadius: new border_radius.BorderRadius.circular(2.0), color: colors.Colors.blue}), $creationLocationd_0dea112b090073317d4: C249 || CT.C249}), $creationLocationd_0dea112b090073317d4: C255 || CT.C255}), new basic.Padding.new({padding: C259 || CT.C259, child: new container.Container.new({width: 500.0, height: 40.0, child: new basic.Center.new({child: new text.Text.new(core.String._check(dart.dsend(materia, '_get', ["nombre"])), {$creationLocationd_0dea112b090073317d4: C260 || CT.C260}), $creationLocationd_0dea112b090073317d4: C263 || CT.C263}), decoration: new box_decoration.BoxDecoration.new({shape: box_border.BoxShape.rectangle, borderRadius: new border_radius.BorderRadius.circular(2.0), color: colors.Colors.blue}), $creationLocationd_0dea112b090073317d4: C266 || CT.C266}), $creationLocationd_0dea112b090073317d4: C272 || CT.C272})]), $creationLocationd_0dea112b090073317d4: C276 || CT.C276})), dynamicTovoid()));
       return list;
     });
   };
   materias_page.materias = function materias(context, id, rol) {
     let materias = null;
-    rol === "docentes" ? materias = new (FutureBuilderOfListOfWidget()).new({future: materias_page.getMateriasDocente(context, id), builder: dart.fn((context, snapshot) => dart.test(snapshot.hasData) ? new basic.Column.new({children: ListOfWidget()._check(snapshot.data), $creationLocationd_0dea112b090073317d4: C260 || CT.C260}) : new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C263 || CT.C263}), BuildContextAndAsyncSnapshotToWidget()), $creationLocationd_0dea112b090073317d4: C264 || CT.C264}) : materias = new (FutureBuilderOfListOfWidget()).new({future: materias_page.getMateriasKardex(context), builder: dart.fn((context, snapshot) => dart.test(snapshot.hasData) ? new basic.Column.new({children: ListOfWidget()._check(snapshot.data), $creationLocationd_0dea112b090073317d4: C268 || CT.C268}) : new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C271 || CT.C271}), BuildContextAndAsyncSnapshotToWidget()), $creationLocationd_0dea112b090073317d4: C272 || CT.C272});
+    rol === "docentes" ? materias = new (FutureBuilderOfListOfWidget()).new({future: materias_page.getMateriasDocente(context, id), builder: dart.fn((context, snapshot) => dart.test(snapshot.hasData) ? new basic.Column.new({children: ListOfWidget()._check(snapshot.data), $creationLocationd_0dea112b090073317d4: C280 || CT.C280}) : new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C283 || CT.C283}), BuildContextAndAsyncSnapshotToWidget()), $creationLocationd_0dea112b090073317d4: C284 || CT.C284}) : rol === "kardex" ? materias = new (FutureBuilderOfListOfWidget()).new({future: materias_page.getMateriasKardex(context), builder: dart.fn((context, snapshot) => dart.test(snapshot.hasData) ? new basic.Column.new({children: ListOfWidget()._check(snapshot.data), $creationLocationd_0dea112b090073317d4: C288 || CT.C288}) : new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C291 || CT.C291}), BuildContextAndAsyncSnapshotToWidget()), $creationLocationd_0dea112b090073317d4: C292 || CT.C292}) : materias = new basic.Column.new({children: JSArrayOfWidget().of([new raised_button.RaisedButton.new({child: new text.Text.new("INSCRIBIR ESTUDIANTE A MATERIA", {$creationLocationd_0dea112b090073317d4: C296 || CT.C296}), onPressed: dart.fn(() => materias_page.inscribir(context), VoidTodynamic()), $creationLocationd_0dea112b090073317d4: C299 || CT.C299}), new raised_button.RaisedButton.new({child: new text.Text.new("ASIGNAR DOCENTE A MATERIA", {$creationLocationd_0dea112b090073317d4: C303 || CT.C303}), onPressed: dart.fn(() => materias_page.asignar(context), VoidTodynamic()), $creationLocationd_0dea112b090073317d4: C306 || CT.C306})]), $creationLocationd_0dea112b090073317d4: C310 || CT.C310});
     return materias;
+  };
+  materias_page.inscribir = function inscribir(context) {
+    return dialog.showDialog(dart.dynamic, {context: context, builder: dart.fn(context => new inscribir_page.InscribirPage.new({$creationLocationd_0dea112b090073317d4: C313 || CT.C313}), BuildContextToInscribirPage())});
+  };
+  materias_page.asignar = function asignar(context) {
+    return dialog.showDialog(dart.dynamic, {context: context, builder: dart.fn(context => new asignar_docente_page.AsignarPage.new({$creationLocationd_0dea112b090073317d4: C314 || CT.C314}), BuildContextToAsignarPage())});
+  };
+  materias_page.asignarMaterias = function asignarMaterias(context) {
+    return async.async(ListOfWidget(), function* asignarMaterias() {
+      let url = "http://localhost:3000/api/kardex/materias";
+      let data = null;
+      let response = null;
+      try {
+        response = (yield http.get(url));
+        data = core.List._check(convert.jsonDecode(response.body));
+      } catch (e$) {
+        let e = dart.getThrown(e$);
+        core.print(e);
+      }
+      core.print(data);
+      let list = JSArrayOfWidget().of([]);
+      data[$forEach](dart.fn(materia => list[$add](new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: JSArrayOfWidget().of([new basic.Padding.new({padding: C242 || CT.C242, child: new container.Container.new({width: 500.0, height: 40.0, child: new basic.Center.new({child: new text.Text.new(core.String._check(dart.dsend(dart.dsend(dart.dsend(dart.dsend(dart.dsend(materia, '_get', ["docente_nombre"]), '+', [" "]), '+', [dart.dsend(materia, '_get', ["apellido_1"])]), '+', [" "]), '+', [dart.dsend(materia, '_get', ["apellido_2"])])), {$creationLocationd_0dea112b090073317d4: C315 || CT.C315}), $creationLocationd_0dea112b090073317d4: C318 || CT.C318}), decoration: new box_decoration.BoxDecoration.new({shape: box_border.BoxShape.rectangle, borderRadius: new border_radius.BorderRadius.circular(2.0), color: colors.Colors.blue}), $creationLocationd_0dea112b090073317d4: C321 || CT.C321}), $creationLocationd_0dea112b090073317d4: C327 || CT.C327}), new basic.Padding.new({padding: C259 || CT.C259, child: new container.Container.new({width: 500.0, height: 40.0, child: new basic.Center.new({child: new text.Text.new(core.String._check(dart.dsend(materia, '_get', ["nombre"])), {$creationLocationd_0dea112b090073317d4: C331 || CT.C331}), $creationLocationd_0dea112b090073317d4: C334 || CT.C334}), decoration: new box_decoration.BoxDecoration.new({shape: box_border.BoxShape.rectangle, borderRadius: new border_radius.BorderRadius.circular(2.0), color: colors.Colors.blue}), $creationLocationd_0dea112b090073317d4: C337 || CT.C337}), $creationLocationd_0dea112b090073317d4: C343 || CT.C343})]), $creationLocationd_0dea112b090073317d4: C347 || CT.C347})), dynamicTovoid()));
+      return list;
+    });
   };
   dart.trackLibraries("packages/siinader_pixies/pages/materias_page", {
     "package:siinader_pixies/pages/materias_page.dart": materias_page
   }, {
-  }, '{"version":3,"sourceRoot":"","sources":["materias_page.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;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","file":"materias_page.ddc.js"}');
+  }, '{"version":3,"sourceRoot":"","sources":["materias_page.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;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","file":"materias_page.ddc.js"}');
   // Exports:
   return {
     pages__materias_page: materias_page

@@ -22,6 +22,9 @@ class _InicioPageState extends State<InicioPage> {
         case 'kardex':
         rol = 'DE KARDEX';
         break;
+        case 'jefeCarrera':
+        rol = 'DE JEFE DE CARRERA';
+        break;
     }
     return Center(
       child: Column(
