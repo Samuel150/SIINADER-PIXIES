@@ -103,6 +103,7 @@ let modulePaths = {
  "packages/siinader_pixies/pages/perfil_page": "packages/siinader_pixies/pages/perfil_page.ddc",
  "packages/siinader_pixies/pages/plan_de_estudios_page": "packages/siinader_pixies/pages/plan_de_estudios_page.ddc",
  "packages/siinader_pixies/pages/ver_notas_page": "packages/siinader_pixies/pages/ver_notas_page.ddc",
+ "packages/siinader_pixies/pages/ver_usuarios": "packages/siinader_pixies/pages/ver_usuarios.ddc",
  "packages/source_span/source_span": "packages/source_span/source_span.ddc",
  "packages/string_scanner/src/eager_span_scanner": "packages/string_scanner/src/eager_span_scanner.ddc",
  "packages/term_glyph/src/generated/ascii_glyph_set": "packages/term_glyph/src/generated/ascii_glyph_set.ddc",
