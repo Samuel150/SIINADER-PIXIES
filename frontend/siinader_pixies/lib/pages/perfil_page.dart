@@ -3,6 +3,9 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class PerfilPage extends StatefulWidget {
+  PerfilPage({Key key, this.rol, this.id}) : super(key: key);
+  final String rol;
+  final String id;
   @override
   _PerfilPageState createState() => _PerfilPageState();
 }
@@ -14,7 +17,7 @@ class _PerfilPageState extends State<PerfilPage> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         FutureBuilder(
-          future: getDatos(1),
+          future: getDatos(widget.id,widget.rol),
           builder: (BuildContext context, AsyncSnapshot snapshot) {
             return snapshot.hasData
                 ? Column(
@@ -33,8 +36,23 @@ class _PerfilPageState extends State<PerfilPage> {
   }
 }
 
-Future<List<Widget>> getDatos(int semestre) async {
-  String url = 'http://localhost:3000/api/estudiantes/2';
+Future<List<Widget>> getDatos(String id,String rol) async {
+  String idTabla;
+  switch (rol) {
+    case 'estudiantes':
+      idTabla = 'idEstudiante';
+      break;
+    case 'docentes':
+      idTabla = 'idDocente';
+      break;
+      case 'kardex':
+      idTabla = 'idKardex';
+      break;
+      case 'jefeCarrera':
+      idTabla = 'idJefeCarrera';
+      break;
+  }
+  String url = 'http://localhost:3000/api/'+rol+'/'+id;
   List data;
   http.Response response;
   try {
@@ -93,7 +111,7 @@ Future<List<Widget>> getDatos(int semestre) async {
               height: 40.0,
               child: Center(
                 child: Text(
-                  perfil['idEstudiante'].toString(),
+                  perfil[idTabla].toString(),
                 ),
               ),
               decoration: BoxDecoration(

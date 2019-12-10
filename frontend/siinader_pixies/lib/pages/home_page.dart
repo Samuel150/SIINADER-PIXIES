@@ -174,7 +174,7 @@ class _HomePageState extends State<HomePage> {
           MateriasPage(rol: widget.rol, id: widget.id),
           PlanEstudios(),
           NotasPage(rol: widget.rol, id: widget.id),
-          PerfilPage(),
+          PerfilPage(rol: widget.rol, id: widget.id),
         ],
       ),
     );
