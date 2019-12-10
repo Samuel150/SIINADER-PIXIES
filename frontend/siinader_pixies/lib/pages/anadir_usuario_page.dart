@@ -15,7 +15,6 @@ class _AnadirUsuarioPageState extends State<AnadirUsuarioPage> {
   TextEditingController _apellido2Value;
   TextEditingController _ciValue;
   TextEditingController _fechaNacimientoValue;
-  TextEditingController _usernameValue;
   TextEditingController _passwordValue;
 
   @override
@@ -26,7 +25,6 @@ class _AnadirUsuarioPageState extends State<AnadirUsuarioPage> {
     _apellido2Value = TextEditingController(text: '');
     _ciValue = TextEditingController(text: '');
     _fechaNacimientoValue = TextEditingController(text: '');
-    _usernameValue = TextEditingController(text: '');
     _passwordValue = TextEditingController(text: '');
   }
 
@@ -304,47 +302,6 @@ class _AnadirUsuarioPageState extends State<AnadirUsuarioPage> {
                     ),
                   ),
                   TextFormField(
-                    controller: _usernameValue,
-                    keyboardType: TextInputType.number,
-                    validator: (value) {
-                      if (value.isEmpty) {
-                        return 'PORFAVOR INGRESA EL NOMBRE USUARIO';
-                      } else {
-                        return null;
-                      }
-                    },
-                    decoration: InputDecoration(
-                      errorStyle: TextStyle(
-                        color: Colors.red[800],
-                        fontWeight: FontWeight.w300,
-                      ),
-                      labelText: 'USUARIO',
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      disabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      focusedErrorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      errorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                    ),
-                    style: TextStyle(
-                      color: Colors.grey[900],
-                      fontSize: 13.0,
-                      fontWeight: FontWeight.w200,
-                    ),
-                  ),
-                  TextFormField(
                     controller: _passwordValue,
                     keyboardType: TextInputType.number,
                     validator: (value) {
@@ -397,7 +354,6 @@ class _AnadirUsuarioPageState extends State<AnadirUsuarioPage> {
                           'apellido_2':_apellido2Value.text,
                           'ci':_ciValue.text,
                           'fecha_nacimiento':_fechaNacimientoValue.text,
-                          'username':_usernameValue.text,
                           'password':_passwordValue.text
                         };
                         var bodyEncoded = json.encode(body);

@@ -342,8 +342,6 @@ Future<List<Widget>> getMateriasDocente(String id) async {
   } catch (e) {
     print(e);
   }
-  print(data);
-
   List<Widget> list = [];
   data.forEach(
     (materia) => list.add(
@@ -408,8 +406,6 @@ Future<List<Widget>> getMateriasKardex() async {
   } catch (e) {
     print(e);
   }
-  print(data);
-
   List<Widget> list = [];
   data.forEach(
     (materia) => list.add(

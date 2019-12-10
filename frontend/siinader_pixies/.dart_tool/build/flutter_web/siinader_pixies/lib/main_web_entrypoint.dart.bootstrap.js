@@ -92,6 +92,7 @@ let modulePaths = {
  "packages/siinader_pixies/main_web_entrypoint": "packages/siinader_pixies/main_web_entrypoint.ddc",
  "packages/siinader_pixies/pages/anadir_usuario_page": "packages/siinader_pixies/pages/anadir_usuario_page.ddc",
  "packages/siinader_pixies/pages/asignar_docente_page": "packages/siinader_pixies/pages/asignar_docente_page.ddc",
+ "packages/siinader_pixies/pages/editar_perfil": "packages/siinader_pixies/pages/editar_perfil.ddc",
  "packages/siinader_pixies/pages/eliminar_usuario": "packages/siinader_pixies/pages/eliminar_usuario.ddc",
  "packages/siinader_pixies/pages/home_page": "packages/siinader_pixies/pages/home_page.ddc",
  "packages/siinader_pixies/pages/ingresar_notas": "packages/siinader_pixies/pages/ingresar_notas.ddc",

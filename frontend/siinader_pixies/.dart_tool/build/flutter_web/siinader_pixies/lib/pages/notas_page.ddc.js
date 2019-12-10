@@ -1420,7 +1420,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C117 || CT.C117,
         [_Location_name]: null,
         [_Location_column]: 19,
-        [_Location_line]: 323,
+        [_Location_line]: 321,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -1462,7 +1462,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "data",
         [_Location_column]: 30,
-        [_Location_line]: 353,
+        [_Location_line]: 351,
         [_Location_file]: null
       });
     },
@@ -1475,7 +1475,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C170 || CT.C170,
         [_Location_name]: null,
         [_Location_column]: 28,
-        [_Location_line]: 352,
+        [_Location_line]: 350,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -1485,7 +1485,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 21,
-        [_Location_line]: 352,
+        [_Location_line]: 350,
         [_Location_file]: null
       });
     },
@@ -1498,7 +1498,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C173 || CT.C173,
         [_Location_name]: null,
         [_Location_column]: 26,
-        [_Location_line]: 351,
+        [_Location_line]: 349,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -1508,7 +1508,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "height",
         [_Location_column]: 19,
-        [_Location_line]: 349,
+        [_Location_line]: 347,
         [_Location_file]: null
       });
     },
@@ -1518,7 +1518,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "width",
         [_Location_column]: 19,
-        [_Location_line]: 350,
+        [_Location_line]: 348,
         [_Location_file]: null
       });
     },
@@ -1528,7 +1528,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 19,
-        [_Location_line]: 351,
+        [_Location_line]: 349,
         [_Location_file]: null
       });
     },
@@ -1538,7 +1538,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "decoration",
         [_Location_column]: 19,
-        [_Location_line]: 356,
+        [_Location_line]: 354,
         [_Location_file]: null
       });
     },
@@ -1551,7 +1551,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C176 || CT.C176,
         [_Location_name]: null,
         [_Location_column]: 24,
-        [_Location_line]: 348,
+        [_Location_line]: 346,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -1561,7 +1561,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "padding",
         [_Location_column]: 17,
-        [_Location_line]: 346,
+        [_Location_line]: 344,
         [_Location_file]: null
       });
     },
@@ -1571,7 +1571,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 17,
-        [_Location_line]: 348,
+        [_Location_line]: 346,
         [_Location_file]: null
       });
     },
@@ -1584,7 +1584,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C182 || CT.C182,
         [_Location_name]: null,
         [_Location_column]: 15,
-        [_Location_line]: 345,
+        [_Location_line]: 343,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -1603,7 +1603,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "data",
         [_Location_column]: 42,
-        [_Location_line]: 371,
+        [_Location_line]: 369,
         [_Location_file]: null
       });
     },
@@ -1616,7 +1616,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C187 || CT.C187,
         [_Location_name]: null,
         [_Location_column]: 28,
-        [_Location_line]: 370,
+        [_Location_line]: 368,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -1626,7 +1626,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 21,
-        [_Location_line]: 370,
+        [_Location_line]: 368,
         [_Location_file]: null
       });
     },
@@ -1639,7 +1639,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C190 || CT.C190,
         [_Location_name]: null,
         [_Location_column]: 26,
-        [_Location_line]: 369,
+        [_Location_line]: 367,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -1649,7 +1649,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "height",
         [_Location_column]: 19,
-        [_Location_line]: 367,
+        [_Location_line]: 365,
         [_Location_file]: null
       });
     },
@@ -1659,7 +1659,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "width",
         [_Location_column]: 19,
-        [_Location_line]: 368,
+        [_Location_line]: 366,
         [_Location_file]: null
       });
     },
@@ -1669,7 +1669,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 19,
-        [_Location_line]: 369,
+        [_Location_line]: 367,
         [_Location_file]: null
       });
     },
@@ -1679,7 +1679,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "decoration",
         [_Location_column]: 19,
-        [_Location_line]: 374,
+        [_Location_line]: 372,
         [_Location_file]: null
       });
     },
@@ -1692,7 +1692,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C193 || CT.C193,
         [_Location_name]: null,
         [_Location_column]: 24,
-        [_Location_line]: 366,
+        [_Location_line]: 364,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -1702,7 +1702,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "padding",
         [_Location_column]: 17,
-        [_Location_line]: 364,
+        [_Location_line]: 362,
         [_Location_file]: null
       });
     },
@@ -1712,7 +1712,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 17,
-        [_Location_line]: 366,
+        [_Location_line]: 364,
         [_Location_file]: null
       });
     },
@@ -1725,7 +1725,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C199 || CT.C199,
         [_Location_name]: null,
         [_Location_column]: 15,
-        [_Location_line]: 363,
+        [_Location_line]: 361,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -1735,7 +1735,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "data",
         [_Location_column]: 42,
-        [_Location_line]: 389,
+        [_Location_line]: 387,
         [_Location_file]: null
       });
     },
@@ -1748,7 +1748,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C203 || CT.C203,
         [_Location_name]: null,
         [_Location_column]: 28,
-        [_Location_line]: 388,
+        [_Location_line]: 386,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -1758,7 +1758,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 21,
-        [_Location_line]: 388,
+        [_Location_line]: 386,
         [_Location_file]: null
       });
     },
@@ -1771,7 +1771,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C206 || CT.C206,
         [_Location_name]: null,
         [_Location_column]: 26,
-        [_Location_line]: 387,
+        [_Location_line]: 385,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -1781,7 +1781,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "height",
         [_Location_column]: 19,
-        [_Location_line]: 385,
+        [_Location_line]: 383,
         [_Location_file]: null
       });
     },
@@ -1791,7 +1791,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "width",
         [_Location_column]: 19,
-        [_Location_line]: 386,
+        [_Location_line]: 384,
         [_Location_file]: null
       });
     },
@@ -1801,7 +1801,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 19,
-        [_Location_line]: 387,
+        [_Location_line]: 385,
         [_Location_file]: null
       });
     },
@@ -1811,7 +1811,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "decoration",
         [_Location_column]: 19,
-        [_Location_line]: 392,
+        [_Location_line]: 390,
         [_Location_file]: null
       });
     },
@@ -1824,7 +1824,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C209 || CT.C209,
         [_Location_name]: null,
         [_Location_column]: 24,
-        [_Location_line]: 384,
+        [_Location_line]: 382,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -1834,7 +1834,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "padding",
         [_Location_column]: 17,
-        [_Location_line]: 382,
+        [_Location_line]: 380,
         [_Location_file]: null
       });
     },
@@ -1844,7 +1844,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 17,
-        [_Location_line]: 384,
+        [_Location_line]: 382,
         [_Location_file]: null
       });
     },
@@ -1857,7 +1857,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C215 || CT.C215,
         [_Location_name]: null,
         [_Location_column]: 15,
-        [_Location_line]: 381,
+        [_Location_line]: 379,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -1876,7 +1876,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "data",
         [_Location_column]: 42,
-        [_Location_line]: 407,
+        [_Location_line]: 405,
         [_Location_file]: null
       });
     },
@@ -1889,7 +1889,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C220 || CT.C220,
         [_Location_name]: null,
         [_Location_column]: 28,
-        [_Location_line]: 406,
+        [_Location_line]: 404,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -1899,7 +1899,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 21,
-        [_Location_line]: 406,
+        [_Location_line]: 404,
         [_Location_file]: null
       });
     },
@@ -1912,7 +1912,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C223 || CT.C223,
         [_Location_name]: null,
         [_Location_column]: 26,
-        [_Location_line]: 405,
+        [_Location_line]: 403,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -1922,7 +1922,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "height",
         [_Location_column]: 19,
-        [_Location_line]: 403,
+        [_Location_line]: 401,
         [_Location_file]: null
       });
     },
@@ -1932,7 +1932,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "width",
         [_Location_column]: 19,
-        [_Location_line]: 404,
+        [_Location_line]: 402,
         [_Location_file]: null
       });
     },
@@ -1942,7 +1942,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 19,
-        [_Location_line]: 405,
+        [_Location_line]: 403,
         [_Location_file]: null
       });
     },
@@ -1952,7 +1952,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "decoration",
         [_Location_column]: 19,
-        [_Location_line]: 410,
+        [_Location_line]: 408,
         [_Location_file]: null
       });
     },
@@ -1965,7 +1965,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C226 || CT.C226,
         [_Location_name]: null,
         [_Location_column]: 24,
-        [_Location_line]: 402,
+        [_Location_line]: 400,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -1975,7 +1975,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "padding",
         [_Location_column]: 17,
-        [_Location_line]: 400,
+        [_Location_line]: 398,
         [_Location_file]: null
       });
     },
@@ -1985,7 +1985,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "child",
         [_Location_column]: 17,
-        [_Location_line]: 402,
+        [_Location_line]: 400,
         [_Location_file]: null
       });
     },
@@ -1998,7 +1998,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C232 || CT.C232,
         [_Location_name]: null,
         [_Location_column]: 15,
-        [_Location_line]: 399,
+        [_Location_line]: 397,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2006,75 +2006,75 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
       return C237 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "mainAxisAlignment",
-        [_Location_column]: 13,
-        [_Location_line]: 343,
-        [_Location_file]: null
-      });
-    },
-    get C238() {
-      return C238 = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "children",
-        [_Location_column]: 13,
-        [_Location_line]: 344,
+        [_Location_name]: "data",
+        [_Location_column]: 28,
+        [_Location_line]: 428,
         [_Location_file]: null
       });
     },
     get C236() {
-      return C236 = dart.constList([C237 || CT.C237, C238 || CT.C238], widget_inspector._Location);
+      return C236 = dart.constList([C237 || CT.C237], widget_inspector._Location);
     },
     get C235() {
       return C235 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: C236 || CT.C236,
         [_Location_name]: null,
-        [_Location_column]: 11,
-        [_Location_line]: 342,
+        [_Location_column]: 28,
+        [_Location_line]: 422,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
-      });
-    },
-    get C241() {
-      return C241 = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "children",
-        [_Location_column]: 19,
-        [_Location_line]: 433,
-        [_Location_file]: null
       });
     },
     get C240() {
-      return C240 = dart.constList([C241 || CT.C241], widget_inspector._Location);
+      return C240 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 21,
+        [_Location_line]: 422,
+        [_Location_file]: null
+      });
     },
     get C239() {
-      return C239 = dart.const({
+      return C239 = dart.constList([C240 || CT.C240], widget_inspector._Location);
+    },
+    get C238() {
+      return C238 = dart.const({
         __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C240 || CT.C240,
+        [_Location_parameterLocations]: C239 || CT.C239,
         [_Location_name]: null,
-        [_Location_column]: 17,
-        [_Location_line]: 432,
+        [_Location_column]: 26,
+        [_Location_line]: 421,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
-    get C242() {
-      return C242 = dart.const({
+    get C243() {
+      return C243 = dart.const({
         __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C117 || CT.C117,
-        [_Location_name]: null,
-        [_Location_column]: 17,
-        [_Location_line]: 435,
-        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 19,
+        [_Location_line]: 419,
+        [_Location_file]: null
+      });
+    },
+    get C244() {
+      return C244 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 19,
+        [_Location_line]: 420,
+        [_Location_file]: null
       });
     },
     get C245() {
       return C245 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "future",
-        [_Location_column]: 9,
-        [_Location_line]: 429,
+        [_Location_name]: "child",
+        [_Location_column]: 19,
+        [_Location_line]: 421,
         [_Location_file]: null
       });
     },
@@ -2082,22 +2082,22 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
       return C246 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "builder",
-        [_Location_column]: 9,
-        [_Location_line]: 430,
+        [_Location_name]: "decoration",
+        [_Location_column]: 19,
+        [_Location_line]: 431,
         [_Location_file]: null
       });
     },
-    get C244() {
-      return C244 = dart.constList([C245 || CT.C245, C246 || CT.C246], widget_inspector._Location);
+    get C242() {
+      return C242 = dart.constList([C243 || CT.C243, C244 || CT.C244, C245 || CT.C245, C246 || CT.C246], widget_inspector._Location);
     },
-    get C243() {
-      return C243 = dart.const({
+    get C241() {
+      return C241 = dart.const({
         __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C244 || CT.C244,
+        [_Location_parameterLocations]: C242 || CT.C242,
         [_Location_name]: null,
-        [_Location_column]: 18,
-        [_Location_line]: 428,
+        [_Location_column]: 24,
+        [_Location_line]: 418,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2105,32 +2105,32 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
       return C249 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "children",
-        [_Location_column]: 19,
-        [_Location_line]: 445,
+        [_Location_name]: "padding",
+        [_Location_column]: 17,
+        [_Location_line]: 416,
+        [_Location_file]: null
+      });
+    },
+    get C250() {
+      return C250 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 418,
         [_Location_file]: null
       });
     },
     get C248() {
-      return C248 = dart.constList([C249 || CT.C249], widget_inspector._Location);
+      return C248 = dart.constList([C249 || CT.C249, C250 || CT.C250], widget_inspector._Location);
     },
     get C247() {
       return C247 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: C248 || CT.C248,
         [_Location_name]: null,
-        [_Location_column]: 17,
-        [_Location_line]: 444,
-        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
-      });
-    },
-    get C250() {
-      return C250 = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C117 || CT.C117,
-        [_Location_name]: null,
-        [_Location_column]: 17,
-        [_Location_line]: 447,
+        [_Location_column]: 15,
+        [_Location_line]: 415,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2138,9 +2138,9 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
       return C253 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "future",
-        [_Location_column]: 9,
-        [_Location_line]: 441,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 13,
+        [_Location_line]: 341,
         [_Location_file]: null
       });
     },
@@ -2148,9 +2148,9 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
       return C254 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "builder",
-        [_Location_column]: 9,
-        [_Location_line]: 442,
+        [_Location_name]: "children",
+        [_Location_column]: 13,
+        [_Location_line]: 342,
         [_Location_file]: null
       });
     },
@@ -2162,8 +2162,8 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: C252 || CT.C252,
         [_Location_name]: null,
-        [_Location_column]: 18,
-        [_Location_line]: 440,
+        [_Location_column]: 11,
+        [_Location_line]: 340,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2173,7 +2173,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "children",
         [_Location_column]: 19,
-        [_Location_line]: 457,
+        [_Location_line]: 454,
         [_Location_file]: null
       });
     },
@@ -2186,7 +2186,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C256 || CT.C256,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 456,
+        [_Location_line]: 453,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2196,7 +2196,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C117 || CT.C117,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 459,
+        [_Location_line]: 456,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2206,7 +2206,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "future",
         [_Location_column]: 9,
-        [_Location_line]: 453,
+        [_Location_line]: 450,
         [_Location_file]: null
       });
     },
@@ -2216,7 +2216,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "builder",
         [_Location_column]: 9,
-        [_Location_line]: 454,
+        [_Location_line]: 451,
         [_Location_file]: null
       });
     },
@@ -2229,7 +2229,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C260 || CT.C260,
         [_Location_name]: null,
         [_Location_column]: 18,
-        [_Location_line]: 452,
+        [_Location_line]: 449,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2239,7 +2239,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "children",
         [_Location_column]: 19,
-        [_Location_line]: 469,
+        [_Location_line]: 466,
         [_Location_file]: null
       });
     },
@@ -2252,7 +2252,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C264 || CT.C264,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 468,
+        [_Location_line]: 465,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2262,7 +2262,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C117 || CT.C117,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 471,
+        [_Location_line]: 468,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2272,7 +2272,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "future",
         [_Location_column]: 9,
-        [_Location_line]: 465,
+        [_Location_line]: 462,
         [_Location_file]: null
       });
     },
@@ -2282,7 +2282,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "builder",
         [_Location_column]: 9,
-        [_Location_line]: 466,
+        [_Location_line]: 463,
         [_Location_file]: null
       });
     },
@@ -2295,7 +2295,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C268 || CT.C268,
         [_Location_name]: null,
         [_Location_column]: 18,
-        [_Location_line]: 464,
+        [_Location_line]: 461,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2305,7 +2305,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "children",
         [_Location_column]: 19,
-        [_Location_line]: 481,
+        [_Location_line]: 478,
         [_Location_file]: null
       });
     },
@@ -2318,7 +2318,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C272 || CT.C272,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 480,
+        [_Location_line]: 477,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2328,7 +2328,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C117 || CT.C117,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 483,
+        [_Location_line]: 480,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2338,7 +2338,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "future",
         [_Location_column]: 9,
-        [_Location_line]: 477,
+        [_Location_line]: 474,
         [_Location_file]: null
       });
     },
@@ -2348,7 +2348,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "builder",
         [_Location_column]: 9,
-        [_Location_line]: 478,
+        [_Location_line]: 475,
         [_Location_file]: null
       });
     },
@@ -2361,7 +2361,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C276 || CT.C276,
         [_Location_name]: null,
         [_Location_column]: 18,
-        [_Location_line]: 476,
+        [_Location_line]: 473,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2371,7 +2371,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "children",
         [_Location_column]: 19,
-        [_Location_line]: 493,
+        [_Location_line]: 490,
         [_Location_file]: null
       });
     },
@@ -2384,7 +2384,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C280 || CT.C280,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 492,
+        [_Location_line]: 489,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2394,7 +2394,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C117 || CT.C117,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 495,
+        [_Location_line]: 492,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2404,7 +2404,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "future",
         [_Location_column]: 9,
-        [_Location_line]: 489,
+        [_Location_line]: 486,
         [_Location_file]: null
       });
     },
@@ -2414,7 +2414,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "builder",
         [_Location_column]: 9,
-        [_Location_line]: 490,
+        [_Location_line]: 487,
         [_Location_file]: null
       });
     },
@@ -2427,7 +2427,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C284 || CT.C284,
         [_Location_name]: null,
         [_Location_column]: 18,
-        [_Location_line]: 488,
+        [_Location_line]: 485,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2437,7 +2437,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "children",
         [_Location_column]: 19,
-        [_Location_line]: 505,
+        [_Location_line]: 502,
         [_Location_file]: null
       });
     },
@@ -2450,7 +2450,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C288 || CT.C288,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 504,
+        [_Location_line]: 501,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2460,7 +2460,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C117 || CT.C117,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 507,
+        [_Location_line]: 504,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2470,7 +2470,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "future",
         [_Location_column]: 9,
-        [_Location_line]: 501,
+        [_Location_line]: 498,
         [_Location_file]: null
       });
     },
@@ -2480,7 +2480,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "builder",
         [_Location_column]: 9,
-        [_Location_line]: 502,
+        [_Location_line]: 499,
         [_Location_file]: null
       });
     },
@@ -2493,7 +2493,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C292 || CT.C292,
         [_Location_name]: null,
         [_Location_column]: 18,
-        [_Location_line]: 500,
+        [_Location_line]: 497,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2503,7 +2503,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "children",
         [_Location_column]: 19,
-        [_Location_line]: 517,
+        [_Location_line]: 514,
         [_Location_file]: null
       });
     },
@@ -2516,7 +2516,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C296 || CT.C296,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 516,
+        [_Location_line]: 513,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2526,7 +2526,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C117 || CT.C117,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 519,
+        [_Location_line]: 516,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2536,7 +2536,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "future",
         [_Location_column]: 9,
-        [_Location_line]: 513,
+        [_Location_line]: 510,
         [_Location_file]: null
       });
     },
@@ -2546,7 +2546,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "builder",
         [_Location_column]: 9,
-        [_Location_line]: 514,
+        [_Location_line]: 511,
         [_Location_file]: null
       });
     },
@@ -2559,7 +2559,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C300 || CT.C300,
         [_Location_name]: null,
         [_Location_column]: 18,
-        [_Location_line]: 512,
+        [_Location_line]: 509,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2569,7 +2569,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "children",
         [_Location_column]: 19,
-        [_Location_line]: 529,
+        [_Location_line]: 526,
         [_Location_file]: null
       });
     },
@@ -2582,7 +2582,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C304 || CT.C304,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 528,
+        [_Location_line]: 525,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2592,7 +2592,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C117 || CT.C117,
         [_Location_name]: null,
         [_Location_column]: 17,
-        [_Location_line]: 531,
+        [_Location_line]: 528,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2602,7 +2602,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "future",
         [_Location_column]: 9,
-        [_Location_line]: 525,
+        [_Location_line]: 522,
         [_Location_file]: null
       });
     },
@@ -2612,7 +2612,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: null,
         [_Location_name]: "builder",
         [_Location_column]: 9,
-        [_Location_line]: 526,
+        [_Location_line]: 523,
         [_Location_file]: null
       });
     },
@@ -2625,7 +2625,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         [_Location_parameterLocations]: C308 || CT.C308,
         [_Location_name]: null,
         [_Location_column]: 18,
-        [_Location_line]: 524,
+        [_Location_line]: 521,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2633,32 +2633,32 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
       return C313 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "data",
-        [_Location_column]: 20,
-        [_Location_line]: 554,
-        [_Location_file]: null
-      });
-    },
-    get C314() {
-      return C314 = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "style",
-        [_Location_column]: 13,
-        [_Location_line]: 555,
+        [_Location_name]: "children",
+        [_Location_column]: 19,
+        [_Location_line]: 538,
         [_Location_file]: null
       });
     },
     get C312() {
-      return C312 = dart.constList([C313 || CT.C313, C314 || CT.C314], widget_inspector._Location);
+      return C312 = dart.constList([C313 || CT.C313], widget_inspector._Location);
     },
     get C311() {
       return C311 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: C312 || CT.C312,
         [_Location_name]: null,
-        [_Location_column]: 18,
-        [_Location_line]: 553,
+        [_Location_column]: 17,
+        [_Location_line]: 537,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
+      });
+    },
+    get C314() {
+      return C314 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C117 || CT.C117,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 540,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2666,9 +2666,9 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
       return C317 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "value",
-        [_Location_column]: 11,
-        [_Location_line]: 552,
+        [_Location_name]: "future",
+        [_Location_column]: 9,
+        [_Location_line]: 534,
         [_Location_file]: null
       });
     },
@@ -2676,9 +2676,9 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
       return C318 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "child",
-        [_Location_column]: 11,
-        [_Location_line]: 553,
+        [_Location_name]: "builder",
+        [_Location_column]: 9,
+        [_Location_line]: 535,
         [_Location_file]: null
       });
     },
@@ -2690,8 +2690,8 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: C316 || CT.C316,
         [_Location_name]: null,
-        [_Location_column]: 9,
-        [_Location_line]: 551,
+        [_Location_column]: 18,
+        [_Location_line]: 533,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2699,32 +2699,32 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
       return C321 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "idMateria",
-        [_Location_column]: 9,
-        [_Location_line]: 570,
-        [_Location_file]: null
-      });
-    },
-    get C322() {
-      return C322 = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "idEstudiante",
-        [_Location_column]: 9,
-        [_Location_line]: 571,
+        [_Location_name]: "children",
+        [_Location_column]: 19,
+        [_Location_line]: 550,
         [_Location_file]: null
       });
     },
     get C320() {
-      return C320 = dart.constList([C321 || CT.C321, C322 || CT.C322], widget_inspector._Location);
+      return C320 = dart.constList([C321 || CT.C321], widget_inspector._Location);
     },
     get C319() {
       return C319 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: C320 || CT.C320,
         [_Location_name]: null,
-        [_Location_column]: 14,
-        [_Location_line]: 569,
+        [_Location_column]: 17,
+        [_Location_line]: 549,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
+      });
+    },
+    get C322() {
+      return C322 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C117 || CT.C117,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 552,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     },
@@ -2732,22 +2732,154 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
       return C325 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "idEstudiante",
+        [_Location_name]: "future",
         [_Location_column]: 9,
-        [_Location_line]: 581,
+        [_Location_line]: 546,
+        [_Location_file]: null
+      });
+    },
+    get C326() {
+      return C326 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "builder",
+        [_Location_column]: 9,
+        [_Location_line]: 547,
         [_Location_file]: null
       });
     },
     get C324() {
-      return C324 = dart.constList([C325 || CT.C325], widget_inspector._Location);
+      return C324 = dart.constList([C325 || CT.C325, C326 || CT.C326], widget_inspector._Location);
     },
     get C323() {
       return C323 = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: C324 || CT.C324,
         [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 545,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
+      });
+    },
+    get C329() {
+      return C329 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 20,
+        [_Location_line]: 575,
+        [_Location_file]: null
+      });
+    },
+    get C330() {
+      return C330 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 13,
+        [_Location_line]: 576,
+        [_Location_file]: null
+      });
+    },
+    get C328() {
+      return C328 = dart.constList([C329 || CT.C329, C330 || CT.C330], widget_inspector._Location);
+    },
+    get C327() {
+      return C327 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C328 || CT.C328,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 574,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
+      });
+    },
+    get C333() {
+      return C333 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "value",
+        [_Location_column]: 11,
+        [_Location_line]: 573,
+        [_Location_file]: null
+      });
+    },
+    get C334() {
+      return C334 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 574,
+        [_Location_file]: null
+      });
+    },
+    get C332() {
+      return C332 = dart.constList([C333 || CT.C333, C334 || CT.C334], widget_inspector._Location);
+    },
+    get C331() {
+      return C331 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C332 || CT.C332,
+        [_Location_name]: null,
+        [_Location_column]: 9,
+        [_Location_line]: 572,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
+      });
+    },
+    get C337() {
+      return C337 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "idMateria",
+        [_Location_column]: 9,
+        [_Location_line]: 592,
+        [_Location_file]: null
+      });
+    },
+    get C338() {
+      return C338 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "idEstudiante",
+        [_Location_column]: 9,
+        [_Location_line]: 593,
+        [_Location_file]: null
+      });
+    },
+    get C336() {
+      return C336 = dart.constList([C337 || CT.C337, C338 || CT.C338], widget_inspector._Location);
+    },
+    get C335() {
+      return C335 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C336 || CT.C336,
+        [_Location_name]: null,
         [_Location_column]: 14,
-        [_Location_line]: 580,
+        [_Location_line]: 591,
+        [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
+      });
+    },
+    get C341() {
+      return C341 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "idEstudiante",
+        [_Location_column]: 9,
+        [_Location_line]: 604,
+        [_Location_file]: null
+      });
+    },
+    get C340() {
+      return C340 = dart.constList([C341 || CT.C341], widget_inspector._Location);
+    },
+    get C339() {
+      return C339 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C340 || CT.C340,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 603,
         [_Location_file]: "org-dartlang-app:///packages/siinader_pixies/pages/notas_page.dart"
       });
     }
@@ -3101,21 +3233,21 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
   let C232;
   let C231;
   let C237;
-  let C238;
   let C236;
   let C235;
-  let C241;
   let C240;
   let C239;
-  let C242;
+  let C238;
+  let C243;
+  let C244;
   let C245;
   let C246;
-  let C244;
-  let C243;
+  let C242;
+  let C241;
   let C249;
+  let C250;
   let C248;
   let C247;
-  let C250;
   let C253;
   let C254;
   let C252;
@@ -3177,20 +3309,36 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
   let C308;
   let C307;
   let C313;
-  let C314;
   let C312;
   let C311;
+  let C314;
   let C317;
   let C318;
   let C316;
   let C315;
   let C321;
-  let C322;
   let C320;
   let C319;
+  let C322;
   let C325;
+  let C326;
   let C324;
   let C323;
+  let C329;
+  let C330;
+  let C328;
+  let C327;
+  let C333;
+  let C334;
+  let C332;
+  let C331;
+  let C337;
+  let C338;
+  let C336;
+  let C335;
+  let C341;
+  let C340;
+  let C339;
   notas_page.getNotas = function getNotas(semestre, id) {
     return async.async(ListOfWidget(), function* getNotas() {
       let url = "http://localhost:3000/api/estudiantes/" + dart.notNull(id) + "/materias";
@@ -3204,7 +3352,7 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         core.print(e);
       }
       let list = JSArrayOfWidget().of([]);
-      data[$forEach](dart.fn(materia => core.identical(semestre, dart.dsend(materia, '_get', ["semestre_cursada"])) ? list[$add](new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: JSArrayOfWidget().of([new basic.Padding.new({padding: C168 || CT.C168, child: new container.Container.new({height: 40.0, width: 400.0, child: new basic.Center.new({child: new text.Text.new(core.String._check(dart.dsend(materia, '_get', ["nombre"])), {$creationLocationd_0dea112b090073317d4: C169 || CT.C169}), $creationLocationd_0dea112b090073317d4: C172 || CT.C172}), decoration: new box_decoration.BoxDecoration.new({shape: box_border.BoxShape.rectangle, borderRadius: new border_radius.BorderRadius.circular(2.0), color: colors.Colors.blue}), $creationLocationd_0dea112b090073317d4: C175 || CT.C175}), $creationLocationd_0dea112b090073317d4: C181 || CT.C181}), new basic.Padding.new({padding: C185 || CT.C185, child: new container.Container.new({height: 40.0, width: 200.0, child: new basic.Center.new({child: new text.Text.new(dart.toString(dart.dsend(materia, '_get', ["nota1er"])), {$creationLocationd_0dea112b090073317d4: C186 || CT.C186}), $creationLocationd_0dea112b090073317d4: C189 || CT.C189}), decoration: new box_decoration.BoxDecoration.new({shape: box_border.BoxShape.rectangle, borderRadius: new border_radius.BorderRadius.circular(2.0), color: colors.Colors.blue}), $creationLocationd_0dea112b090073317d4: C192 || CT.C192}), $creationLocationd_0dea112b090073317d4: C198 || CT.C198}), new basic.Padding.new({padding: C185 || CT.C185, child: new container.Container.new({height: 40.0, width: 200.0, child: new basic.Center.new({child: new text.Text.new(dart.toString(dart.dsend(materia, '_get', ["nota2do"])), {$creationLocationd_0dea112b090073317d4: C202 || CT.C202}), $creationLocationd_0dea112b090073317d4: C205 || CT.C205}), decoration: new box_decoration.BoxDecoration.new({shape: box_border.BoxShape.rectangle, borderRadius: new border_radius.BorderRadius.circular(2.0), color: colors.Colors.blue}), $creationLocationd_0dea112b090073317d4: C208 || CT.C208}), $creationLocationd_0dea112b090073317d4: C214 || CT.C214}), new basic.Padding.new({padding: C218 || CT.C218, child: new container.Container.new({height: 40.0, width: 200.0, child: new basic.Center.new({child: new text.Text.new(dart.toString(dart.dsend(materia, '_get', ["nota3er"])), {$creationLocationd_0dea112b090073317d4: C219 || CT.C219}), $creationLocationd_0dea112b090073317d4: C222 || CT.C222}), decoration: new box_decoration.BoxDecoration.new({shape: box_border.BoxShape.rectangle, borderRadius: new border_radius.BorderRadius.circular(2.0), color: colors.Colors.blue}), $creationLocationd_0dea112b090073317d4: C225 || CT.C225}), $creationLocationd_0dea112b090073317d4: C231 || CT.C231})]), $creationLocationd_0dea112b090073317d4: C235 || CT.C235})) : core.print("No del semestre seleccionado"), dynamicTovoid()));
+      data[$forEach](dart.fn(materia => core.identical(semestre, dart.dsend(materia, '_get', ["semestre_cursada"])) ? list[$add](new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: JSArrayOfWidget().of([new basic.Padding.new({padding: C168 || CT.C168, child: new container.Container.new({height: 40.0, width: 400.0, child: new basic.Center.new({child: new text.Text.new(core.String._check(dart.dsend(materia, '_get', ["nombre"])), {$creationLocationd_0dea112b090073317d4: C169 || CT.C169}), $creationLocationd_0dea112b090073317d4: C172 || CT.C172}), decoration: new box_decoration.BoxDecoration.new({shape: box_border.BoxShape.rectangle, borderRadius: new border_radius.BorderRadius.circular(2.0), color: colors.Colors.blue}), $creationLocationd_0dea112b090073317d4: C175 || CT.C175}), $creationLocationd_0dea112b090073317d4: C181 || CT.C181}), new basic.Padding.new({padding: C185 || CT.C185, child: new container.Container.new({height: 40.0, width: 100.0, child: new basic.Center.new({child: new text.Text.new(dart.toString(dart.dsend(materia, '_get', ["nota1er"])), {$creationLocationd_0dea112b090073317d4: C186 || CT.C186}), $creationLocationd_0dea112b090073317d4: C189 || CT.C189}), decoration: new box_decoration.BoxDecoration.new({shape: box_border.BoxShape.rectangle, borderRadius: new border_radius.BorderRadius.circular(2.0), color: colors.Colors.blue}), $creationLocationd_0dea112b090073317d4: C192 || CT.C192}), $creationLocationd_0dea112b090073317d4: C198 || CT.C198}), new basic.Padding.new({padding: C185 || CT.C185, child: new container.Container.new({height: 40.0, width: 100.0, child: new basic.Center.new({child: new text.Text.new(dart.toString(dart.dsend(materia, '_get', ["nota2do"])), {$creationLocationd_0dea112b090073317d4: C202 || CT.C202}), $creationLocationd_0dea112b090073317d4: C205 || CT.C205}), decoration: new box_decoration.BoxDecoration.new({shape: box_border.BoxShape.rectangle, borderRadius: new border_radius.BorderRadius.circular(2.0), color: colors.Colors.blue}), $creationLocationd_0dea112b090073317d4: C208 || CT.C208}), $creationLocationd_0dea112b090073317d4: C214 || CT.C214}), new basic.Padding.new({padding: C218 || CT.C218, child: new container.Container.new({height: 40.0, width: 100.0, child: new basic.Center.new({child: new text.Text.new(dart.toString(dart.dsend(materia, '_get', ["nota3er"])), {$creationLocationd_0dea112b090073317d4: C219 || CT.C219}), $creationLocationd_0dea112b090073317d4: C222 || CT.C222}), decoration: new box_decoration.BoxDecoration.new({shape: box_border.BoxShape.rectangle, borderRadius: new border_radius.BorderRadius.circular(2.0), color: colors.Colors.blue}), $creationLocationd_0dea112b090073317d4: C225 || CT.C225}), $creationLocationd_0dea112b090073317d4: C231 || CT.C231}), new basic.Padding.new({padding: C218 || CT.C218, child: new container.Container.new({height: 40.0, width: 100.0, child: new basic.Center.new({child: new text.Text.new(dart.toString(dart.dsend(dart.dsend(dart.dsend(dart.dsend(dart.dsend(materia, '_get', ["nota1er"]), '+', [dart.dsend(materia, '_get', ["nota2do"])]), '+', [dart.dsend(materia, '_get', ["nota3er"])]), '/', [3]), 'round', [])), {$creationLocationd_0dea112b090073317d4: C235 || CT.C235}), $creationLocationd_0dea112b090073317d4: C238 || CT.C238}), decoration: new box_decoration.BoxDecoration.new({shape: box_border.BoxShape.rectangle, borderRadius: new border_radius.BorderRadius.circular(2.0), color: colors.Colors.blue}), $creationLocationd_0dea112b090073317d4: C241 || CT.C241}), $creationLocationd_0dea112b090073317d4: C247 || CT.C247})]), $creationLocationd_0dea112b090073317d4: C251 || CT.C251})) : core.print("No del semestre seleccionado"), dynamicTovoid()));
       return list;
     });
   };
@@ -3213,47 +3361,47 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
     switch (semestreValue) {
       case 1:
       {
-        semestre = new (FutureBuilderOfListOfWidget()).new({future: notas_page.getNotas(1, id), builder: dart.fn((context, snapshot) => dart.test(snapshot.hasData) ? new basic.Column.new({children: ListOfWidget()._check(snapshot.data), $creationLocationd_0dea112b090073317d4: C239 || CT.C239}) : new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C242 || CT.C242}), BuildContextAndAsyncSnapshotToWidget()), $creationLocationd_0dea112b090073317d4: C243 || CT.C243});
+        semestre = new (FutureBuilderOfListOfWidget()).new({future: notas_page.getNotas(1, id), builder: dart.fn((context, snapshot) => dart.test(snapshot.hasData) ? new basic.Column.new({children: ListOfWidget()._check(snapshot.data), $creationLocationd_0dea112b090073317d4: C255 || CT.C255}) : new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C258 || CT.C258}), BuildContextAndAsyncSnapshotToWidget()), $creationLocationd_0dea112b090073317d4: C259 || CT.C259});
         break;
       }
       case 2:
       {
-        semestre = new (FutureBuilderOfListOfWidget()).new({future: notas_page.getNotas(2, id), builder: dart.fn((context, snapshot) => dart.test(snapshot.hasData) ? new basic.Column.new({children: ListOfWidget()._check(snapshot.data), $creationLocationd_0dea112b090073317d4: C247 || CT.C247}) : new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C250 || CT.C250}), BuildContextAndAsyncSnapshotToWidget()), $creationLocationd_0dea112b090073317d4: C251 || CT.C251});
+        semestre = new (FutureBuilderOfListOfWidget()).new({future: notas_page.getNotas(2, id), builder: dart.fn((context, snapshot) => dart.test(snapshot.hasData) ? new basic.Column.new({children: ListOfWidget()._check(snapshot.data), $creationLocationd_0dea112b090073317d4: C263 || CT.C263}) : new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C266 || CT.C266}), BuildContextAndAsyncSnapshotToWidget()), $creationLocationd_0dea112b090073317d4: C267 || CT.C267});
         break;
       }
       case 3:
       {
-        semestre = new (FutureBuilderOfListOfWidget()).new({future: notas_page.getNotas(3, id), builder: dart.fn((context, snapshot) => dart.test(snapshot.hasData) ? new basic.Column.new({children: ListOfWidget()._check(snapshot.data), $creationLocationd_0dea112b090073317d4: C255 || CT.C255}) : new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C258 || CT.C258}), BuildContextAndAsyncSnapshotToWidget()), $creationLocationd_0dea112b090073317d4: C259 || CT.C259});
+        semestre = new (FutureBuilderOfListOfWidget()).new({future: notas_page.getNotas(3, id), builder: dart.fn((context, snapshot) => dart.test(snapshot.hasData) ? new basic.Column.new({children: ListOfWidget()._check(snapshot.data), $creationLocationd_0dea112b090073317d4: C271 || CT.C271}) : new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C274 || CT.C274}), BuildContextAndAsyncSnapshotToWidget()), $creationLocationd_0dea112b090073317d4: C275 || CT.C275});
         break;
       }
       case 4:
       {
-        semestre = new (FutureBuilderOfListOfWidget()).new({future: notas_page.getNotas(4, id), builder: dart.fn((context, snapshot) => dart.test(snapshot.hasData) ? new basic.Column.new({children: ListOfWidget()._check(snapshot.data), $creationLocationd_0dea112b090073317d4: C263 || CT.C263}) : new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C266 || CT.C266}), BuildContextAndAsyncSnapshotToWidget()), $creationLocationd_0dea112b090073317d4: C267 || CT.C267});
+        semestre = new (FutureBuilderOfListOfWidget()).new({future: notas_page.getNotas(4, id), builder: dart.fn((context, snapshot) => dart.test(snapshot.hasData) ? new basic.Column.new({children: ListOfWidget()._check(snapshot.data), $creationLocationd_0dea112b090073317d4: C279 || CT.C279}) : new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C282 || CT.C282}), BuildContextAndAsyncSnapshotToWidget()), $creationLocationd_0dea112b090073317d4: C283 || CT.C283});
         break;
       }
       case 5:
       {
-        semestre = new (FutureBuilderOfListOfWidget()).new({future: notas_page.getNotas(5, id), builder: dart.fn((context, snapshot) => dart.test(snapshot.hasData) ? new basic.Column.new({children: ListOfWidget()._check(snapshot.data), $creationLocationd_0dea112b090073317d4: C271 || CT.C271}) : new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C274 || CT.C274}), BuildContextAndAsyncSnapshotToWidget()), $creationLocationd_0dea112b090073317d4: C275 || CT.C275});
+        semestre = new (FutureBuilderOfListOfWidget()).new({future: notas_page.getNotas(5, id), builder: dart.fn((context, snapshot) => dart.test(snapshot.hasData) ? new basic.Column.new({children: ListOfWidget()._check(snapshot.data), $creationLocationd_0dea112b090073317d4: C287 || CT.C287}) : new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C290 || CT.C290}), BuildContextAndAsyncSnapshotToWidget()), $creationLocationd_0dea112b090073317d4: C291 || CT.C291});
         break;
       }
       case 6:
       {
-        semestre = new (FutureBuilderOfListOfWidget()).new({future: notas_page.getNotas(6, id), builder: dart.fn((context, snapshot) => dart.test(snapshot.hasData) ? new basic.Column.new({children: ListOfWidget()._check(snapshot.data), $creationLocationd_0dea112b090073317d4: C279 || CT.C279}) : new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C282 || CT.C282}), BuildContextAndAsyncSnapshotToWidget()), $creationLocationd_0dea112b090073317d4: C283 || CT.C283});
+        semestre = new (FutureBuilderOfListOfWidget()).new({future: notas_page.getNotas(6, id), builder: dart.fn((context, snapshot) => dart.test(snapshot.hasData) ? new basic.Column.new({children: ListOfWidget()._check(snapshot.data), $creationLocationd_0dea112b090073317d4: C295 || CT.C295}) : new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C298 || CT.C298}), BuildContextAndAsyncSnapshotToWidget()), $creationLocationd_0dea112b090073317d4: C299 || CT.C299});
         break;
       }
       case 7:
       {
-        semestre = new (FutureBuilderOfListOfWidget()).new({future: notas_page.getNotas(7, id), builder: dart.fn((context, snapshot) => dart.test(snapshot.hasData) ? new basic.Column.new({children: ListOfWidget()._check(snapshot.data), $creationLocationd_0dea112b090073317d4: C287 || CT.C287}) : new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C290 || CT.C290}), BuildContextAndAsyncSnapshotToWidget()), $creationLocationd_0dea112b090073317d4: C291 || CT.C291});
+        semestre = new (FutureBuilderOfListOfWidget()).new({future: notas_page.getNotas(7, id), builder: dart.fn((context, snapshot) => dart.test(snapshot.hasData) ? new basic.Column.new({children: ListOfWidget()._check(snapshot.data), $creationLocationd_0dea112b090073317d4: C303 || CT.C303}) : new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C306 || CT.C306}), BuildContextAndAsyncSnapshotToWidget()), $creationLocationd_0dea112b090073317d4: C307 || CT.C307});
         break;
       }
       case 8:
       {
-        semestre = new (FutureBuilderOfListOfWidget()).new({future: notas_page.getNotas(8, id), builder: dart.fn((context, snapshot) => dart.test(snapshot.hasData) ? new basic.Column.new({children: ListOfWidget()._check(snapshot.data), $creationLocationd_0dea112b090073317d4: C295 || CT.C295}) : new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C298 || CT.C298}), BuildContextAndAsyncSnapshotToWidget()), $creationLocationd_0dea112b090073317d4: C299 || CT.C299});
+        semestre = new (FutureBuilderOfListOfWidget()).new({future: notas_page.getNotas(8, id), builder: dart.fn((context, snapshot) => dart.test(snapshot.hasData) ? new basic.Column.new({children: ListOfWidget()._check(snapshot.data), $creationLocationd_0dea112b090073317d4: C311 || CT.C311}) : new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C314 || CT.C314}), BuildContextAndAsyncSnapshotToWidget()), $creationLocationd_0dea112b090073317d4: C315 || CT.C315});
         break;
       }
       default:
       {
-        semestre = new (FutureBuilderOfListOfWidget()).new({future: notas_page.getNotas(1, id), builder: dart.fn((context, snapshot) => dart.test(snapshot.hasData) ? new basic.Column.new({children: ListOfWidget()._check(snapshot.data), $creationLocationd_0dea112b090073317d4: C303 || CT.C303}) : new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C306 || CT.C306}), BuildContextAndAsyncSnapshotToWidget()), $creationLocationd_0dea112b090073317d4: C307 || CT.C307});
+        semestre = new (FutureBuilderOfListOfWidget()).new({future: notas_page.getNotas(1, id), builder: dart.fn((context, snapshot) => dart.test(snapshot.hasData) ? new basic.Column.new({children: ListOfWidget()._check(snapshot.data), $creationLocationd_0dea112b090073317d4: C319 || CT.C319}) : new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C322 || CT.C322}), BuildContextAndAsyncSnapshotToWidget()), $creationLocationd_0dea112b090073317d4: C323 || CT.C323});
         break;
       }
     }
@@ -3272,20 +3420,20 @@ define(['dart_sdk', 'packages/flutter/src/widgets/actions', 'packages/flutter/sr
         core.print(e);
       }
       let items = JSArrayOfDropdownMenuItemOfint().of([]);
-      data[$forEach](dart.fn(materia => items[$add](new (DropdownMenuItemOfint()).new({value: core.int._check(dart.dsend(materia, '_get', ["idMateria"])), child: new text.Text.new(core.String._check(dart.dsend(materia, '_get', ["nombre"])), {style: new text_style.TextStyle.new({color: colors.Colors.grey._get(900), fontSize: 13.0, fontWeight: ui.FontWeight.w200}), $creationLocationd_0dea112b090073317d4: C311 || CT.C311}), $creationLocationd_0dea112b090073317d4: C315 || CT.C315})), dynamicTovoid()));
+      data[$forEach](dart.fn(materia => items[$add](new (DropdownMenuItemOfint()).new({value: core.int._check(dart.dsend(materia, '_get', ["idMateria"])), child: new text.Text.new(core.String._check(dart.dsend(materia, '_get', ["nombre"])), {style: new text_style.TextStyle.new({color: colors.Colors.grey._get(900), fontSize: 13.0, fontWeight: ui.FontWeight.w200}), $creationLocationd_0dea112b090073317d4: C327 || CT.C327}), $creationLocationd_0dea112b090073317d4: C331 || CT.C331})), dynamicTovoid()));
       return items;
     });
   };
   notas_page.ingresar = function ingresar(context, idMateria, idEstudiante) {
-    return dialog.showDialog(dart.dynamic, {context: context, builder: dart.fn(context => new ingresar_notas.IngresarNotasPage.new({idMateria: idMateria, idEstudiante: idEstudiante, $creationLocationd_0dea112b090073317d4: C319 || CT.C319}), BuildContextToIngresarNotasPage())});
+    return dialog.showDialog(dart.dynamic, {context: context, builder: dart.fn(context => new ingresar_notas.IngresarNotasPage.new({idMateria: idMateria, idEstudiante: idEstudiante, $creationLocationd_0dea112b090073317d4: C335 || CT.C335}), BuildContextToIngresarNotasPage())});
   };
   notas_page.ver = function ver(context, idEstudiante) {
-    return dialog.showDialog(dart.dynamic, {context: context, builder: dart.fn(context => new ver_notas_page.VerNotasPage.new({idEstudiante: idEstudiante, $creationLocationd_0dea112b090073317d4: C323 || CT.C323}), BuildContextToVerNotasPage())});
+    return dialog.showDialog(dart.dynamic, {context: context, builder: dart.fn(context => new ver_notas_page.VerNotasPage.new({idEstudiante: idEstudiante, $creationLocationd_0dea112b090073317d4: C339 || CT.C339}), BuildContextToVerNotasPage())});
   };
   dart.trackLibraries("packages/siinader_pixies/pages/notas_page", {
     "package:siinader_pixies/pages/notas_page.dart": notas_page
   }, {
-  }, '{"version":3,"sourceRoot":"","sources":["notas_page.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;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","file":"notas_page.ddc.js"}');
+  }, '{"version":3,"sourceRoot":"","sources":["notas_page.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;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","file":"notas_page.ddc.js"}');
   // Exports:
   return {
     pages__notas_page: notas_page

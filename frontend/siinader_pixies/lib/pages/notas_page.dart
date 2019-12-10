@@ -310,9 +310,7 @@ class _NotasPageState extends State<NotasPage> {
                                   onPressed: () {
                                     if (_formKey.currentState.validate()) {
                                       print(_codigoEstudianteValue);
-                                      ver(
-                                          context,
-                                          _codigoEstudianteValue.text);
+                                      ver(context, _codigoEstudianteValue.text);
                                     }
                                   },
                                 )
@@ -365,7 +363,7 @@ Future<List<Widget>> getNotas(int semestre, String id) async {
                     const EdgeInsets.only(bottom: 2.0, left: 4.0, right: 4.0),
                 child: Container(
                   height: 40.0,
-                  width: 200.0,
+                  width: 100.0,
                   child: Center(
                     child: Text(
                       materia['nota1er'].toString(),
@@ -383,7 +381,7 @@ Future<List<Widget>> getNotas(int semestre, String id) async {
                     const EdgeInsets.only(bottom: 2.0, left: 4.0, right: 4.0),
                 child: Container(
                   height: 40.0,
-                  width: 200.0,
+                  width: 100.0,
                   child: Center(
                     child: Text(
                       materia['nota2do'].toString(),
@@ -401,10 +399,33 @@ Future<List<Widget>> getNotas(int semestre, String id) async {
                     const EdgeInsets.only(bottom: 2.0, left: 4.0, right: 100.0),
                 child: Container(
                   height: 40.0,
-                  width: 200.0,
+                  width: 100.0,
                   child: Center(
                     child: Text(
                       materia['nota3er'].toString(),
+                    ),
+                  ),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(2.0),
+                    color: Colors.blue,
+                  ),
+                ),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.only(bottom: 2.0, left: 4.0, right: 100.0),
+                child: Container(
+                  height: 40.0,
+                  width: 100.0,
+                  child: Center(
+                    child: Text(
+                      ((materia['nota1er'] +
+                                  materia['nota2do'] +
+                                  materia['nota3er']) /
+                              3)
+                          .round()
+                          .toString(),
                     ),
                   ),
                   decoration: BoxDecoration(
@@ -562,6 +583,7 @@ Future<List<DropdownMenuItem<int>>> getMateriasDocente(String id) async {
       ));
   return items;
 }
+
 ingresar(BuildContext context, String idMateria, String idEstudiante) {
   return showDialog(
     context: context,
@@ -573,6 +595,7 @@ ingresar(BuildContext context, String idMateria, String idEstudiante) {
     },
   );
 }
+
 ver(BuildContext context, String idEstudiante) {
   return showDialog(
     context: context,
