@@ -2,6 +2,15 @@ const express = require('express');
 const mysql = require('mysql');
 const app = express();
 const cors = require('cors');
+const connection = mysql.createConnection({ host: 'localhost', user: 'root', password: '123456789', database: 'siinader' });
+connection.connect(err => {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log('Connected to the MySQL server');
+    }
+});
+
 const swaggerJsDoc = require('swagger-jsdoc')
 const swaggerUi = require('swagger-ui-express')
 const swaggerOptions = {
@@ -40,14 +49,6 @@ const swaggerOptions = {
 };
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
-const connection = mysql.createConnection({ host: 'localhost', user: 'root', password: '123456789', database: 'siinader' });
-connection.connect(err => {
-    if (err) {
-        console.log(err);
-    } else {
-        console.log('Connected to the MySQL server');
-    }
-});
 
 app.set('port', 3000);
 app.use(express.json());
@@ -62,6 +63,7 @@ app.use(cors({origin: true, credentials: true}));
  *          '200':
  *              description: A successful response
 */
+
 app.get('/api', (req, res) => res.send('SIINADER'));
 app.get('/api/estudiantes/:id?', (req, res) => {
     var id = req.params.id;
