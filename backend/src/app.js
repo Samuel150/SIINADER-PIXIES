@@ -115,7 +115,7 @@ app.put('/api/estudiantes/:id', (req, res) => {
 });
 app.delete('/api/estudiantes/:id', (req, res) => {
     var id = req.params.id;
-    connection.query('DELETE FROM estudiantes WHERE idEstudiante = ?' [id], (err, results) => {
+    connection.query('DELETE FROM estudiantes WHERE idEstudiante = ?', [id], (err, results) => {
         if (err) {
             return res.send(err);
         } else {
@@ -317,5 +317,57 @@ app.get('/api/jefeCarrera/:id?', (req, res) => {
                 return res.send(results);
             }
         });
+});
+app.post('/api/jefeCarrera', (req, res) => {
+    var nombre = req.body.nombre;
+    var apellido_1 = req.body.apellido_1;
+    var apellido_2 = req.body.apellido_2;
+    var ci = req.body.ci;
+    var fecha_nacimiento = req.body.fecha_nacimiento;
+    var username = req.body.username;
+    var password = req.body.password;
+    connection.query('INSERT INTO jefes_carrera (nombre,apellido_1,apellido_2,ci,fecha_nacimiento,username,password) VALUES (?,?,?,?,?,?,?)',[nombre,apellido_1,apellido_2,ci,fecha_nacimiento,username,password], (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
+});
+app.post('/api/kardex', (req, res) => {
+    var nombre = req.body.nombre;
+    var apellido_1 = req.body.apellido_1;
+    var apellido_2 = req.body.apellido_2;
+    var ci = req.body.ci;
+    var fecha_nacimiento = req.body.fecha_nacimiento;
+    var username = req.body.username;
+    var password = req.body.password;
+    connection.query('INSERT INTO kardex (nombre,apellido_1,apellido_2,ci,fecha_nacimiento,username,password) VALUES (?,?,?,?,?,?,?)',[nombre,apellido_1,apellido_2,ci,fecha_nacimiento,username,password], (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
+});
+app.delete('/api/kardex/:id', (req, res) => {
+    var id = req.params.id;
+    connection.query('DELETE FROM kardex WHERE idKardex = ?',[id], (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
+});
+app.delete('/api/jefeCarrera/:id', (req, res) => {
+    var id = req.params.id;
+    connection.query('DELETE FROM jefes_carrera WHERE idJefeCarrera = ?',[id], (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
 });
 app.listen(app.get('port'), () => console.log('Start server on port ' + app.get('port')));
