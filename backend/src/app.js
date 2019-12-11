@@ -280,4 +280,42 @@ app.get('/api/kardex/materias', (req, res) => {
         }
     });
 });
+app.get('/api/kardex/:id?', (req, res) => {
+    var id = req.params.id;
+    id ?
+        connection.query('SELECT * FROM kardex WHERE idKardex = ?' ,[id], (err, results) => {
+            if (err) {
+                return res.send(err);
+            } else {
+                return res.send(results);
+            }
+        })
+        :
+        connection.query('SELECT * FROM kardex', (err, results) => {
+            if (err) {
+                return res.send(err);
+            } else {
+                return res.send(results);
+            }
+        });
+});
+app.get('/api/jefeCarrera/:id?', (req, res) => {
+    var id = req.params.id;
+    id ?
+        connection.query('SELECT * FROM jefes_carrera WHERE idJefeCarrera = ?' ,[id], (err, results) => {
+            if (err) {
+                return res.send(err);
+            } else {
+                return res.send(results);
+            }
+        })
+        :
+        connection.query('SELECT * FROM jefeCarrera', (err, results) => {
+            if (err) {
+                return res.send(err);
+            } else {
+                return res.send(results);
+            }
+        });
+});
 app.listen(app.get('port'), () => console.log('Start server on port ' + app.get('port')));
