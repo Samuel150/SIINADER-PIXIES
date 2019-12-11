@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:siinader_pixies/pages/editar_perfil.dart';
 import 'package:siinader_pixies/pages/inicio_page.dart';
 import 'package:siinader_pixies/pages/login_page.dart';
 import 'package:siinader_pixies/pages/materias_page.dart';
@@ -20,7 +21,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    print(widget.rol);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -150,12 +150,7 @@ class _HomePageState extends State<HomePage> {
             ],
             onSelected: (value) {
               value == 1
-                  ? Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (BuildContext context) => PerfilPage(),
-                      ),
-                    )
+                  ? editarPerfil(context,widget.id,widget.rol)
                   : Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
@@ -170,7 +165,7 @@ class _HomePageState extends State<HomePage> {
         physics: NeverScrollableScrollPhysics(),
         controller: pageController,
         children: <Widget>[
-          InicioPage(rol: widget.rol),
+          InicioPage(rol: widget.rol,nombre: widget.name,),
           MateriasPage(rol: widget.rol, id: widget.id),
           PlanEstudios(),
           NotasPage(rol: widget.rol, id: widget.id),
@@ -179,4 +174,15 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+}
+editarPerfil(BuildContext context, String id,String rol) {
+  return showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return EditarPerfilPage(
+        id: id,
+        rol:rol,
+      );
+    },
+  );
 }

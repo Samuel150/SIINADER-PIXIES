@@ -3,9 +3,9 @@ import 'package:siinader_pixies/pages/anadir_usuario_page.dart';
 import 'package:siinader_pixies/pages/eliminar_usuario.dart';
 
 class InicioPage extends StatefulWidget {
-  InicioPage({Key key, this.rol, this.id}) : super(key: key);
+  InicioPage({Key key, this.rol,this.nombre}) : super(key: key);
   final String rol;
-  final String id;
+  final String nombre;
   @override
   _InicioPageState createState() => _InicioPageState();
 }
@@ -19,20 +19,21 @@ class _InicioPageState extends State<InicioPage> {
         rol = 'ESTUDIANTIL';
         break;
       case 'docentes':
-        rol = 'DE DOCENTES';
+        rol = 'DOCENTES';
         break;
       case 'kardex':
-        rol = 'DE KARDEX';
+        rol = 'KARDEX';
         break;
       case 'jefeCarrera':
-        rol = 'DE JEFE DE CARRERA';
+        rol = 'JEFE DE CARRERA';
         break;
     }
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text('BIENVENIDO A TU PLATAFORMA ' + rol),
+          Text('SIINADER - ' + rol),
+          Text('BIENVENIDO '+widget.nombre.toUpperCase()),
           widget.rol == 'kardex'
               ? Row(
                 mainAxisAlignment: MainAxisAlignment.center,
