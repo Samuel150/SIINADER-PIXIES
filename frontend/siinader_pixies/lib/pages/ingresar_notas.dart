@@ -227,30 +227,3 @@ class _IngresarNotasPageState extends State<IngresarNotasPage> {
     return [];
   }
 }
-
-Future<List<DropdownMenuItem<int>>> getMaterias() async {
-  String url = 'http://localhost:3000/api/materias';
-  List data;
-  http.Response response;
-  try {
-    response = await http.get(url);
-    data = jsonDecode(response.body);
-  } catch (e) {
-    print(e);
-  }
-  List<DropdownMenuItem<int>> items = [];
-  data.forEach((materia) => items.add(
-        DropdownMenuItem<int>(
-          value: materia['idMateria'],
-          child: Text(
-            materia['nombre'],
-            style: TextStyle(
-              color: Colors.grey[900],
-              fontSize: 13.0,
-              fontWeight: FontWeight.w200,
-            ),
-          ),
-        ),
-      ));
-  return items;
-}
