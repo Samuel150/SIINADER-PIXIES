@@ -20,8 +20,8 @@ class _PerfilPageState extends State<PerfilPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('MI PERFIL'),
               FutureBuilder(
                 future: getDatos(widget.id, widget.rol, widget.color),
                 builder: (BuildContext context, AsyncSnapshot snapshot) {
@@ -79,89 +79,122 @@ Future<List<Widget>> getDatos(String id, String rol, Color color) async {
           Padding(
             padding:
                 const EdgeInsets.only(bottom: 2.0, left: 100.0, right: 25.0),
-            child: Container(
-              width: 400.0,
-              height: 45.0,
-              child: Center(
-                child: Text(
-                  perfil['nombre']+' '+perfil['apellido_1']+' '+perfil['apellido_2'],
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16.0,
+            child: Column(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Container(
+                    child: Text(
+                      'MI PERFIL',
+                      style: TextStyle(fontSize: 20.0),
+                    ),
                   ),
                 ),
-              ),
-              decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(2.0),
-                color: color,
-              ),
+                Text('NOMBRE:'),
+                Container(
+                  width: 400.0,
+                  height: 45.0,
+                  child: Center(
+                    child: Text(
+                      perfil['nombre'] +
+                          ' ' +
+                          perfil['apellido_1'] +
+                          ' ' +
+                          perfil['apellido_2'],
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16.0,
+                      ),
+                    ),
+                  ),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(2.0),
+                    color: color,
+                  ),
+                ),
+              ],
             ),
           ),
           Padding(
             padding:
                 const EdgeInsets.only(bottom: 2.0, left: 100.0, right: 25.0),
-            child: Container(
-              width: 400.0,
-              height: 45.0,
-              child: Center(
-                child: Text(
-                  perfil['ci'].toString(),
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16.0,
+            child: Column(
+              children: <Widget>[
+                Text('CI:'),
+                Container(
+                  width: 400.0,
+                  height: 45.0,
+                  child: Center(
+                    child: Text(
+                      perfil['ci'].toString(),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16.0,
+                      ),
+                    ),
+                  ),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(2.0),
+                    color: color,
                   ),
                 ),
-              ),
-              decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(2.0),
-                color: color,
-              ),
+              ],
             ),
           ),
           Padding(
             padding:
                 const EdgeInsets.only(bottom: 2.0, left: 100.0, right: 25.0),
-            child: Container(
-              width: 400.0,
-              height: 45.0,
-              child: Center(
-                child: Text(
-                  perfil[idTabla].toString(),
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16.0,
+            child: Column(
+              children: <Widget>[
+                Text('CÓDIGO:'),
+                Container(
+                  width: 400.0,
+                  height: 45.0,
+                  child: Center(
+                    child: Text(
+                      perfil[idTabla].toString(),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16.0,
+                      ),
+                    ),
+                  ),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(2.0),
+                    color: color,
                   ),
                 ),
-              ),
-              decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(2.0),
-                color: color,
-              ),
+              ],
             ),
           ),
           Padding(
             padding:
                 const EdgeInsets.only(bottom: 2.0, left: 100.0, right: 25.0),
-            child: Container(
-              width: 400.0,
-              height: 45.0,
-              child: Center(
-                child: Text(
-                  perfil['fecha_nacimiento'].toString().substring(0, 10),
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16.0,
+            child: Column(
+              children: <Widget>[
+                Text('FECHA DE NACIMIENTO:'),
+                Container(
+                  width: 400.0,
+                  height: 45.0,
+                  child: Center(
+                    child: Text(
+                      perfil['fecha_nacimiento'].toString().substring(0, 10),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16.0,
+                      ),
+                    ),
+                  ),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(2.0),
+                    color: color,
                   ),
                 ),
-              ),
-              decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(2.0),
-                color: color,
-              ),
+              ],
             ),
           ),
         ],
