@@ -1,0 +1,138 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Siinader API",
+        "description": "Documentación de la API usada para el sistema Siinader",
+        "servers": ["http://localhost:3000"]
+    },
+    "definitions": {
+        "Estudiante": {
+            "properties": {
+                "idEstudiante": {
+                    "type": "int(11)"
+                },
+                "nombre": {
+                    "type": "varchar(45)"
+                },
+                "apellido_1": {
+                    "type": "varchar(45)"
+                },
+                "apellido_2": {
+                    "type": "varchar(45)"
+                },
+                "ci": {
+                    "type": "int(11)"
+                },
+                "fecha_nacimiento": {
+                    "type": "date"
+                },
+                "password": {
+                    "type": "varchar(45)"
+                }
+            }
+        },
+        "Estudiantes": {
+            "type": "object",
+            "properties": {
+                "Estudiantes": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "#/definitions/Estudiante"
+                    }
+                }
+            }
+        },
+        "Docente": {
+            "properties": {
+                "idDocente": {
+                    "type": "int(11)"
+                },
+                "nombre": {
+                    "type": "varchar(45)"
+                },
+                "apellido_1": {
+                    "type": "varchar(45)"
+                },
+                "apellido_2": {
+                    "type": "varchar(45)"
+                },
+                "ci": {
+                    "type": "int(11)"
+                },
+                "fecha_nacimiento": {
+                    "type": "date"
+                },
+                "password": {
+                    "type": "varchar(45)"
+                }
+            }
+        },
+        "Jefes de carrera": {
+            "properties": {
+                "idJefeCarrera": {
+                    "type": "int(11)"
+                },
+                "nombre": {
+                    "type": "varchar(45)"
+                },
+                "apellido_1": {
+                    "type": "varchar(45)"
+                },
+                "apellido_2": {
+                    "type": "varchar(45)"
+                },
+                "ci": {
+                    "type": "int(11)"
+                },
+                "fecha_nacimiento": {
+                    "type": "date"
+                },
+                "password": {
+                    "type": "varchar(45)"
+                }
+            }
+        },
+        "Kardex": {
+            "properties": {
+                "idKardex": {
+                    "type": "int(11)"
+                },
+                "nombre": {
+                    "type": "varchar(45)"
+                },
+                "apellido_1": {
+                    "type": "varchar(45)"
+                },
+                "apellido_2": {
+                    "type": "varchar(45)"
+                },
+                "ci": {
+                    "type": "int(11)"
+                },
+                "fecha_nacimiento": {
+                    "type": "date"
+                },
+                "password": {
+                    "type": "varchar(45)"
+                }
+            }
+        },
+        "Materia": {
+            "properties": {
+                "idMateria": {
+                    "type": "int(11)"
+                },
+                "nombre": {
+                    "type": "varchar(45)"
+                },
+                "creditos": {
+                    "type": "int(11)"
+                },
+                "semestre": {
+                    "type": "int(11)"
+                }
+            }
+        }
+    }
+}
