@@ -69,8 +69,7 @@ Future<Widget> getUsuarios(String rol, String id) async {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Padding(
-            padding:
-                const EdgeInsets.only(bottom: 2.0, left: 100.0, right: 25.0),
+            padding: const EdgeInsets.only(bottom: 2.0, right: 10.0),
             child: Container(
               height: 40.0,
               width: 400.0,
@@ -81,29 +80,33 @@ Future<Widget> getUsuarios(String rol, String id) async {
                       usuario['apellido_1'] +
                       ' ' +
                       usuario['apellido_2'],
+                  style: TextStyle(color: Colors.white),
                 ),
               ),
               decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
                 borderRadius: BorderRadius.circular(2.0),
-                color: Colors.blue,
+                color: Colors.green[400],
               ),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 2.0, left: 4.0, right: 4.0),
+            padding: const EdgeInsets.only(
+              bottom: 2.0,
+              left: 10.0,
+            ),
             child: Container(
               height: 40.0,
               width: 100.0,
               child: Center(
                 child: Text(
-                  usuario[id].toString(),
+                  usuario[id].toString(),style: TextStyle(color: Colors.white),
                 ),
               ),
               decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
                 borderRadius: BorderRadius.circular(2.0),
-                color: Colors.blue,
+                color: Colors.green[400],
               ),
             ),
           ),

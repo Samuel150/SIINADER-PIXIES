@@ -4,9 +4,10 @@ import 'package:siinader_pixies/pages/eliminar_usuario.dart';
 import 'package:siinader_pixies/pages/ver_usuarios.dart';
 
 class InicioPage extends StatefulWidget {
-  InicioPage({Key key, this.rol, this.nombre}) : super(key: key);
+  InicioPage({Key key, this.rol, this.nombre, this.color}) : super(key: key);
   final String rol;
   final String nombre;
+  final Color color;
   @override
   _InicioPageState createState() => _InicioPageState();
 }
@@ -35,49 +36,136 @@ class _InicioPageState extends State<InicioPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('SIINADER - ' + rol),
-            Text('BIENVENIDO ' + widget.nombre.toUpperCase()),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'SIINADER - ' + rol,
+                style: TextStyle(fontSize: 30.0),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 8.0, bottom: 30.0),
+              child: Text(
+                'BIENVENIDO ' + widget.nombre.toUpperCase(),
+                style: TextStyle(fontSize: 30.0),
+              ),
+            ),
             widget.rol == 'kardex'
                 ? Column(
                     children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          RaisedButton(
-                            child: Text('AÑADIR USUARIO'),
-                            onPressed: () => anadir(context),
-                          ),
-                          RaisedButton(
-                            child: Text('ELIMINAR USUARIO'),
-                            onPressed: () => eliminar(context),
-                          ),
-                        ],
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: RaisedButton(
+                                color: widget.color,
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 20.0),
+                                  child: Text(
+                                    'AÑADIR USUARIO',
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ),
+                                onPressed: () => anadir(context),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: RaisedButton(
+                                color: widget.color,
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 20.0),
+                                  child: Text(
+                                    'ELIMINAR USUARIO',
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ),
+                                onPressed: () => eliminar(context),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          RaisedButton(
-                            child: Text('VER ESTUDIANTES'),
-                            onPressed: () => ver(context, 'estudiantes'),
-                          ),
-                          RaisedButton(
-                            child: Text('VER DOCENTES'),
-                            onPressed: () => ver(context, 'docentes'),
-                          ),
-                        ],
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: RaisedButton(
+                                color: widget.color,
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 20.0),
+                                  child: Text(
+                                    'VER ESTUDIANTES',
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ),
+                                onPressed: () => ver(context, 'estudiantes'),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: RaisedButton(
+                                color: widget.color,
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 20.0),
+                                  child: Text(
+                                    'VER DOCENTES',
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ),
+                                onPressed: () => ver(context, 'docentes'),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          RaisedButton(
-                            child: Text('VER JEFES DE CARRERA'),
-                            onPressed: () => ver(context, 'jefeCarrera'),
-                          ),
-                          RaisedButton(
-                            child: Text('VER KARDEX'),
-                            onPressed: () => ver(context, 'kardex'),
-                          ),
-                        ],
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: RaisedButton(
+                                color: widget.color,
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 20.0),
+                                  child: Text(
+                                    'VER JEFES DE CARRERA',
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ),
+                                onPressed: () => ver(context, 'jefeCarrera'),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: RaisedButton(
+                                color: widget.color,
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 20.0),
+                                  child: Text(
+                                    'VER KARDEX',
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ),
+                                onPressed: () => ver(context, 'kardex'),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   )

@@ -181,7 +181,7 @@ class _HomePageState extends State<HomePage> {
             ],
             onSelected: (value) {
               value == 1
-                  ? editarPerfil(context, widget.id, widget.rol)
+                  ? editarPerfil(context, widget.id, widget.rol,color)
                   : Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
@@ -199,6 +199,7 @@ class _HomePageState extends State<HomePage> {
           InicioPage(
             rol: widget.rol,
             nombre: widget.name,
+            color: color,
           ),
           MateriasPage(rol: widget.rol, id: widget.id, color: color),
           PlanEstudios(color: color),
@@ -210,13 +211,14 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-editarPerfil(BuildContext context, String id, String rol) {
+editarPerfil(BuildContext context, String id, String rol,Color color) {
   return showDialog(
     context: context,
     builder: (BuildContext context) {
       return EditarPerfilPage(
         id: id,
         rol: rol,
+        color: color,
       );
     },
   );
