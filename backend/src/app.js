@@ -24,7 +24,7 @@ app.use(cors({ origin: true, credentials: true }));
 app.get('/api', (req, res) => res.send('SIINADER'));
 
 //obtener todos los estudiantes o uno solo
-app.get('/api/estudiantes/:id?', (req, res) => {
+app.get('/api/estudiantes', (req, res) => {
     var id = req.params.id;
     connection.query('SELECT * FROM estudiantes', (err, results) => {
         if (err) {
