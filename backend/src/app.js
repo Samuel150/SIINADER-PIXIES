@@ -2,63 +2,13 @@ const express = require('express');
 const mysql = require('mysql');
 const app = express();
 const cors = require('cors');
-const swaggerJsDoc = require('swagger-jsdoc')
 const swaggerUi = require('swagger-ui-express')
-const swaggerOptions = {
-    swaggerDefinition: {
-        info: {
-            version: "1.0.0",
-            title: 'Siinader API',
-            description: "Documentación de la API usada para el sistema Siinader",
-            servers: ["http://localhost:3000"]
-        },
-        definitions: {
-            Estudiante: {
-                properties: {
-                    idEstudiante: {
-                        type: "int(11)"
-                    },
-                    nombre: {
-                        type: "varchar(45)"
-                    },
-                    apellido_1: {
-                        type: "varchar(45)"
-                    },
-                    apellido_2: {
-                        type: "varchar(45)"
-                    },
-                    ci: {
-                        type: "int(11)"
-                    },
-                    fecha_nacimiento: {
-                        type: "date"
-                    },
-                    password: {
-                        type: "varchar(45)"
-                    }
-                }
-            },
-            Docente: {
-                properties: {
-                    nombre: {
-                        type: "String"
-                    }
-                }
-            },
-            Materia: {
-                properties: {
-                    nombre: {
-                        type: "String"
-                    }
-                }
-            },
-        }
-    },
-    apis: ["app.js"]
-};
-const swaggerDocs = swaggerJsDoc(swaggerOptions);
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+const swaggerDocument = require('./swagger.json')
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 const connection = mysql.createConnection({ host: 'localhost', user: 'root', password: '123456789', database: 'siinader' });
+
 connection.connect(err => {
     if (err) {
         console.log(err);
@@ -70,18 +20,12 @@ connection.connect(err => {
 app.set('port', 3000);
 app.use(express.json());
 app.use(cors({ origin: true, credentials: true }));
-/**
- * @swagger
- * /api:
- *  get:
- *      description: Imprime SIINADER
- *      responses:
- *          '200':
- *              description: A successful response
-*/
+
+//imprime siinader
 app.get('/api', (req, res) => res.send('SIINADER'));
-//obtener todos los estudiantes
-app.get('/api/estudiantes', (req, res) => {
+
+//obtener todos los estudiantes o uno solo
+app.get('/api/estudiantes/:id?', (req, res) => {
     var id = req.params.id;
     connection.query('SELECT * FROM estudiantes', (err, results) => {
         if (err) {
