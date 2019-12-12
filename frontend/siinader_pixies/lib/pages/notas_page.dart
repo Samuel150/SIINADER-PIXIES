@@ -6,9 +6,10 @@ import 'package:siinader_pixies/pages/ingresar_notas.dart';
 import 'package:siinader_pixies/pages/ver_notas_page.dart';
 
 class NotasPage extends StatefulWidget {
-  NotasPage({Key key, this.rol, this.id}) : super(key: key);
+  NotasPage({Key key, this.rol, this.id, this.color}) : super(key: key);
   final String rol;
   final String id;
+  final Color color;
   @override
   _NotasPageState createState() => _NotasPageState();
 }
@@ -26,305 +27,478 @@ class _NotasPageState extends State<NotasPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Image.asset(
-          'assets/images/notas.jpg',
-          height: 400,
-        ),
-        widget.rol == 'estudiantes'
-            ? Column(
-                children: <Widget>[
-                  Text(
-                    'MIS NOTAS',
-                    style: TextStyle(fontSize: 24.0),
-                  ),
-                  DropdownButton(
-                    items: [
-                      DropdownMenuItem<int>(
-                        value: 1,
-                        child: Text(
-                          'PRIMER SEMESTRE',
-                          style: TextStyle(
-                            color: Colors.grey[900],
-                            fontSize: 13.0,
-                            fontWeight: FontWeight.w200,
-                          ),
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              Image.asset(
+                'assets/images/notas.jpg',
+                height: 400,
+              ),
+              widget.rol == 'estudiantes'
+                  ? Column(
+                      children: <Widget>[
+                        Text(
+                          'MIS NOTAS',
+                          style: TextStyle(fontSize: 24.0),
                         ),
-                      ),
-                      DropdownMenuItem<int>(
-                        value: 2,
-                        child: Text(
-                          'SEGUNDO SEMESTRE',
-                          style: TextStyle(
-                            color: Colors.grey[900],
-                            fontSize: 13.0,
-                            fontWeight: FontWeight.w200,
-                          ),
-                        ),
-                      ),
-                      DropdownMenuItem<int>(
-                        value: 3,
-                        child: Text(
-                          'TERCER SEMESTRE',
-                          style: TextStyle(
-                            color: Colors.grey[900],
-                            fontSize: 13.0,
-                            fontWeight: FontWeight.w200,
-                          ),
-                        ),
-                      ),
-                      DropdownMenuItem<int>(
-                        value: 4,
-                        child: Text(
-                          'CUARTO SEMESTRE',
-                          style: TextStyle(
-                            color: Colors.grey[900],
-                            fontSize: 13.0,
-                            fontWeight: FontWeight.w200,
-                          ),
-                        ),
-                      ),
-                      DropdownMenuItem<int>(
-                        value: 5,
-                        child: Text(
-                          'QUINTO SEMESTRE',
-                          style: TextStyle(
-                            color: Colors.grey[900],
-                            fontSize: 13.0,
-                            fontWeight: FontWeight.w200,
-                          ),
-                        ),
-                      ),
-                      DropdownMenuItem<int>(
-                        value: 6,
-                        child: Text(
-                          'SEXTO SEMESTRE',
-                          style: TextStyle(
-                            color: Colors.grey[900],
-                            fontSize: 13.0,
-                            fontWeight: FontWeight.w200,
-                          ),
-                        ),
-                      ),
-                      DropdownMenuItem<int>(
-                        value: 7,
-                        child: Text(
-                          'SÉPTIMO SEMESTRE',
-                          style: TextStyle(
-                            color: Colors.grey[900],
-                            fontSize: 13.0,
-                            fontWeight: FontWeight.w200,
-                          ),
-                        ),
-                      ),
-                      DropdownMenuItem<int>(
-                        value: 8,
-                        child: Text(
-                          'OCTAVO SEMESTRE',
-                          style: TextStyle(
-                            color: Colors.grey[900],
-                            fontSize: 13.0,
-                            fontWeight: FontWeight.w200,
-                          ),
-                        ),
-                      ),
-                    ],
-                    onChanged: (int value) {
-                      setState(() {
-                        _semestreValue = value;
-                      });
-                    },
-                    hint: Text(
-                      'SEMESTRE',
-                    ),
-                    value: _semestreValue,
-                  ),
-                  semestre(_semestreValue, widget.id),
-                ],
-              )
-            : widget.rol == 'docentes' ||
-                    widget.rol == 'kardex' ||
-                    widget.rol == 'jefeCarrera'
-                ? Column(
-                    children: <Widget>[
-                      Text(
-                        'NOTAS',
-                        style: TextStyle(fontSize: 24.0),
-                      ),
-                      widget.rol == 'docentes'
-                          ? Column(
-                              children: <Widget>[
-                                Form(
-                                  key: _formKey,
-                                  child: Container(
-                                    width: 400.0,
-                                    child: TextFormField(
-                                      controller: _codigoEstudianteValue,
-                                      keyboardType: TextInputType.number,
-                                      validator: (value) {
-                                        if (value.isEmpty) {
-                                          return 'PORFAVOR INGRESA EL CÓDIGO DE ESTUDIANTE';
-                                        } else {
-                                          return null;
-                                        }
-                                      },
-                                      decoration: InputDecoration(
-                                        prefixIcon: Icon(
-                                          Icons.supervised_user_circle,
-                                          color: Colors.grey[900],
-                                        ),
-                                        errorStyle: TextStyle(
-                                          color: Colors.red[800],
-                                          fontWeight: FontWeight.w300,
-                                        ),
-                                        labelText: 'CÓDIGO DE ESTUDIANTE',
-                                        border: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                              color: Colors.grey[900]),
-                                        ),
-                                        enabledBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                              color: Colors.grey[900]),
-                                        ),
-                                        disabledBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                              color: Colors.grey[900]),
-                                        ),
-                                        focusedBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                              color: Colors.grey[900]),
-                                        ),
-                                        focusedErrorBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                              color: Colors.grey[900]),
-                                        ),
-                                        errorBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                              color: Colors.grey[900]),
-                                        ),
-                                      ),
-                                      style: TextStyle(
-                                        color: Colors.grey[900],
-                                        fontSize: 13.0,
-                                        fontWeight: FontWeight.w200,
-                                      ),
-                                    ),
-                                  ),
+                        DropdownButton(
+                          items: [
+                            DropdownMenuItem<int>(
+                              value: 1,
+                              child: Text(
+                                'PRIMER SEMESTRE',
+                                style: TextStyle(
+                                  color: Colors.grey[900],
+                                  fontSize: 13.0,
+                                  fontWeight: FontWeight.w200,
                                 ),
-                                FutureBuilder(
-                                  future: getMateriasDocente(widget.id),
-                                  builder: (BuildContext context,
-                                      AsyncSnapshot snapshot) {
-                                    return snapshot.hasData
-                                        ? DropdownButton<int>(
-                                            items: snapshot.data,
-                                            onChanged: (int value) {
-                                              setState(() {
-                                                _idMateriaValue = value;
-                                              });
-                                            },
-                                            hint: Text(
-                                              'MATERIA',
-                                            ),
-                                            value: _idMateriaValue,
-                                          )
-                                        : CircularProgressIndicator();
-                                  },
-                                ),
-                                RaisedButton(
-                                  child: Text('INGRESAR NOTAS'),
-                                  onPressed: () {
-                                    if (_formKey.currentState.validate()) {
-                                      print(_codigoEstudianteValue);
-                                      ingresar(
-                                          context,
-                                          _idMateriaValue.toString(),
-                                          _codigoEstudianteValue.text);
-                                    }
-                                  },
-                                )
-                              ],
-                            )
-                          : Column(
-                              children: <Widget>[
-                                Form(
-                                  key: _formKey,
-                                  child: Container(
-                                    width: 400.0,
-                                    child: TextFormField(
-                                      controller: _codigoEstudianteValue,
-                                      keyboardType: TextInputType.number,
-                                      validator: (value) {
-                                        if (value.isEmpty) {
-                                          return 'PORFAVOR INGRESA EL CÓDIGO DE ESTUDIANTE';
-                                        } else {
-                                          return null;
-                                        }
-                                      },
-                                      decoration: InputDecoration(
-                                        prefixIcon: Icon(
-                                          Icons.supervised_user_circle,
-                                          color: Colors.grey[900],
-                                        ),
-                                        errorStyle: TextStyle(
-                                          color: Colors.red[800],
-                                          fontWeight: FontWeight.w300,
-                                        ),
-                                        labelText: 'CÓDIGO DE ESTUDIANTE',
-                                        border: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                              color: Colors.grey[900]),
-                                        ),
-                                        enabledBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                              color: Colors.grey[900]),
-                                        ),
-                                        disabledBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                              color: Colors.grey[900]),
-                                        ),
-                                        focusedBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                              color: Colors.grey[900]),
-                                        ),
-                                        focusedErrorBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                              color: Colors.grey[900]),
-                                        ),
-                                        errorBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                              color: Colors.grey[900]),
-                                        ),
-                                      ),
-                                      style: TextStyle(
-                                        color: Colors.grey[900],
-                                        fontSize: 13.0,
-                                        fontWeight: FontWeight.w200,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                RaisedButton(
-                                  child: Text('VER NOTAS'),
-                                  onPressed: () {
-                                    if (_formKey.currentState.validate()) {
-                                      print(_codigoEstudianteValue);
-                                      ver(context, _codigoEstudianteValue.text);
-                                    }
-                                  },
-                                )
-                              ],
+                              ),
                             ),
-                    ],
-                  )
-                : Container(),
-      ],
+                            DropdownMenuItem<int>(
+                              value: 2,
+                              child: Text(
+                                'SEGUNDO SEMESTRE',
+                                style: TextStyle(
+                                  color: Colors.grey[900],
+                                  fontSize: 13.0,
+                                  fontWeight: FontWeight.w200,
+                                ),
+                              ),
+                            ),
+                            DropdownMenuItem<int>(
+                              value: 3,
+                              child: Text(
+                                'TERCER SEMESTRE',
+                                style: TextStyle(
+                                  color: Colors.grey[900],
+                                  fontSize: 13.0,
+                                  fontWeight: FontWeight.w200,
+                                ),
+                              ),
+                            ),
+                            DropdownMenuItem<int>(
+                              value: 4,
+                              child: Text(
+                                'CUARTO SEMESTRE',
+                                style: TextStyle(
+                                  color: Colors.grey[900],
+                                  fontSize: 13.0,
+                                  fontWeight: FontWeight.w200,
+                                ),
+                              ),
+                            ),
+                            DropdownMenuItem<int>(
+                              value: 5,
+                              child: Text(
+                                'QUINTO SEMESTRE',
+                                style: TextStyle(
+                                  color: Colors.grey[900],
+                                  fontSize: 13.0,
+                                  fontWeight: FontWeight.w200,
+                                ),
+                              ),
+                            ),
+                            DropdownMenuItem<int>(
+                              value: 6,
+                              child: Text(
+                                'SEXTO SEMESTRE',
+                                style: TextStyle(
+                                  color: Colors.grey[900],
+                                  fontSize: 13.0,
+                                  fontWeight: FontWeight.w200,
+                                ),
+                              ),
+                            ),
+                            DropdownMenuItem<int>(
+                              value: 7,
+                              child: Text(
+                                'SÉPTIMO SEMESTRE',
+                                style: TextStyle(
+                                  color: Colors.grey[900],
+                                  fontSize: 13.0,
+                                  fontWeight: FontWeight.w200,
+                                ),
+                              ),
+                            ),
+                            DropdownMenuItem<int>(
+                              value: 8,
+                              child: Text(
+                                'OCTAVO SEMESTRE',
+                                style: TextStyle(
+                                  color: Colors.grey[900],
+                                  fontSize: 13.0,
+                                  fontWeight: FontWeight.w200,
+                                ),
+                              ),
+                            ),
+                          ],
+                          onChanged: (int value) {
+                            setState(() {
+                              _semestreValue = value;
+                            });
+                          },
+                          hint: Text(
+                            'SEMESTRE',
+                          ),
+                          value: _semestreValue,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  bottom: 2.0, right: 10.0),
+                              child: Container(
+                                height: 45.0,
+                                width: 400.0,
+                                child: Center(
+                                  child: Text(
+                                    'MATERIA',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16.0,
+                                    ),
+                                  ),
+                                ),
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.rectangle,
+                                  borderRadius: BorderRadius.circular(2.0),
+                                  color: Colors.amber[800],
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  bottom: 2.0, left: 10.0, right: 4.0),
+                              child: Container(
+                                height: 45.0,
+                                width: 100.0,
+                                child: Center(
+                                  child: Text(
+                                    '1P',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16.0,
+                                    ),
+                                  ),
+                                ),
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.rectangle,
+                                  borderRadius: BorderRadius.circular(2.0),
+                                  color: Colors.amber[800],
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  bottom: 2.0, left: 4.0, right: 4.0),
+                              child: Container(
+                                height: 45.0,
+                                width: 100.0,
+                                child: Center(
+                                  child: Text(
+                                    '2P',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16.0,
+                                    ),
+                                  ),
+                                ),
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.rectangle,
+                                  borderRadius: BorderRadius.circular(2.0),
+                                  color: Colors.amber[800],
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  bottom: 2.0, left: 4.0, right: 10.0),
+                              child: Container(
+                                height: 45.0,
+                                width: 100.0,
+                                child: Center(
+                                  child: Text(
+                                    '3P',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16.0,
+                                    ),
+                                  ),
+                                ),
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.rectangle,
+                                  borderRadius: BorderRadius.circular(2.0),
+                                  color: Colors.amber[800],
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  bottom: 2.0, left: 10.0),
+                              child: Container(
+                                height: 45.0,
+                                width: 100.0,
+                                child: Center(
+                                  child: Text(
+                                    'PROMEDIO',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16.0,
+                                    ),
+                                  ),
+                                ),
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.rectangle,
+                                  borderRadius: BorderRadius.circular(2.0),
+                                  color: Colors.amber[800],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child:
+                              semestre(_semestreValue, widget.id, widget.color),
+                        ),
+                      ],
+                    )
+                  : widget.rol == 'docentes' ||
+                          widget.rol == 'kardex' ||
+                          widget.rol == 'jefeCarrera'
+                      ? Column(
+                          children: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                'NOTAS',
+                                style: TextStyle(fontSize: 24.0),
+                              ),
+                            ),
+                            widget.rol == 'docentes'
+                                ? Column(
+                                    children: <Widget>[
+                                      Form(
+                                        key: _formKey,
+                                        child: Container(
+                                          width: 400.0,
+                                          child: Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                vertical: 20.0),
+                                            child: TextFormField(
+                                              controller:
+                                                  _codigoEstudianteValue,
+                                              keyboardType:
+                                                  TextInputType.number,
+                                              validator: (value) {
+                                                if (value.isEmpty) {
+                                                  return 'PORFAVOR INGRESA EL CÓDIGO DE ESTUDIANTE';
+                                                } else {
+                                                  return null;
+                                                }
+                                              },
+                                              decoration: InputDecoration(
+                                                prefixIcon: Icon(
+                                                  Icons.supervised_user_circle,
+                                                  color: Colors.grey[900],
+                                                ),
+                                                errorStyle: TextStyle(
+                                                  color: Colors.red[800],
+                                                  fontWeight: FontWeight.w300,
+                                                ),
+                                                labelText:
+                                                    'CÓDIGO DE ESTUDIANTE',
+                                                border: OutlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                      color: Colors.grey[900]),
+                                                ),
+                                                enabledBorder:
+                                                    OutlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                      color: Colors.grey[900]),
+                                                ),
+                                                disabledBorder:
+                                                    OutlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                      color: Colors.grey[900]),
+                                                ),
+                                                focusedBorder:
+                                                    OutlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                      color: Colors.grey[900]),
+                                                ),
+                                                focusedErrorBorder:
+                                                    OutlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                      color: Colors.grey[900]),
+                                                ),
+                                                errorBorder: OutlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                      color: Colors.grey[900]),
+                                                ),
+                                              ),
+                                              style: TextStyle(
+                                                color: Colors.grey[900],
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      FutureBuilder(
+                                        future: getMateriasDocente(widget.id),
+                                        builder: (BuildContext context,
+                                            AsyncSnapshot snapshot) {
+                                          return snapshot.hasData
+                                              ? DropdownButton<int>(
+                                                  items: snapshot.data,
+                                                  onChanged: (int value) {
+                                                    setState(() {
+                                                      _idMateriaValue = value;
+                                                    });
+                                                  },
+                                                  hint: Text(
+                                                    'MATERIA',
+                                                  ),
+                                                  value: _idMateriaValue,
+                                                )
+                                              : CircularProgressIndicator();
+                                        },
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 20.0),
+                                        child: RaisedButton(
+                                          color: Colors.orange[900],
+                                          child: Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 120.0,
+                                                vertical: 20.0),
+                                            child: Text('INGRESAR NOTAS'),
+                                          ),
+                                          onPressed: () {
+                                            if (_formKey.currentState
+                                                .validate()) {
+                                              print(_codigoEstudianteValue);
+                                              ingresar(
+                                                  context,
+                                                  _idMateriaValue.toString(),
+                                                  _codigoEstudianteValue.text);
+                                            }
+                                          },
+                                        ),
+                                      )
+                                    ],
+                                  )
+                                : Column(
+                                    children: <Widget>[
+                                      Form(
+                                        key: _formKey,
+                                        child: Container(
+                                          width: 400.0,
+                                          child: TextFormField(
+                                            controller: _codigoEstudianteValue,
+                                            keyboardType: TextInputType.number,
+                                            validator: (value) {
+                                              if (value.isEmpty) {
+                                                return 'PORFAVOR INGRESA EL CÓDIGO DE ESTUDIANTE';
+                                              } else {
+                                                return null;
+                                              }
+                                            },
+                                            decoration: InputDecoration(
+                                              prefixIcon: Icon(
+                                                Icons.supervised_user_circle,
+                                                color: Colors.grey[900],
+                                              ),
+                                              errorStyle: TextStyle(
+                                                color: Colors.red[800],
+                                                fontWeight: FontWeight.w300,
+                                              ),
+                                              labelText: 'CÓDIGO DE ESTUDIANTE',
+                                              border: OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                    color: Colors.grey[900]),
+                                              ),
+                                              enabledBorder: OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                    color: Colors.grey[900]),
+                                              ),
+                                              disabledBorder:
+                                                  OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                    color: Colors.grey[900]),
+                                              ),
+                                              focusedBorder: OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                    color: Colors.grey[900]),
+                                              ),
+                                              focusedErrorBorder:
+                                                  OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                    color: Colors.grey[900]),
+                                              ),
+                                              errorBorder: OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                    color: Colors.grey[900]),
+                                              ),
+                                            ),
+                                            style: TextStyle(
+                                              color: Colors.grey[900],
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 20.0),
+                                        child: RaisedButton(
+                                          color: widget.color,
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Padding(
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 135.0,
+                                                      vertical: 15.0),
+                                              child: Text(
+                                                'VER NOTAS',
+                                                style: TextStyle(
+                                                    color: Colors.white),
+                                              ),
+                                            ),
+                                          ),
+                                          onPressed: () {
+                                            if (_formKey.currentState
+                                                .validate()) {
+                                              print(_codigoEstudianteValue);
+                                              ver(context,
+                                                  _codigoEstudianteValue.text,widget.color);
+                                            }
+                                          },
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                          ],
+                        )
+                      : Container(),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
 
-Future<List<Widget>> getNotas(int semestre, String id) async {
+Future<List<Widget>> getNotas(int semestre, String id, Color color) async {
   String url = 'http://localhost:3000/api/estudiantes/' + id + '/materias';
   List data;
   http.Response response;
@@ -341,38 +515,45 @@ Future<List<Widget>> getNotas(int semestre, String id) async {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.only(
-                    bottom: 2.0, left: 100.0, right: 25.0),
+                padding: const EdgeInsets.only(bottom: 2.0, right: 10.0),
                 child: Container(
-                  height: 40.0,
+                  height: 45.0,
                   width: 400.0,
                   child: Center(
                     child: Text(
                       materia['nombre'],
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16.0,
+                      ),
                     ),
                   ),
                   decoration: BoxDecoration(
                     shape: BoxShape.rectangle,
                     borderRadius: BorderRadius.circular(2.0),
-                    color: Colors.blue,
+                    color: color,
                   ),
                 ),
               ),
               Padding(
                 padding:
-                    const EdgeInsets.only(bottom: 2.0, left: 4.0, right: 4.0),
+                    const EdgeInsets.only(bottom: 2.0, left: 10.0, right: 4.0),
                 child: Container(
-                  height: 40.0,
+                  height: 45.0,
                   width: 100.0,
                   child: Center(
                     child: Text(
                       materia['nota1er'].toString(),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16.0,
+                      ),
                     ),
                   ),
                   decoration: BoxDecoration(
                     shape: BoxShape.rectangle,
                     borderRadius: BorderRadius.circular(2.0),
-                    color: Colors.blue,
+                    color: color,
                   ),
                 ),
               ),
@@ -380,43 +561,50 @@ Future<List<Widget>> getNotas(int semestre, String id) async {
                 padding:
                     const EdgeInsets.only(bottom: 2.0, left: 4.0, right: 4.0),
                 child: Container(
-                  height: 40.0,
+                  height: 45.0,
                   width: 100.0,
                   child: Center(
                     child: Text(
                       materia['nota2do'].toString(),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16.0,
+                      ),
                     ),
                   ),
                   decoration: BoxDecoration(
                     shape: BoxShape.rectangle,
                     borderRadius: BorderRadius.circular(2.0),
-                    color: Colors.blue,
+                    color: color,
                   ),
                 ),
               ),
               Padding(
                 padding:
-                    const EdgeInsets.only(bottom: 2.0, left: 4.0, right: 100.0),
+                    const EdgeInsets.only(bottom: 2.0, left: 4.0, right: 10.0),
                 child: Container(
-                  height: 40.0,
+                  height: 45.0,
                   width: 100.0,
                   child: Center(
                     child: Text(
                       materia['nota3er'].toString(),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16.0,
+                      ),
                     ),
                   ),
                   decoration: BoxDecoration(
                     shape: BoxShape.rectangle,
                     borderRadius: BorderRadius.circular(2.0),
-                    color: Colors.blue,
+                    color: color,
                   ),
                 ),
               ),
               Padding(
-                padding:
-                    const EdgeInsets.only(bottom: 2.0, left: 4.0, right: 100.0),
+                padding: const EdgeInsets.only(bottom: 2.0, left: 10.0),
                 child: Container(
-                  height: 40.0,
+                  height: 45.0,
                   width: 100.0,
                   child: Center(
                     child: Text(
@@ -426,32 +614,38 @@ Future<List<Widget>> getNotas(int semestre, String id) async {
                               3)
                           .round()
                           .toString(),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16.0,
+                      ),
                     ),
                   ),
                   decoration: BoxDecoration(
                     shape: BoxShape.rectangle,
                     borderRadius: BorderRadius.circular(2.0),
-                    color: Colors.blue,
+                    color: color,
                   ),
                 ),
               ),
             ],
           ),
         )
-      : print('No del semestre seleccionado'));
+      : print(''));
   return list;
 }
 
-Widget semestre(int semestreValue, String id) {
+Widget semestre(int semestreValue, String id, Color color) {
   Widget semestre;
   switch (semestreValue) {
     case 1:
       semestre = FutureBuilder(
-        future: getNotas(1, id),
+        future: getNotas(1, id, color),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           return snapshot.hasData
               ? Column(
-                  children: snapshot.data,
+                  children: snapshot.data.isNotEmpty
+                      ? snapshot.data
+                      : [Text('NO EXISTEN DATOS')],
                 )
               : CircularProgressIndicator();
         },
@@ -459,11 +653,13 @@ Widget semestre(int semestreValue, String id) {
       break;
     case 2:
       semestre = FutureBuilder(
-        future: getNotas(2, id),
+        future: getNotas(2, id, color),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           return snapshot.hasData
               ? Column(
-                  children: snapshot.data,
+                  children: snapshot.data.isNotEmpty
+                      ? snapshot.data
+                      : [Text('NO EXISTEN DATOS')],
                 )
               : CircularProgressIndicator();
         },
@@ -471,11 +667,13 @@ Widget semestre(int semestreValue, String id) {
       break;
     case 3:
       semestre = FutureBuilder(
-        future: getNotas(3, id),
+        future: getNotas(3, id, color),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           return snapshot.hasData
               ? Column(
-                  children: snapshot.data,
+                  children: snapshot.data.isNotEmpty
+                      ? snapshot.data
+                      : [Text('NO EXISTEN DATOS')],
                 )
               : CircularProgressIndicator();
         },
@@ -483,11 +681,13 @@ Widget semestre(int semestreValue, String id) {
       break;
     case 4:
       semestre = FutureBuilder(
-        future: getNotas(4, id),
+        future: getNotas(4, id, color),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           return snapshot.hasData
               ? Column(
-                  children: snapshot.data,
+                  children: snapshot.data.isNotEmpty
+                      ? snapshot.data
+                      : [Text('NO EXISTEN DATOS')],
                 )
               : CircularProgressIndicator();
         },
@@ -495,11 +695,13 @@ Widget semestre(int semestreValue, String id) {
       break;
     case 5:
       semestre = FutureBuilder(
-        future: getNotas(5, id),
+        future: getNotas(5, id, color),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           return snapshot.hasData
               ? Column(
-                  children: snapshot.data,
+                  children: snapshot.data.isNotEmpty
+                      ? snapshot.data
+                      : [Text('NO EXISTEN DATOS')],
                 )
               : CircularProgressIndicator();
         },
@@ -507,11 +709,13 @@ Widget semestre(int semestreValue, String id) {
       break;
     case 6:
       semestre = FutureBuilder(
-        future: getNotas(6, id),
+        future: getNotas(6, id, color),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           return snapshot.hasData
               ? Column(
-                  children: snapshot.data,
+                  children: snapshot.data.isNotEmpty
+                      ? snapshot.data
+                      : [Text('NO EXISTEN DATOS')],
                 )
               : CircularProgressIndicator();
         },
@@ -519,11 +723,13 @@ Widget semestre(int semestreValue, String id) {
       break;
     case 7:
       semestre = FutureBuilder(
-        future: getNotas(7, id),
+        future: getNotas(7, id, color),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           return snapshot.hasData
               ? Column(
-                  children: snapshot.data,
+                  children: snapshot.data.isNotEmpty
+                      ? snapshot.data
+                      : [Text('NO EXISTEN DATOS')],
                 )
               : CircularProgressIndicator();
         },
@@ -531,11 +737,13 @@ Widget semestre(int semestreValue, String id) {
       break;
     case 8:
       semestre = FutureBuilder(
-        future: getNotas(8, id),
+        future: getNotas(8, id, color),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           return snapshot.hasData
               ? Column(
-                  children: snapshot.data,
+                  children: snapshot.data.isNotEmpty
+                      ? snapshot.data
+                      : [Text('NO EXISTEN DATOS')],
                 )
               : CircularProgressIndicator();
         },
@@ -543,11 +751,13 @@ Widget semestre(int semestreValue, String id) {
       break;
     default:
       semestre = FutureBuilder(
-        future: getNotas(1, id),
+        future: getNotas(1, id, color),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           return snapshot.hasData
               ? Column(
-                  children: snapshot.data,
+                  children: snapshot.data.isNotEmpty
+                      ? snapshot.data
+                      : [Text('NO EXISTEN DATOS')],
                 )
               : CircularProgressIndicator();
         },
@@ -596,12 +806,12 @@ ingresar(BuildContext context, String idMateria, String idEstudiante) {
   );
 }
 
-ver(BuildContext context, String idEstudiante) {
+ver(BuildContext context, String idEstudiante,Color color) {
   return showDialog(
     context: context,
     builder: (BuildContext context) {
       return VerNotasPage(
-        idEstudiante: idEstudiante,
+        idEstudiante: idEstudiante,color: color,
       );
     },
   );

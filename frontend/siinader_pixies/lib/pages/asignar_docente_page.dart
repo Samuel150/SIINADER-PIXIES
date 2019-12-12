@@ -29,49 +29,52 @@ class _AsignarPageState extends State<AsignarPage> {
           key: _formKey,
           child: Column(
             children: <Widget>[
-              TextFormField(
-                controller: _codigoDocenteValue,
-                keyboardType: TextInputType.number,
-                validator: (value) {
-                  if (value.isEmpty) {
-                    return 'PORFAVOR INGRESA EL CÓDIGO DE DOCENTE';
-                  } else {
-                    return null;
-                  }
-                },
-                decoration: InputDecoration(
-                  prefixIcon: Icon(
-                    Icons.supervised_user_circle,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextFormField(
+                  controller: _codigoDocenteValue,
+                  keyboardType: TextInputType.number,
+                  validator: (value) {
+                    if (value.isEmpty) {
+                      return 'PORFAVOR INGRESA EL CÓDIGO DE DOCENTE';
+                    } else {
+                      return null;
+                    }
+                  },
+                  decoration: InputDecoration(
+                    prefixIcon: Icon(
+                      Icons.supervised_user_circle,
+                      color: Colors.grey[900],
+                    ),
+                    errorStyle: TextStyle(
+                      color: Colors.red[800],
+                      fontWeight: FontWeight.w300,
+                    ),
+                    labelText: 'CÓDIGO DE DOCENTE',
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.grey[900]),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.grey[900]),
+                    ),
+                    disabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.grey[900]),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.grey[900]),
+                    ),
+                    focusedErrorBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.grey[900]),
+                    ),
+                    errorBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.grey[900]),
+                    ),
+                  ),
+                  style: TextStyle(
                     color: Colors.grey[900],
+                    fontSize: 13.0,
+                    fontWeight: FontWeight.w200,
                   ),
-                  errorStyle: TextStyle(
-                    color: Colors.red[800],
-                    fontWeight: FontWeight.w300,
-                  ),
-                  labelText: 'CÓDIGO DE DOCENTE',
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey[900]),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey[900]),
-                  ),
-                  disabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey[900]),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey[900]),
-                  ),
-                  focusedErrorBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey[900]),
-                  ),
-                  errorBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey[900]),
-                  ),
-                ),
-                style: TextStyle(
-                  color: Colors.grey[900],
-                  fontSize: 13.0,
-                  fontWeight: FontWeight.w200,
                 ),
               ),
               FutureBuilder(
@@ -285,7 +288,17 @@ class _AsignarPageState extends State<AsignarPage> {
                 value: _horaValue,
               ),
               RaisedButton(
-                child: Text('ASIGNAR'),
+                color: Colors.blue[400],
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 80.0, vertical: 20.0),
+                  child: Text(
+                    'ASIGNAR',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
                 onPressed: () async {
                   if (_formKey.currentState.validate()) {
                     print(_codigoDocenteValue.text);
@@ -312,7 +325,7 @@ class _AsignarPageState extends State<AsignarPage> {
                       print(e);
                     }
                     print(data);
-                    if(data.toString().contains('"affectedRows":1')){
+                    if (data.toString().contains('"affectedRows":1')) {
                       Navigator.of(context).pop();
                     }
                   }

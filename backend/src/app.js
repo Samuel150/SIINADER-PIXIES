@@ -6,6 +6,8 @@ const swaggerUi = require('swagger-ui-express')
 const swaggerDocument = require('./swagger.json')
 const connection = mysql.createConnection({ host: 'localhost', user: 'root', password: '123456789', database: 'siinader' });
 
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 connection.connect(err => {
     if (err) {
         console.log(err);
@@ -16,8 +18,7 @@ connection.connect(err => {
 
 app.set('port', 3000);
 app.use(express.json());
-app.use(cors({origin: true, credentials: true}));
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use(cors({ origin: true, credentials: true }));
 
 //imprime siinader
 app.get('/api', (req, res) => res.send('SIINADER'));
@@ -25,22 +26,25 @@ app.get('/api', (req, res) => res.send('SIINADER'));
 //obtener todos los estudiantes o uno solo
 app.get('/api/estudiantes/:id?', (req, res) => {
     var id = req.params.id;
-    id ?
-        connection.query('SELECT * FROM estudiantes WHERE idEstudiante = ?', [id], (err, results) => {
-            if (err) {
-                return res.send(err);
-            } else {
-                return res.send(results);
-            }
-        })
-        :
-        connection.query('SELECT * FROM estudiantes', (err, results) => {
-            if (err) {
-                return res.send(err);
-            } else {
-                return res.send(results);
-            }
-        });
+    connection.query('SELECT * FROM estudiantes', (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
+});
+//obtener un estudiante
+app.get('/api/estudiantes/:id', (req, res) => {
+    var id = req.params.id;
+    connection.query('SELECT * FROM estudiantes WHERE idEstudiante = ?', [id], (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
+
 });
 //crear estudiante
 app.post('/api/estudiantes', (req, res) => {
@@ -85,25 +89,27 @@ app.delete('/api/estudiantes/:id', (req, res) => {
         }
     });
 });
-//obtener todos los docentes o uno solo
-app.get('/api/docentes/:id?', (req, res) => {
+//obtener todos los docentes
+app.get('/api/docentes', (req, res) => {
     var id = req.params.id;
-    id ?
-        connection.query('SELECT * FROM docentes WHERE idDocente = ?' ,[id], (err, results) => {
-            if (err) {
-                return res.send(err);
-            } else {
-                return res.send(results);
-            }
-        })
-        :
-        connection.query('SELECT * FROM docentes', (err, results) => {
-            if (err) {
-                return res.send(err);
-            } else {
-                return res.send(results);
-            }
-        });
+    connection.query('SELECT * FROM docentes', (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
+});
+//obtener un docente
+app.get('/api/docentes/:id', (req, res) => {
+    var id = req.params.id;
+    connection.query('SELECT * FROM docentes WHERE idDocente = ?', [id], (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
 });
 //crear docente
 app.post('/api/docentes', (req, res) => {
@@ -113,7 +119,7 @@ app.post('/api/docentes', (req, res) => {
     var ci = req.body.ci;
     var fecha_nacimiento = req.body.fecha_nacimiento;
     var password = req.body.password;
-    connection.query('INSERT INTO docentes (nombre,apellido_1,apellido_2,ci,fecha_nacimiento,password) VALUES (?,?,?,?,?,?)',[nombre,apellido_1,apellido_2,ci,fecha_nacimiento,password], (err, results) => {
+    connection.query('INSERT INTO docentes (nombre,apellido_1,apellido_2,ci,fecha_nacimiento,password) VALUES (?,?,?,?,?,?)', [nombre, apellido_1, apellido_2, ci, fecha_nacimiento, password], (err, results) => {
         if (err) {
             return res.send(err);
         } else {
@@ -140,7 +146,7 @@ app.put('/api/docentes/:id', (req, res) => {
 //eliminar docente
 app.delete('/api/docentes/:id', (req, res) => {
     var id = req.params.id;
-    connection.query('DELETE FROM docentes WHERE idDocente = ?',[id], (err, results) => {
+    connection.query('DELETE FROM docentes WHERE idDocente = ?', [id], (err, results) => {
         if (err) {
             return res.send(err);
         } else {
@@ -148,25 +154,28 @@ app.delete('/api/docentes/:id', (req, res) => {
         }
     });
 });
-//obtener todas las materias o una sola
-app.get('/api/materias/:id?', (req, res) => {
+//obtener todas las materias
+app.get('/api/materias', (req, res) => {
     var id = req.params.id;
-    id ?
-        connection.query('SELECT * FROM materias WHERE idMateria = ?',[id], (err, results) => {
-            if (err) {
-                return res.send(err);
-            } else {
-                return res.send(results);
-            }
-        })
-        :
-        connection.query('SELECT * FROM materias', (err, results) => {
-            if (err) {
-                return res.send(err);
-            } else {
-                return res.send(results);
-            }
-        });
+    connection.query('SELECT * FROM materias', (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
+});
+//obtener una materias
+app.get('/api/materias/:id', (req, res) => {
+    var id = req.params.id;
+
+    connection.query('SELECT * FROM materias WHERE idMateria = ?', [id], (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
 });
 //obtener las materias y notas de un estudiante
 app.get('/api/estudiantes/:id/materias', (req, res) => {
@@ -186,7 +195,7 @@ app.post('/api/jefeCarrera/inscripcion', (req, res) => {
     var semestre_cursada = req.body.semestre_cursada;
     var aula = req.body.aula;
     var hora_inicio = req.body.hora_inicio;
-    connection.query('INSERT INTO estudiante_has_materia (estudiante_idEstudiante,materia_idMateria,semestre_cursada,aula,hora_inicio) VALUES ("'+estudiante_idEstudiante+'","'+materia_idMateria+'","'+semestre_cursada+'","'+aula+'","'+hora_inicio+'")', (err, results) => {
+    connection.query('INSERT INTO estudiante_has_materia (estudiante_idEstudiante,materia_idMateria,semestre_cursada,aula,hora_inicio) VALUES ("' + estudiante_idEstudiante + '","' + materia_idMateria + '","' + semestre_cursada + '","' + aula + '","' + hora_inicio + '")', (err, results) => {
         if (err) {
             return res.send(err);
         } else {
@@ -200,7 +209,7 @@ app.post('/api/jefeCarrera/asignacion', (req, res) => {
     var materias_idMateria = req.body.materias_idMateria;
     var aula = req.body.aula;
     var hora_inicio = req.body.hora_inicio;
-    connection.query('INSERT INTO docente_has_materia (docente_idDocente,materias_idMateria,aula,hora_inicio) VALUES ("'+docente_idDocente+'","'+materias_idMateria+'","'+aula+'","'+hora_inicio+'")', (err, results) => {
+    connection.query('INSERT INTO docente_has_materia (docente_idDocente,materias_idMateria,aula,hora_inicio) VALUES ("' + docente_idDocente + '","' + materias_idMateria + '","' + aula + '","' + hora_inicio + '")', (err, results) => {
         if (err) {
             return res.send(err);
         } else {
@@ -212,7 +221,7 @@ app.post('/api/jefeCarrera/asignacion', (req, res) => {
 app.get('/api/docentes/notas/:idEstudiante/:idMateria', (req, res) => {
     var idEstudiante = req.params.idEstudiante;
     var idMateria = req.params.idMateria;
-    connection.query('SELECT nota1er,nota2do,nota3er FROM estudiante_has_materia WHERE estudiante_idEstudiante ='+idEstudiante+'&& materia_idMateria = '+idMateria, (err, results) => {
+    connection.query('SELECT nota1er,nota2do,nota3er FROM estudiante_has_materia WHERE estudiante_idEstudiante =' + idEstudiante + '&& materia_idMateria = ' + idMateria, (err, results) => {
         if (err) {
             return res.send(err);
         } else {
@@ -238,7 +247,7 @@ app.put('/api/docentes/notas/:idEstudiante/:idMateria', (req, res) => {
 //obtener las materias que un docente dicta
 app.get('/api/docentes/:id/materias', (req, res) => {
     var id = req.params.id;
-    connection.query('SELECT idDocente,idMateria,aula,hora_inicio, materias.nombre,docentes.nombre as docente_nombre ,docentes.apellido_1,docentes.apellido_2 FROM docente_has_materia,materias,docentes WHERE docente_idDocente ='+ id +' && idMateria=materias_idMateria && idDocente=docente_idDocente', (err, results) => {
+    connection.query('SELECT idDocente,idMateria,aula,hora_inicio, materias.nombre,docentes.nombre as docente_nombre ,docentes.apellido_1,docentes.apellido_2 FROM docente_has_materia,materias,docentes WHERE docente_idDocente =' + id + ' && idMateria=materias_idMateria && idDocente=docente_idDocente', (err, results) => {
         if (err) {
             return res.send(err);
         } else {
@@ -260,7 +269,7 @@ app.get('/api/kardex/materias', (req, res) => {
 app.get('/api/kardex/:id?', (req, res) => {
     var id = req.params.id;
     id ?
-        connection.query('SELECT * FROM kardex WHERE idKardex = ?' ,[id], (err, results) => {
+        connection.query('SELECT * FROM kardex WHERE idKardex = ?', [id], (err, results) => {
             if (err) {
                 return res.send(err);
             } else {
@@ -276,25 +285,27 @@ app.get('/api/kardex/:id?', (req, res) => {
             }
         });
 });
-//obtener todos los jefes de carrera o uno solo
-app.get('/api/jefeCarrera/:id?', (req, res) => {
+//obtener todos los jefes de carrera
+app.get('/api/jefeCarrera', (req, res) => {
     var id = req.params.id;
-    id ?
-        connection.query('SELECT * FROM jefes_carrera WHERE idJefeCarrera = ?' ,[id], (err, results) => {
-            if (err) {
-                return res.send(err);
-            } else {
-                return res.send(results);
-            }
-        })
-        :
-        connection.query('SELECT * FROM jefes_Carrera', (err, results) => {
-            if (err) {
-                return res.send(err);
-            } else {
-                return res.send(results);
-            }
-        });
+    connection.query('SELECT * FROM jefes_Carrera', (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
+});
+//obtener todos los jefes de carrera o uno solo
+app.get('/api/jefeCarrera/:id', (req, res) => {
+    var id = req.params.id;
+    connection.query('SELECT * FROM jefes_carrera WHERE idJefeCarrera = ?', [id], (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
 });
 //crear jefe de carrera
 app.post('/api/jefeCarrera', (req, res) => {
@@ -304,7 +315,7 @@ app.post('/api/jefeCarrera', (req, res) => {
     var ci = req.body.ci;
     var fecha_nacimiento = req.body.fecha_nacimiento;
     var password = req.body.password;
-    connection.query('INSERT INTO jefes_carrera (nombre,apellido_1,apellido_2,ci,fecha_nacimiento,password) VALUES (?,?,?,?,?,?)',[nombre,apellido_1,apellido_2,ci,fecha_nacimiento,password], (err, results) => {
+    connection.query('INSERT INTO jefes_carrera (nombre,apellido_1,apellido_2,ci,fecha_nacimiento,password) VALUES (?,?,?,?,?,?)', [nombre, apellido_1, apellido_2, ci, fecha_nacimiento, password], (err, results) => {
         if (err) {
             return res.send(err);
         } else {
@@ -320,7 +331,7 @@ app.post('/api/kardex', (req, res) => {
     var ci = req.body.ci;
     var fecha_nacimiento = req.body.fecha_nacimiento;
     var password = req.body.password;
-    connection.query('INSERT INTO kardex (nombre,apellido_1,apellido_2,ci,fecha_nacimiento,password) VALUES (?,?,?,?,?,?)',[nombre,apellido_1,apellido_2,ci,fecha_nacimiento,password], (err, results) => {
+    connection.query('INSERT INTO kardex (nombre,apellido_1,apellido_2,ci,fecha_nacimiento,password) VALUES (?,?,?,?,?,?)', [nombre, apellido_1, apellido_2, ci, fecha_nacimiento, password], (err, results) => {
         if (err) {
             return res.send(err);
         } else {
@@ -331,7 +342,7 @@ app.post('/api/kardex', (req, res) => {
 //eliminar kardex
 app.delete('/api/kardex/:id', (req, res) => {
     var id = req.params.id;
-    connection.query('DELETE FROM kardex WHERE idKardex = ?',[id], (err, results) => {
+    connection.query('DELETE FROM kardex WHERE idKardex = ?', [id], (err, results) => {
         if (err) {
             return res.send(err);
         } else {
@@ -342,7 +353,7 @@ app.delete('/api/kardex/:id', (req, res) => {
 //eliminar jefe de carrera
 app.delete('/api/jefeCarrera/:id', (req, res) => {
     var id = req.params.id;
-    connection.query('DELETE FROM jefes_carrera WHERE idJefeCarrera = ?',[id], (err, results) => {
+    connection.query('DELETE FROM jefes_carrera WHERE idJefeCarrera = ?', [id], (err, results) => {
         if (err) {
             return res.send(err);
         } else {
