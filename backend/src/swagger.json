@@ -154,6 +154,29 @@
                         "description": "No encontrado"
                     }
                 }
+            },
+            "delete": {
+                "tags": [
+                    {
+                        "name": "Estudiante",
+                        "description": "API para los estudiantes"
+                    }
+                ],
+                "summary": "Elimina al estudiante con el ID dado",
+                "responses": {
+                    "200": {
+                        "description": "Respuesta exitosa",
+                        "schema": {
+                            "$ref": "#/definitions/Estudiante"
+                        }
+                    },
+                    "400": {
+                        "description": "Datos enviados incorrectos"
+                    },
+                    "404": {
+                        "description": "No encontrado"
+                    }
+                }
             }
         }
     },
