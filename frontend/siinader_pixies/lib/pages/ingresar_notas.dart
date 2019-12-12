@@ -37,170 +37,208 @@ class _IngresarNotasPageState extends State<IngresarNotasPage> {
                 return snapshot.hasData
                     ? Column(
                         children: <Widget>[
-                          TextFormField(
-                            controller: _nota1erValue,
-                            keyboardType: TextInputType.number,
-                            validator: (value) {
-                              if (value.isEmpty) {
-                                return 'PORFAVOR INGRESA LA NOTA DEL PRIMER PARCIAL';
-                              } else {
-                                return null;
-                              }
-                            },
-                            decoration: InputDecoration(
-                              errorStyle: TextStyle(
-                                color: Colors.red[800],
-                                fontWeight: FontWeight.w300,
-                              ),
-                              labelText: 'PRIMER PARCIAL',
-                              border: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey[900]),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey[900]),
-                              ),
-                              disabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey[900]),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey[900]),
-                              ),
-                              focusedErrorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey[900]),
-                              ),
-                              errorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey[900]),
-                              ),
-                            ),
-                            style: TextStyle(
-                              color: Colors.grey[900],
-                              fontSize: 13.0,
-                              fontWeight: FontWeight.w200,
-                            ),
-                          ),
-                          TextFormField(
-                            controller: _nota2doValue,
-                            keyboardType: TextInputType.number,
-                            validator: (value) {
-                              if (value.isEmpty) {
-                                return 'PORFAVOR INGRESA LA NOTA DEL SEGUNDO PARCIAL';
-                              } else {
-                                return null;
-                              }
-                            },
-                            decoration: InputDecoration(
-                              errorStyle: TextStyle(
-                                color: Colors.red[800],
-                                fontWeight: FontWeight.w300,
-                              ),
-                              labelText: 'SEGUNDO PARCIAL',
-                              border: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey[900]),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey[900]),
-                              ),
-                              disabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey[900]),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey[900]),
-                              ),
-                              focusedErrorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey[900]),
-                              ),
-                              errorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey[900]),
-                              ),
-                            ),
-                            style: TextStyle(
-                              color: Colors.grey[900],
-                              fontSize: 13.0,
-                              fontWeight: FontWeight.w200,
-                            ),
-                          ),
-                          TextFormField(
-                            controller: _nota3erValue,
-                            keyboardType: TextInputType.number,
-                            validator: (value) {
-                              if (value.isEmpty) {
-                                return 'PORFAVOR INGRESA LA NOTA DEL TERCER PARCIAL';
-                              } else {
-                                return null;
-                              }
-                            },
-                            decoration: InputDecoration(
-                              errorStyle: TextStyle(
-                                color: Colors.red[800],
-                                fontWeight: FontWeight.w300,
-                              ),
-                              labelText: 'TERCER PARCIAL',
-                              border: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey[900]),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey[900]),
-                              ),
-                              disabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey[900]),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey[900]),
-                              ),
-                              focusedErrorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey[900]),
-                              ),
-                              errorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey[900]),
-                              ),
-                            ),
-                            style: TextStyle(
-                              color: Colors.grey[900],
-                              fontSize: 13.0,
-                              fontWeight: FontWeight.w200,
-                            ),
-                          ),
-                          RaisedButton(
-                            child: Text('INGRESAR'),
-                            onPressed: () async {
-                              if (_formKey.currentState.validate()) {
-                                String url =
-                                    'http://localhost:3000/api/docentes/notas/' +
-                                        widget.idEstudiante +
-                                        '/' +
-                                        widget.idMateria;
-                                dynamic data;
-                                var body = {
-                                  'idEstudiante': widget.idEstudiante,
-                                  'idMateria': widget.idMateria,
-                                  'nota1er': _nota1erValue.text,
-                                  'nota2do': _nota2doValue.text,
-                                  'nota3er': _nota3erValue.text
-                                };
-                                var bodyEncoded = json.encode(body);
-                                http.Response response;
-                                try {
-                                  response = await http.put(url,
-                                      body: bodyEncoded,
-                                      headers: {
-                                        "Accept": "application/json",
-                                        "Content-Type": "application/json"
-                                      });
-                                  data = response.body;
-                                } catch (e) {
-                                  print(e);
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: TextFormField(
+                              controller: _nota1erValue,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return 'PORFAVOR INGRESA LA NOTA DEL PRIMER PARCIAL';
+                                } else {
+                                  return null;
                                 }
-                                if (data
-                                    .toString()
-                                    .contains('"affectedRows":1')) {
-                                  Navigator.of(context).pop();
+                              },
+                              decoration: InputDecoration(
+                                errorStyle: TextStyle(
+                                  color: Colors.red[800],
+                                  fontWeight: FontWeight.w300,
+                                ),
+                                labelText: 'PRIMER PARCIAL',
+                                border: OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Colors.grey[900]),
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Colors.grey[900]),
+                                ),
+                                disabledBorder: OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Colors.grey[900]),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Colors.grey[900]),
+                                ),
+                                focusedErrorBorder: OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Colors.grey[900]),
+                                ),
+                                errorBorder: OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Colors.grey[900]),
+                                ),
+                              ),
+                              style: TextStyle(
+                                color: Colors.grey[900],
+                                fontSize: 13.0,
+                                fontWeight: FontWeight.w200,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: TextFormField(
+                              controller: _nota2doValue,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return 'PORFAVOR INGRESA LA NOTA DEL SEGUNDO PARCIAL';
+                                } else {
+                                  return null;
                                 }
-                              }
-                            },
+                              },
+                              decoration: InputDecoration(
+                                errorStyle: TextStyle(
+                                  color: Colors.red[800],
+                                  fontWeight: FontWeight.w300,
+                                ),
+                                labelText: 'SEGUNDO PARCIAL',
+                                border: OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Colors.grey[900]),
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Colors.grey[900]),
+                                ),
+                                disabledBorder: OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Colors.grey[900]),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Colors.grey[900]),
+                                ),
+                                focusedErrorBorder: OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Colors.grey[900]),
+                                ),
+                                errorBorder: OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Colors.grey[900]),
+                                ),
+                              ),
+                              style: TextStyle(
+                                color: Colors.grey[900],
+                                fontSize: 13.0,
+                                fontWeight: FontWeight.w200,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: TextFormField(
+                              controller: _nota3erValue,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return 'PORFAVOR INGRESA LA NOTA DEL TERCER PARCIAL';
+                                } else {
+                                  return null;
+                                }
+                              },
+                              decoration: InputDecoration(
+                                errorStyle: TextStyle(
+                                  color: Colors.red[800],
+                                  fontWeight: FontWeight.w300,
+                                ),
+                                labelText: 'TERCER PARCIAL',
+                                border: OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Colors.grey[900]),
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Colors.grey[900]),
+                                ),
+                                disabledBorder: OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Colors.grey[900]),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Colors.grey[900]),
+                                ),
+                                focusedErrorBorder: OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Colors.grey[900]),
+                                ),
+                                errorBorder: OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Colors.grey[900]),
+                                ),
+                              ),
+                              style: TextStyle(
+                                color: Colors.grey[900],
+                                fontSize: 13.0,
+                                fontWeight: FontWeight.w200,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: RaisedButton(
+                              color: Colors.orange[900],
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 80.0, vertical: 20.0),
+                                child: Text(
+                                  'INGRESAR',
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ),
+                              onPressed: () async {
+                                if (_formKey.currentState.validate()) {
+                                  String url =
+                                      'http://localhost:3000/api/docentes/notas/' +
+                                          widget.idEstudiante +
+                                          '/' +
+                                          widget.idMateria;
+                                  dynamic data;
+                                  var body = {
+                                    'idEstudiante': widget.idEstudiante,
+                                    'idMateria': widget.idMateria,
+                                    'nota1er': _nota1erValue.text,
+                                    'nota2do': _nota2doValue.text,
+                                    'nota3er': _nota3erValue.text
+                                  };
+                                  var bodyEncoded = json.encode(body);
+                                  http.Response response;
+                                  try {
+                                    response = await http.put(url,
+                                        body: bodyEncoded,
+                                        headers: {
+                                          "Accept": "application/json",
+                                          "Content-Type": "application/json"
+                                        });
+                                    data = response.body;
+                                  } catch (e) {
+                                    print(e);
+                                  }
+                                  if (data
+                                      .toString()
+                                      .contains('"affectedRows":1')) {
+                                    Navigator.of(context).pop();
+                                  }
+                                }
+                              },
+                            ),
                           )
                         ],
                       )
-                    : CircularProgressIndicator();
+                    : Center(child: CircularProgressIndicator());
               },
             )),
       ),

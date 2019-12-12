@@ -18,6 +18,25 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final pageController = PageController(initialPage: 0, keepPage: true);
+  Color color;
+  @override
+  void initState() {
+    switch (widget.rol) {
+      case 'estudiantes':
+        color = Colors.amber[600];
+        break;
+      case 'docentes':
+        color = Colors.orange[900];
+        break;
+      case 'kardex':
+        color = Colors.green[400];
+        break;
+      case 'jefeCarrera':
+        color = Colors.blue[400];
+        break;
+    }
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +45,21 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.white,
         title: Padding(
           padding: const EdgeInsets.only(left: 8.0),
-          child: Text(
-            'SIINADER',
-            style: TextStyle(color: Colors.grey[900]),
+          child: Container(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'SIINADER',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            decoration: BoxDecoration(
+              shape: BoxShape.rectangle,
+              borderRadius: BorderRadius.circular(6.0),
+              color: color,
+            ),
           ),
         ),
         actions: <Widget>[
@@ -150,7 +181,7 @@ class _HomePageState extends State<HomePage> {
             ],
             onSelected: (value) {
               value == 1
-                  ? editarPerfil(context,widget.id,widget.rol)
+                  ? editarPerfil(context, widget.id, widget.rol)
                   : Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
@@ -165,23 +196,27 @@ class _HomePageState extends State<HomePage> {
         physics: NeverScrollableScrollPhysics(),
         controller: pageController,
         children: <Widget>[
-          InicioPage(rol: widget.rol,nombre: widget.name,),
-          MateriasPage(rol: widget.rol, id: widget.id),
-          PlanEstudios(),
-          NotasPage(rol: widget.rol, id: widget.id),
-          PerfilPage(rol: widget.rol, id: widget.id),
+          InicioPage(
+            rol: widget.rol,
+            nombre: widget.name,
+          ),
+          MateriasPage(rol: widget.rol, id: widget.id, color: color),
+          PlanEstudios(color: color),
+          NotasPage(rol: widget.rol, id: widget.id, color: color),
+          PerfilPage(rol: widget.rol, id: widget.id,color: color),
         ],
       ),
     );
   }
 }
-editarPerfil(BuildContext context, String id,String rol) {
+
+editarPerfil(BuildContext context, String id, String rol) {
   return showDialog(
     context: context,
     builder: (BuildContext context) {
       return EditarPerfilPage(
         id: id,
-        rol:rol,
+        rol: rol,
       );
     },
   );

@@ -29,58 +29,61 @@ class _InicioPageState extends State<InicioPage> {
         rol = 'JEFE DE CARRERA';
         break;
     }
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text('SIINADER - ' + rol),
-          Text('BIENVENIDO ' + widget.nombre.toUpperCase()),
-          widget.rol == 'kardex'
-              ? Column(
-                  children: <Widget>[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        RaisedButton(
-                          child: Text('AÑADIR USUARIO'),
-                          onPressed: () => anadir(context),
-                        ),
-                        RaisedButton(
-                          child: Text('ELIMINAR USUARIO'),
-                          onPressed: () => eliminar(context),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        RaisedButton(
-                          child: Text('VER ESTUDIANTES'),
-                          onPressed: () => ver(context,'estudiantes'),
-                        ),
-                        RaisedButton(
-                          child: Text('VER DOCENTES'),
-                          onPressed: () => ver(context,'docentes'),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        RaisedButton(
-                          child: Text('VER JEFES DE CARRERA'),
-                          onPressed: () => ver(context,'jefeCarrera'),
-                        ),
-                        RaisedButton(
-                          child: Text('VER KARDEX'),
-                          onPressed: () => ver(context,'kardex'),
-                        ),
-                      ],
-                    ),
-                  ],
-                )
-              : Container(),
-        ],
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('SIINADER - ' + rol),
+            Text('BIENVENIDO ' + widget.nombre.toUpperCase()),
+            widget.rol == 'kardex'
+                ? Column(
+                    children: <Widget>[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          RaisedButton(
+                            child: Text('AÑADIR USUARIO'),
+                            onPressed: () => anadir(context),
+                          ),
+                          RaisedButton(
+                            child: Text('ELIMINAR USUARIO'),
+                            onPressed: () => eliminar(context),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          RaisedButton(
+                            child: Text('VER ESTUDIANTES'),
+                            onPressed: () => ver(context, 'estudiantes'),
+                          ),
+                          RaisedButton(
+                            child: Text('VER DOCENTES'),
+                            onPressed: () => ver(context, 'docentes'),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          RaisedButton(
+                            child: Text('VER JEFES DE CARRERA'),
+                            onPressed: () => ver(context, 'jefeCarrera'),
+                          ),
+                          RaisedButton(
+                            child: Text('VER KARDEX'),
+                            onPressed: () => ver(context, 'kardex'),
+                          ),
+                        ],
+                      ),
+                    ],
+                  )
+                : Container(),
+          ],
+        ),
       ),
     );
   }
@@ -94,14 +97,18 @@ anadir(BuildContext context) {
     },
   );
 }
-ver(BuildContext context,String rol) {
+
+ver(BuildContext context, String rol) {
   return showDialog(
     context: context,
     builder: (BuildContext context) {
-      return VerUsuariosPage(rol: rol,);
+      return VerUsuariosPage(
+        rol: rol,
+      );
     },
   );
 }
+
 eliminar(BuildContext context) {
   return showDialog(
     context: context,

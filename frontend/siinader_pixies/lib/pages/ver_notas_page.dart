@@ -3,8 +3,9 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class VerNotasPage extends StatefulWidget {
-  VerNotasPage({Key key, this.idEstudiante}) : super(key: key);
+  VerNotasPage({Key key, this.idEstudiante, this.color}) : super(key: key);
   final String idEstudiante;
+  final Color color;
   @override
   _VerNotasPageState createState() => _VerNotasPageState();
 }
@@ -17,13 +18,124 @@ class _VerNotasPageState extends State<VerNotasPage> {
       content: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            FutureBuilder(
-              future: getNotas(widget.idEstudiante),
-              builder: (BuildContext context, AsyncSnapshot snapshot) {
-                return snapshot.hasData
-                    ? snapshot.data
-                    : CircularProgressIndicator();
-              },
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 2.0, right: 10.0),
+                  child: Container(
+                    height: 45.0,
+                    width: 400.0,
+                    child: Center(
+                      child: Text(
+                        'MATERIA',
+                        style: TextStyle(
+                          color: Colors.grey[900],
+                        ),
+                      ),
+                    ),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.circular(2.0),
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                      bottom: 2.0, left: 10.0, right: 4.0),
+                  child: Container(
+                    height: 45.0,
+                    width: 100.0,
+                    child: Center(
+                      child: Text(
+                        '1P',
+                        style: TextStyle(
+                          color: Colors.grey[900],
+                        ),
+                      ),
+                    ),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.circular(2.0),
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding:
+                      const EdgeInsets.only(bottom: 2.0, left: 4.0, right: 4.0),
+                  child: Container(
+                    height: 45.0,
+                    width: 100.0,
+                    child: Center(
+                      child: Text(
+                        '2P',
+                        style: TextStyle(
+                          color: Colors.grey[900],
+                        ),
+                      ),
+                    ),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.circular(2.0),
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                      bottom: 2.0, left: 4.0, right: 10.0),
+                  child: Container(
+                    height: 45.0,
+                    width: 100.0,
+                    child: Center(
+                      child: Text(
+                        '3P',
+                        style: TextStyle(
+                          color: Colors.grey[900],
+                        ),
+                      ),
+                    ),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.circular(2.0),
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 2.0, left: 10.0),
+                  child: Container(
+                    height: 45.0,
+                    width: 100.0,
+                    child: Center(
+                      child: Text(
+                        'PROMEDIO',
+                        style: TextStyle(
+                          color: Colors.grey[900],
+                        ),
+                      ),
+                    ),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.circular(2.0),
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: FutureBuilder(
+                future: getNotas(widget.idEstudiante, widget.color),
+                builder: (BuildContext context, AsyncSnapshot snapshot) {
+                  return snapshot.hasData
+                      ? snapshot.data
+                      : CircularProgressIndicator();
+                },
+              ),
             ),
           ],
         ),
@@ -31,7 +143,8 @@ class _VerNotasPageState extends State<VerNotasPage> {
     );
   }
 }
-Future<Widget> getNotas(String id) async {
+
+Future<Widget> getNotas(String id, Color color) async {
   String url = 'http://localhost:3000/api/estudiantes/' + id + '/materias';
   List data;
   http.Response response;
@@ -48,90 +161,107 @@ Future<Widget> getNotas(String id) async {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Padding(
-            padding:
-                const EdgeInsets.only(bottom: 2.0, left: 100.0, right: 25.0),
+            padding: const EdgeInsets.only(bottom: 2.0, right: 10.0),
             child: Container(
-              height: 40.0,
+              height: 45.0,
               width: 400.0,
               child: Center(
                 child: Text(
                   materia['nombre'],
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
                 ),
               ),
               decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
                 borderRadius: BorderRadius.circular(2.0),
-                color: Colors.blue,
+                color: color,
               ),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 2.0, left: 4.0, right: 4.0),
+            padding: const EdgeInsets.only(bottom: 2.0, left: 10.0, right: 4.0),
             child: Container(
-              height: 40.0,
+              height: 45.0,
               width: 100.0,
               child: Center(
                 child: Text(
                   materia['nota1er'].toString(),
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
                 ),
               ),
               decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
                 borderRadius: BorderRadius.circular(2.0),
-                color: Colors.blue,
+                color: color,
               ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(bottom: 2.0, left: 4.0, right: 4.0),
             child: Container(
-              height: 40.0,
+              height: 45.0,
               width: 100.0,
               child: Center(
                 child: Text(
                   materia['nota2do'].toString(),
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
                 ),
               ),
               decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
                 borderRadius: BorderRadius.circular(2.0),
-                color: Colors.blue,
+                color: color,
               ),
             ),
           ),
           Padding(
-            padding:
-                const EdgeInsets.only(bottom: 2.0, left: 4.0, right: 100.0),
+            padding: const EdgeInsets.only(bottom: 2.0, left: 4.0, right: 10.0),
             child: Container(
-              height: 40.0,
+              height: 45.0,
               width: 100.0,
               child: Center(
                 child: Text(
                   materia['nota3er'].toString(),
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
                 ),
               ),
               decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
                 borderRadius: BorderRadius.circular(2.0),
-                color: Colors.blue,
+                color: color,
               ),
             ),
           ),
           Padding(
-            padding:
-                const EdgeInsets.only(bottom: 2.0, left: 4.0, right: 100.0),
+            padding: const EdgeInsets.only(bottom: 2.0, left: 10.0),
             child: Container(
-              height: 40.0,
+              height: 45.0,
               width: 100.0,
               child: Center(
                 child: Text(
-                  ((materia['nota1er']+materia['nota2do']+materia['nota3er'])/3).round().toString(),
+                  ((materia['nota1er'] +
+                              materia['nota2do'] +
+                              materia['nota3er']) /
+                          3)
+                      .round()
+                      .toString(),
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
                 ),
               ),
               decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
                 borderRadius: BorderRadius.circular(2.0),
-                color: Colors.blue,
+                color: color,
               ),
             ),
           ),
@@ -139,5 +269,7 @@ Future<Widget> getNotas(String id) async {
       ),
     ),
   );
-  return Column(children: list,);
+  return Column(
+    children: list.isNotEmpty ? list : [Text('NO EXISTEN DATOS')],
+  );
 }
