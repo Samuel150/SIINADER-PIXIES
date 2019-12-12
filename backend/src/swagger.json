@@ -6,6 +6,57 @@
         "description": "Documentación de la API usada para el sistema Siinader",
         "servers": ["http://localhost:3000"]
     },
+    "host": "localhost:3000",
+    "basePath": "",
+    "tags": [
+        {
+            "name": "Siinader",
+            "description": "API para un sistema academico de la carrera de derecho en la UPEA"
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/api/estudiantes": {
+            "post": {
+                "tags": [
+                    "Estudiante"
+                ],
+                "summary": "Crea un estudiante",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "El estudiante que se creará",
+                        "schema": {
+                            "$ref": "#/definitions/Estudiante"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Respuesta exitosa",
+                        "schema":{
+                            "$ref": "#/definitions/Estudiante"
+                        }
+                    },
+                    "404": {
+                        "description": "No encontrado"
+                    }
+                }
+            }
+        }
+    },
     "definitions": {
         "Estudiante": {
             "properties": {
