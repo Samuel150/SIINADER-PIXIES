@@ -120,6 +120,40 @@
                         "description": "No encontrado"
                     }
                 }
+            },
+            "put": {
+                "tags": [
+                    {
+                        "name": "Estudiante",
+                        "description": "API para los estudiantes"
+                    }
+                ],
+                "summary": "Actualiza al estudiante con el ID dado",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "description": "El estudiante se actulizará, no debe incluir ID ni CI",
+                        "schema": {
+                            "$ref": "#/definitions/Estudiante"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Respuesta exitosa",
+                        "schema": {
+                            "$ref": "#/definitions/Estudiante"
+                        }
+                    },
+                    "400": {
+                        "description": "Datos enviados incorrectos"
+                    },
+                    "404": {
+                        "description": "No encontrado"
+                    }
+                }
             }
         }
     },
@@ -185,7 +219,7 @@
                 }
             }
         },
-        "Jefes de carrera": {
+        "Jefe de carrera": {
             "properties": {
                 "idJefeCarrera": {
                     "type": "integer"
