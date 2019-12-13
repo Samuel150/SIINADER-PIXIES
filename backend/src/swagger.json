@@ -177,6 +177,468 @@
                         "description": "No encontrado"
                     }
                 }
+            },
+        
+            "/api/docente": {
+                "get": {
+                    "tags": [
+                        {
+                            "name": "Docente",
+                            "description": " API para los docentes"
+                        }
+                    ],
+                    "summary": "Obtiene todos los docentes",
+                    "responses": {
+                        "200": {
+                            "description": "Respuesta exitosa",
+                            "schema": {
+                                "$ref": "#/definitions/Docente"
+                            }
+                        },
+                        "400": {
+                            "description": "Datos enviados incorrectos"
+                        },
+                        "404": {
+                            "description": "No encontrado"
+                        }
+                    }
+                },
+                "post": {
+                    "tags": [
+                        {
+                            "name": "Docente",
+                            "description": "API para los docentes"
+                        }
+                    ],
+                    "summary": "Crea un docente",
+                    "parameters": [
+                        {
+                            "in": "body",
+                            "name": "body",
+                            "description": "El docente que se creará, no debe incluir id",
+                            "required": true,
+                            "schema": {
+                                "$ref": "#/definitions/Docente"
+                            }
+                        }
+                    ],
+                    "produces": [
+                        "application/json"
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "Respuesta exitosa",
+                            "schema": {
+                                "$ref": "#/definitions/Docente"
+                            }
+                        },
+                        "400": {
+                            "description": "Datos enviados incorrectos"
+                        },
+                        "404": {
+                            "description": "No encontrado"
+                        }
+                    }
+                }
+            },
+            "/api/docentes/{id}": {
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID del docente que se quiere obtener",
+                        "type": "string"
+                    }
+                ],
+                "get": {
+                    "tags": [
+                        {
+                            "name": "Docente",
+                            "description": "API para los docentes"
+                        }
+                    ],
+                    "summary": "Obtiene el docente con el ID dado",
+                    "responses": {
+                        "200": {
+                            "description": "Respuesta exitosa",
+                            "schema": {
+                                "$ref": "#/definitions/Docente"
+                            }
+                        },
+                        "400": {
+                            "description": "Datos enviados incorrectos"
+                        },
+                        "404": {
+                            "description": "No encontrado"
+                        }
+                    }
+                },
+                "put": {
+                    "tags": [
+                        {
+                            "name": "Docente",
+                            "description": "API para los docente"
+                        }
+                    ],
+                    "summary": "Actualiza al docente con el ID dado",
+                    "parameters": [
+                        {
+                            "in": "body",
+                            "name": "body",
+                            "required": true,
+                            "description": "El docente se actulizará, no debe incluir ID ni CI",
+                            "schema": {
+                                "$ref": "#/definitions/Docente"
+                            }
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "Respuesta exitosa",
+                            "schema": {
+                                "$ref": "#/definitions/Docente"
+                            }
+                        },
+                        "400": {
+                            "description": "Datos enviados incorrectos"
+                        },
+                        "404": {
+                            "description": "No encontrado"
+                        }
+                    }
+                },
+                "delete": {
+                    "tags": [
+                        {
+                            "name": "Docente",
+                            "description": "API para los docentes"
+                        }
+                    ],
+                    "summary": "Elimina al docente con el ID dado",
+                    "responses": {
+                        "200": {
+                            "description": "Respuesta exitosa",
+                            "schema": {
+                                "$ref": "#/definitions/Docente"
+                            }
+                        },
+                        "400": {
+                            "description": "Datos enviados incorrectos"
+                        },
+                        "404": {
+                            "description": "No encontrado"
+                        }
+                    }
+                }
+            },
+            
+            "/api/JefeCarrera": {
+                "get": {
+                    "tags": [
+                        {
+                            "name": "JefeCarrera",
+                            "description": "API para el Jefe de Carrera"
+                        }
+                    ],
+                    "summary": "Obtiene al Jefe de Carrera",
+                    "responses": {
+                        "200": {
+                            "description": "Respuesta exitosa",
+                            "schema": {
+                                "$ref": "#/definitions/JefeCarrera"
+                            }
+                        },
+                        "400": {
+                            "description": "Datos enviados incorrectos"
+                        },
+                        "404": {
+                            "description": "No encontrado"
+                        }
+                    }
+                },
+                "post": {
+                    "tags": [
+                        {
+                            "name": "JefeCarrera",
+                            "description": "API para los JefeCarrera"
+                        }
+                    ],
+                    "summary": "Crea un JefeCarrera",
+                    "parameters": [
+                        {
+                            "in": "body",
+                            "name": "body",
+                            "description": "El Jefe de Carrera que se creará, no debe incluir id",
+                            "required": true,
+                            "schema": {
+                                "$ref": "#/definitions/JefeCarrera"
+                            }
+                        }
+                    ],
+                    "produces": [
+                        "application/json"
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "Respuesta exitosa",
+                            "schema": {
+                                "$ref": "#/definitions/JefeCarrera"
+                            }
+                        },
+                        "400": {
+                            "description": "Datos enviados incorrectos"
+                        },
+                        "404": {
+                            "description": "No encontrado"
+                        }
+                    }
+                }
+            },
+            "/api/JefeCarrera/{id}": {
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID del Jefe de Carrera que se quiere obtener",
+                        "type": "string"
+                    }
+                ],
+                "get": {
+                    "tags": [
+                        {
+                            "name": "JefeCarrera",
+                            "description": "API para los Jefe de Carrera"
+                        }
+                    ],
+                    "summary": "Obtiene el Jefe de Carrera con el ID dado",
+                    "responses": {
+                        "200": {
+                            "description": "Respuesta exitosa",
+                            "schema": {
+                                "$ref": "#/definitions/JefeCarrera"
+                            }
+                        },
+                        "400": {
+                            "description": "Datos enviados incorrectos"
+                        },
+                        "404": {
+                            "description": "No encontrado"
+                        }
+                    }
+                },
+                "put": {
+                    "tags": [
+                        {
+                            "name": "JefeCarrera",
+                            "description": "API para los Jefe de Carrera"
+                        }
+                    ],
+                    "summary": "Actualiza al Jefe de Carrera con el ID dado",
+                    "parameters": [
+                        {
+                            "in": "body",
+                            "name": "body",
+                            "required": true,
+                            "description": "El Jefe de Carrera se actulizará, no debe incluir ID ni CI",
+                            "schema": {
+                                "$ref": "#/definitions/JefeCarrera"
+                            }
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "Respuesta exitosa",
+                            "schema": {
+                                "$ref": "#/definitions/JefeCarrera"
+                            }
+                        },
+                        "400": {
+                            "description": "Datos enviados incorrectos"
+                        },
+                        "404": {
+                            "description": "No encontrado"
+                        }
+                    }
+                },
+                "delete": {
+                    "tags": [
+                        {
+                            "name": "JefeCarrera",
+                            "description": "API para los Jefe de Carrera"
+                        }
+                    ],
+                    "summary": "Elimina al Jefe de Carrera con el ID dado",
+                    "responses": {
+                        "200": {
+                            "description": "Respuesta exitosa",
+                            "schema": {
+                                "$ref": "#/definitions/JefeCarrera"
+                            }
+                        },
+                        "400": {
+                            "description": "Datos enviados incorrectos"
+                        },
+                        "404": {
+                            "description": "No encontrado"
+                        }
+                    }
+                }	
+            },
+            
+            "/api/kardex": {
+                "get": {
+                    "tags": [
+                        {
+                            "name": "Kardex",
+                            "description": " API para los kardex"
+                        }
+                    ],
+                    "summary": "Obtiene todos los kardex",
+                    "responses": {
+                        "200": {
+                            "description": "Respuesta exitosa",
+                            "schema": {
+                                "$ref": "#/definitions/Kardex"
+                            }
+                        },
+                        "400": {
+                            "description": "Datos enviados incorrectos"
+                        },
+                        "404": {
+                            "description": "No encontrado"
+                        }
+                    }
+                },
+                "post": {
+                    "tags": [
+                        {
+                            "name": "Kardex",
+                            "description": " API para los kardex"
+                        }
+                    ],
+                    "summary": "Crea un kardex",
+                    "parameters": [
+                        {
+                            "in": "body",
+                            "name": "body",
+                            "description": "El kardex que se creará, no debe incluir id",
+                            "required": true,
+                            "schema": {
+                                "$ref": "#/definitions/Kardex"
+                            }
+                        }
+                    ],
+                    "produces": [
+                        "application/json"
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "Respuesta exitosa",
+                            "schema": {
+                                "$ref": "#/definitions/Kardex"
+                            }
+                        },
+                        "400": {
+                            "description": "Datos enviados incorrectos"
+                        },
+                        "404": {
+                            "description": "No encontrado"
+                        }
+                    }
+                }
+            },
+            "/api/kardex/{id}": {
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID del kardex que se quiere obtener",
+                        "type": "string"
+                    }
+                ],
+                "get": {
+                    "tags": [
+                        {
+                            "name": "Kardex",
+                            "description": "API para los kardex"
+                        }
+                    ],
+                    "summary": "Obtiene el kardex con el ID dado",
+                    "responses": {
+                        "200": {
+                            "description": "Respuesta exitosa",
+                            "schema": {
+                                "$ref": "#/definitions/Kardex"
+                            }
+                        },
+                        "400": {
+                            "description": "Datos enviados incorrectos"
+                        },
+                        "404": {
+                            "description": "No encontrado"
+                        }
+                    }
+                },
+                "put": {
+                    "tags": [
+                        {
+                            "name": "Kardex",
+                            "description": "API para los kardex"
+                        }
+                    ],
+                    "summary": "Actualiza al kardex con el ID dado",
+                    "parameters": [
+                        {
+                            "in": "body",
+                            "name": "body",
+                            "required": true,
+                            "description": "El kardex se actulizará, no debe incluir ID ni CI",
+                            "schema": {
+                                "$ref": "#/definitions/Kardex"
+                            }
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "Respuesta exitosa",
+                            "schema": {
+                                "$ref": "#/definitions/Kardex"
+                            }
+                        },
+                        "400": {
+                            "description": "Datos enviados incorrectos"
+                        },
+                        "404": {
+                            "description": "No encontrado"
+                        }
+                    }
+                },
+                "delete": {
+                    "tags": [
+                        {
+                            "name": "Kardex",
+                            "description": "API para los kardex"
+                        }
+                    ],
+                    "summary": "Elimina al kardex con el ID dado",
+                    "responses": {
+                        "200": {
+                            "description": "Respuesta exitosa",
+                            "schema": {
+                                "$ref": "#/definitions/Kardex"
+                            }
+                        },
+                        "400": {
+                            "description": "Datos enviados incorrectos"
+                        },
+                        "404": {
+                            "description": "No encontrado"
+                        }
+                    }
+                }	
             }
         }
     },
