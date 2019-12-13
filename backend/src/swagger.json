@@ -4,7 +4,9 @@
         "version": "1.0.0",
         "title": "Siinader API",
         "description": "Documentación de la API usada para el sistema Siinader",
-        "servers": ["http://localhost:3000"]
+        "servers": [
+            "http://localhost:3000"
+        ]
     },
     "host": "localhost:3000",
     "basePath": "",
@@ -25,16 +27,43 @@
     ],
     "paths": {
         "/api/estudiantes": {
+            "get": {
+                "tags": [
+                    {
+                        "name": "Estudiante",
+                        "description": "API para los estudiantes"
+                    }
+                ],
+                "summary": "Obtiene todos los estudiantes",
+                "responses": {
+                    "200": {
+                        "description": "Respuesta exitosa",
+                        "schema": {
+                            "$ref": "#/definitions/Estudiante"
+                        }
+                    },
+                    "400": {
+                        "description": "Datos enviados incorrectos"
+                    },
+                    "404": {
+                        "description": "No encontrado"
+                    }
+                }
+            },
             "post": {
                 "tags": [
-                    "Estudiante"
+                    {
+                        "name": "Estudiante",
+                        "description": "API para los estudiantes"
+                    }
                 ],
                 "summary": "Crea un estudiante",
                 "parameters": [
                     {
                         "in": "body",
                         "name": "body",
-                        "description": "El estudiante que se creará",
+                        "description": "El estudiante que se creará, no debe incluir id",
+                        "required": true,
                         "schema": {
                             "$ref": "#/definitions/Estudiante"
                         }
@@ -46,9 +75,46 @@
                 "responses": {
                     "200": {
                         "description": "Respuesta exitosa",
-                        "schema":{
+                        "schema": {
                             "$ref": "#/definitions/Estudiante"
                         }
+                    },
+                    "400": {
+                        "description": "Datos enviados incorrectos"
+                    },
+                    "404": {
+                        "description": "No encontrado"
+                    }
+                }
+            }
+        },
+        "/api/estudiantes/{id}": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "description": "ID del estudiante que se quiere obtener",
+                    "type": "string"
+                }
+            ],
+            "get": {
+                "tags": [
+                    {
+                        "name": "Estudiante",
+                        "description": "API para los estudiantes"
+                    }
+                ],
+                "summary": "Obtiene el estudiante con el ID dado",
+                "responses": {
+                    "200": {
+                        "description": "Respuesta exitosa",
+                        "schema": {
+                            "$ref": "#/definitions/Estudiante"
+                        }
+                    },
+                    "400": {
+                        "description": "Datos enviados incorrectos"
                     },
                     "404": {
                         "description": "No encontrado"
@@ -61,25 +127,25 @@
         "Estudiante": {
             "properties": {
                 "idEstudiante": {
-                    "type": "int(11)"
+                    "type": "integer"
                 },
                 "nombre": {
-                    "type": "varchar(45)"
+                    "type": "string"
                 },
                 "apellido_1": {
-                    "type": "varchar(45)"
+                    "type": "string"
                 },
                 "apellido_2": {
-                    "type": "varchar(45)"
+                    "type": "string"
                 },
                 "ci": {
-                    "type": "int(11)"
+                    "type": "integer"
                 },
                 "fecha_nacimiento": {
-                    "type": "date"
+                    "type": "string"
                 },
                 "password": {
-                    "type": "varchar(45)"
+                    "type": "string"
                 }
             }
         },
@@ -97,91 +163,91 @@
         "Docente": {
             "properties": {
                 "idDocente": {
-                    "type": "int(11)"
+                    "type": "integer"
                 },
                 "nombre": {
-                    "type": "varchar(45)"
+                    "type": "string"
                 },
                 "apellido_1": {
-                    "type": "varchar(45)"
+                    "type": "string"
                 },
                 "apellido_2": {
-                    "type": "varchar(45)"
+                    "type": "string"
                 },
                 "ci": {
-                    "type": "int(11)"
+                    "type": "integer"
                 },
                 "fecha_nacimiento": {
-                    "type": "date"
+                    "type": "string"
                 },
                 "password": {
-                    "type": "varchar(45)"
+                    "type": "string"
                 }
             }
         },
         "Jefes de carrera": {
             "properties": {
                 "idJefeCarrera": {
-                    "type": "int(11)"
+                    "type": "integer"
                 },
                 "nombre": {
-                    "type": "varchar(45)"
+                    "type": "string"
                 },
                 "apellido_1": {
-                    "type": "varchar(45)"
+                    "type": "string"
                 },
                 "apellido_2": {
-                    "type": "varchar(45)"
+                    "type": "string"
                 },
                 "ci": {
-                    "type": "int(11)"
+                    "type": "integer"
                 },
                 "fecha_nacimiento": {
-                    "type": "date"
+                    "type": "string"
                 },
                 "password": {
-                    "type": "varchar(45)"
+                    "type": "string"
                 }
             }
         },
         "Kardex": {
             "properties": {
                 "idKardex": {
-                    "type": "int(11)"
+                    "type": "integer"
                 },
                 "nombre": {
-                    "type": "varchar(45)"
+                    "type": "string"
                 },
                 "apellido_1": {
-                    "type": "varchar(45)"
+                    "type": "string"
                 },
                 "apellido_2": {
-                    "type": "varchar(45)"
+                    "type": "string"
                 },
                 "ci": {
-                    "type": "int(11)"
+                    "type": "integer"
                 },
                 "fecha_nacimiento": {
-                    "type": "date"
+                    "type": "string"
                 },
                 "password": {
-                    "type": "varchar(45)"
+                    "type": "string"
                 }
             }
         },
         "Materia": {
             "properties": {
                 "idMateria": {
-                    "type": "int(11)"
+                    "type": "integer"
                 },
                 "nombre": {
-                    "type": "varchar(45)"
+                    "type": "string"
                 },
                 "creditos": {
-                    "type": "int(11)"
+                    "type": "integer"
                 },
                 "semestre": {
-                    "type": "int(11)"
+                    "type": "integer"
                 }
             }
         }
