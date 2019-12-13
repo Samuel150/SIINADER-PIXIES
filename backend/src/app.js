@@ -392,5 +392,4 @@ app.put('/api/jefeCarrera/:id', (req, res) => {
         }
     });
 });
-swaggerUi.generateHTML(swaggerDocument);
 app.listen(app.get('port'), () => console.log('Start server on port ' + app.get('port')));
