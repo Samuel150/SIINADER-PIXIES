@@ -31,7 +31,7 @@
                 "tags": [
                     {
                         "name": "Estudiante",
-                        "description": "API para los estudiantes"
+                        "description": " API para los estudiantes"
                     }
                 ],
                 "summary": "Obtiene todos los estudiantes",
@@ -54,7 +54,7 @@
                 "tags": [
                     {
                         "name": "Estudiante",
-                        "description": "API para los estudiantes"
+                        "description": " API para los estudiantes"
                     }
                 ],
                 "summary": "Crea un estudiante",
@@ -62,7 +62,7 @@
                     {
                         "in": "body",
                         "name": "body",
-                        "description": "El estudiante que se creará, no debe incluir id",
+                        "description": "El estudiantes que se creará, no debe incluir id",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/Estudiante"
@@ -102,7 +102,7 @@
                 "tags": [
                     {
                         "name": "Estudiante",
-                        "description": "API para los estudiantes"
+                        "description": " API para los estudiantes"
                     }
                 ],
                 "summary": "Obtiene el estudiante con el ID dado",
@@ -125,7 +125,7 @@
                 "tags": [
                     {
                         "name": "Estudiante",
-                        "description": "API para los estudiantes"
+                        "description": " API para los estudiantes"
                     }
                 ],
                 "summary": "Actualiza al estudiante con el ID dado",
@@ -159,7 +159,7 @@
                 "tags": [
                     {
                         "name": "Estudiante",
-                        "description": "API para los estudiantes"
+                        "description": " API para los estudiantes"
                     }
                 ],
                 "summary": "Elimina al estudiante con el ID dado",

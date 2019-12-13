@@ -5,7 +5,6 @@ const cors = require('cors');
 const swaggerUi = require('swagger-ui-express')
 const swaggerDocument = require('./swagger.json')
 const connection = mysql.createConnection({ host: 'localhost', user: 'root', password: '123456789', database: 'siinader' });
-
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 connection.connect(err => {
@@ -393,4 +392,5 @@ app.put('/api/jefeCarrera/:id', (req, res) => {
         }
     });
 });
+swaggerUi.generateHTML(swaggerDocument);
 app.listen(app.get('port'), () => console.log('Start server on port ' + app.get('port')));
