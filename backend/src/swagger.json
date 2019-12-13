@@ -498,7 +498,7 @@
                     "200": {
                         "description": "Respuesta exitosa",
                         "schema": {
-                            "$ref": "#/definitions/Jefe de carrera"
+                            "$ref": "#/definitions/JefeDeCarrera"
                         }
                     },
                     "400": {
@@ -524,7 +524,7 @@
                         "description": "El jefes de carrera que se creará, no debe incluir id",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/Jefe de carrera"
+                            "$ref": "#/definitions/JefeDeCarrera"
                         }
                     }
                 ],
@@ -535,7 +535,7 @@
                     "200": {
                         "description": "Respuesta exitosa",
                         "schema": {
-                            "$ref": "#/definitions/Jefe de carrera"
+                            "$ref": "#/definitions/JefeDeCarrera"
                         }
                     },
                     "400": {
@@ -569,7 +569,7 @@
                     "200": {
                         "description": "Respuesta exitosa",
                         "schema": {
-                            "$ref": "#/definitions/Jefe de carrera"
+                            "$ref": "#/definitions/JefeDeCarrera"
                         }
                     },
                     "400": {
@@ -595,7 +595,7 @@
                         "required": true,
                         "description": "El jefes de carrera se actulizará, no debe incluir CI",
                         "schema": {
-                            "$ref": "#/definitions/Jefe de carrera"
+                            "$ref": "#/definitions/JefeDeCarrera"
                         }
                     }
                 ],
@@ -603,7 +603,7 @@
                     "200": {
                         "description": "Respuesta exitosa",
                         "schema": {
-                            "$ref": "#/definitions/Jefe de carrera"
+                            "$ref": "#/definitions/JefeDeCarrera"
                         }
                     },
                     "400": {
@@ -626,7 +626,7 @@
                     "200": {
                         "description": "Respuesta exitosa",
                         "schema": {
-                            "$ref": "#/definitions/Jefe de carrera"
+                            "$ref": "#/definitions/JefeDeCarrera"
                         }
                     },
                     "400": {
@@ -666,17 +666,6 @@
                 }
             }
         },
-        "Estudiantes": {
-            "type": "object",
-            "properties": {
-                "Estudiantes": {
-                    "type": "object",
-                    "additionalProperties": {
-                        "$ref": "#/definitions/Estudiante"
-                    }
-                }
-            }
-        },
         "Docente": {
             "properties": {
                 "idDocente": {
@@ -702,7 +691,7 @@
                 }
             }
         },
-        "Jefe de carrera": {
+        "JefeDeCarrera": {
             "properties": {
                 "idJefeCarrera": {
                     "type": "integer"
