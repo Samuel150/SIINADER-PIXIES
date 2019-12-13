@@ -96,284 +96,306 @@ class _AnadirUsuarioPageState extends State<AnadirUsuarioPage> {
               key: _formKey,
               child: Column(
                 children: <Widget>[
-                  TextFormField(
-                    controller: _nombreValue,
-                    keyboardType: TextInputType.number,
-                    validator: (value) {
-                      if (value.isEmpty) {
-                        return 'PORFAVOR INGRESA EL NOMBRE DEL USUARIO';
-                      } else {
-                        return null;
-                      }
-                    },
-                    decoration: InputDecoration(
-                      errorStyle: TextStyle(
-                        color: Colors.red[800],
-                        fontWeight: FontWeight.w300,
-                      ),
-                      labelText: 'NOMBRE',
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      disabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      focusedErrorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      errorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                    ),
-                    style: TextStyle(
-                      color: Colors.grey[900],
-                      fontSize: 13.0,
-                      fontWeight: FontWeight.w200,
-                    ),
-                  ),
-                  TextFormField(
-                    controller: _apellido1Value,
-                    keyboardType: TextInputType.number,
-                    validator: (value) {
-                      if (value.isEmpty) {
-                        return 'PORFAVOR INGRESA EL PRIMER APELLIDO';
-                      } else {
-                        return null;
-                      }
-                    },
-                    decoration: InputDecoration(
-                      errorStyle: TextStyle(
-                        color: Colors.red[800],
-                        fontWeight: FontWeight.w300,
-                      ),
-                      labelText: 'PRIMER APELLIDO',
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      disabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      focusedErrorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      errorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                    ),
-                    style: TextStyle(
-                      color: Colors.grey[900],
-                      fontSize: 13.0,
-                      fontWeight: FontWeight.w200,
-                    ),
-                  ),
-                  TextFormField(
-                    controller: _apellido2Value,
-                    keyboardType: TextInputType.number,
-                    validator: (value) {
-                      if (value.isEmpty) {
-                        return 'PORFAVOR INGRESA EL SEGUNDO APELLIDO';
-                      } else {
-                        return null;
-                      }
-                    },
-                    decoration: InputDecoration(
-                      errorStyle: TextStyle(
-                        color: Colors.red[800],
-                        fontWeight: FontWeight.w300,
-                      ),
-                      labelText: 'SEGUNDO APELLIDO',
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      disabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      focusedErrorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      errorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                    ),
-                    style: TextStyle(
-                      color: Colors.grey[900],
-                      fontSize: 13.0,
-                      fontWeight: FontWeight.w200,
-                    ),
-                  ),
-                  TextFormField(
-                    controller: _ciValue,
-                    keyboardType: TextInputType.number,
-                    validator: (value) {
-                      if (value.isEmpty) {
-                        return 'PORFAVOR INGRESA EL CI';
-                      } else {
-                        return null;
-                      }
-                    },
-                    decoration: InputDecoration(
-                      errorStyle: TextStyle(
-                        color: Colors.red[800],
-                        fontWeight: FontWeight.w300,
-                      ),
-                      labelText: 'CARNET DE IDENTIDAD',
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      disabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      focusedErrorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      errorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                    ),
-                    style: TextStyle(
-                      color: Colors.grey[900],
-                      fontSize: 13.0,
-                      fontWeight: FontWeight.w200,
-                    ),
-                  ),
-                  TextFormField(
-                    controller: _fechaNacimientoValue,
-                    keyboardType: TextInputType.number,
-                    validator: (value) {
-                      if (value.isEmpty) {
-                        return 'PORFAVOR INGRESA LA FECHA DE NACIMIENTO';
-                      } else {
-                        return null;
-                      }
-                    },
-                    decoration: InputDecoration(
-                      errorStyle: TextStyle(
-                        color: Colors.red[800],
-                        fontWeight: FontWeight.w300,
-                      ),
-                      labelText: 'FECHA DE NACIMIENTO',
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      disabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      focusedErrorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      errorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                    ),
-                    style: TextStyle(
-                      color: Colors.grey[900],
-                      fontSize: 13.0,
-                      fontWeight: FontWeight.w200,
-                    ),
-                  ),
-                  TextFormField(
-                    controller: _passwordValue,
-                    keyboardType: TextInputType.number,
-                    validator: (value) {
-                      if (value.isEmpty) {
-                        return 'PORFAVOR INGRESA LA CONTRASEÑA';
-                      } else {
-                        return null;
-                      }
-                    },
-                    decoration: InputDecoration(
-                      errorStyle: TextStyle(
-                        color: Colors.red[800],
-                        fontWeight: FontWeight.w300,
-                      ),
-                      labelText: 'CONTRASEÑA',
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      disabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      focusedErrorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                      errorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[900]),
-                      ),
-                    ),
-                    style: TextStyle(
-                      color: Colors.grey[900],
-                      fontSize: 13.0,
-                      fontWeight: FontWeight.w200,
-                    ),
-                  ),
-                  RaisedButton(
-                    child: Text('AÑADIR'),
-                    onPressed: () async {
-                      if (_formKey.currentState.validate()) {
-                        String url = 'http://localhost:3000/api/' + _rolValue;
-                        dynamic data;
-                        var body = {
-                          'nombre':_nombreValue.text,
-                          'apellido_1':_apellido1Value.text,
-                          'apellido_2':_apellido2Value.text,
-                          'ci':_ciValue.text,
-                          'fecha_nacimiento':_fechaNacimientoValue.text,
-                          'password':_passwordValue.text
-                        };
-                        var bodyEncoded = json.encode(body);
-                        http.Response response;
-                        try {
-                          response = await http.post(url,
-                              body: bodyEncoded,
-                              headers: {
-                                "Accept": "application/json",
-                                "Content-Type": "application/json"
-                              });
-                          data = response.body;
-                        } catch (e) {
-                          print(e);
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      controller: _nombreValue,
+                      keyboardType: TextInputType.number,
+                      validator: (value) {
+                        if (value.isEmpty) {
+                          return 'PORFAVOR INGRESA EL NOMBRE DEL USUARIO';
+                        } else {
+                          return null;
                         }
-                        if (data.toString().contains('"affectedRows":1')) {
-                          Navigator.of(context).pop();
+                      },
+                      decoration: InputDecoration(
+                        errorStyle: TextStyle(
+                          color: Colors.red[800],
+                          fontWeight: FontWeight.w300,
+                        ),
+                        labelText: 'NOMBRE',
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        disabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        focusedErrorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        errorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                      ),
+                      style: TextStyle(
+                        color: Colors.grey[900],
+                        fontSize: 13.0,
+                        fontWeight: FontWeight.w200,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      controller: _apellido1Value,
+                      keyboardType: TextInputType.number,
+                      validator: (value) {
+                        if (value.isEmpty) {
+                          return 'PORFAVOR INGRESA EL PRIMER APELLIDO';
+                        } else {
+                          return null;
                         }
-                      }
-                    },
+                      },
+                      decoration: InputDecoration(
+                        errorStyle: TextStyle(
+                          color: Colors.red[800],
+                          fontWeight: FontWeight.w300,
+                        ),
+                        labelText: 'PRIMER APELLIDO',
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        disabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        focusedErrorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        errorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                      ),
+                      style: TextStyle(
+                        color: Colors.grey[900],
+                        fontSize: 13.0,
+                        fontWeight: FontWeight.w200,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      controller: _apellido2Value,
+                      keyboardType: TextInputType.number,
+                      validator: (value) {
+                        if (value.isEmpty) {
+                          return 'PORFAVOR INGRESA EL SEGUNDO APELLIDO';
+                        } else {
+                          return null;
+                        }
+                      },
+                      decoration: InputDecoration(
+                        errorStyle: TextStyle(
+                          color: Colors.red[800],
+                          fontWeight: FontWeight.w300,
+                        ),
+                        labelText: 'SEGUNDO APELLIDO',
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        disabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        focusedErrorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        errorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                      ),
+                      style: TextStyle(
+                        color: Colors.grey[900],
+                        fontSize: 13.0,
+                        fontWeight: FontWeight.w200,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      controller: _ciValue,
+                      keyboardType: TextInputType.number,
+                      validator: (value) {
+                        if (value.isEmpty) {
+                          return 'PORFAVOR INGRESA EL CI';
+                        } else {
+                          return null;
+                        }
+                      },
+                      decoration: InputDecoration(
+                        errorStyle: TextStyle(
+                          color: Colors.red[800],
+                          fontWeight: FontWeight.w300,
+                        ),
+                        labelText: 'CARNET DE IDENTIDAD',
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        disabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        focusedErrorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        errorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                      ),
+                      style: TextStyle(
+                        color: Colors.grey[900],
+                        fontSize: 13.0,
+                        fontWeight: FontWeight.w200,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      controller: _fechaNacimientoValue,
+                      keyboardType: TextInputType.number,
+                      validator: (value) {
+                        if (value.isEmpty) {
+                          return 'PORFAVOR INGRESA LA FECHA DE NACIMIENTO';
+                        } else {
+                          return null;
+                        }
+                      },
+                      decoration: InputDecoration(
+                        errorStyle: TextStyle(
+                          color: Colors.red[800],
+                          fontWeight: FontWeight.w300,
+                        ),
+                        labelText: 'FECHA DE NACIMIENTO',
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        disabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        focusedErrorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        errorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                      ),
+                      style: TextStyle(
+                        color: Colors.grey[900],
+                        fontSize: 13.0,
+                        fontWeight: FontWeight.w200,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      controller: _passwordValue,
+                      keyboardType: TextInputType.number,
+                      validator: (value) {
+                        if (value.isEmpty) {
+                          return 'PORFAVOR INGRESA LA CONTRASEÑA';
+                        } else {
+                          return null;
+                        }
+                      },
+                      decoration: InputDecoration(
+                        errorStyle: TextStyle(
+                          color: Colors.red[800],
+                          fontWeight: FontWeight.w300,
+                        ),
+                        labelText: 'CONTRASEÑA',
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        disabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        focusedErrorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                        errorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[900]),
+                        ),
+                      ),
+                      style: TextStyle(
+                        color: Colors.grey[900],
+                        fontSize: 13.0,
+                        fontWeight: FontWeight.w200,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: RaisedButton(
+                      color: Colors.green[400],
+                      child: Text('AÑADIR',style: TextStyle(color: Colors.white),),
+                      onPressed: () async {
+                        if (_formKey.currentState.validate()) {
+                          String url = 'http://localhost:3000/api/' + _rolValue;
+                          dynamic data;
+                          var body = {
+                            'nombre':_nombreValue.text,
+                            'apellido_1':_apellido1Value.text,
+                            'apellido_2':_apellido2Value.text,
+                            'ci':_ciValue.text,
+                            'fecha_nacimiento':_fechaNacimientoValue.text,
+                            'password':_passwordValue.text
+                          };
+                          var bodyEncoded = json.encode(body);
+                          http.Response response;
+                          try {
+                            response = await http.post(url,
+                                body: bodyEncoded,
+                                headers: {
+                                  "Accept": "application/json",
+                                  "Content-Type": "application/json"
+                                });
+                            data = response.body;
+                          } catch (e) {
+                            print(e);
+                          }
+                          if (data.toString().contains('"affectedRows":1')) {
+                            Navigator.of(context).pop();
+                          }
+                        }
+                      },
+                    ),
                   ),
                 ],
               ),
