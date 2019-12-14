@@ -164,7 +164,7 @@ app.get('/api/materias', (req, res) => {
         }
     });
 });
-//obtener una materias
+//obtener una materia
 app.get('/api/materias/:id', (req, res) => {
     var id = req.params.id;
 
@@ -295,7 +295,7 @@ app.get('/api/jefeCarrera', (req, res) => {
         }
     });
 });
-//obtener todos los jefes de carrera o uno solo
+//obtener un jefe de carrera
 app.get('/api/jefeCarrera/:id', (req, res) => {
     var id = req.params.id;
     connection.query('SELECT * FROM jefes_carrera WHERE idJefeCarrera = ?', [id], (err, results) => {

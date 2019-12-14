@@ -88,13 +88,13 @@
                 }
             }
         },
-        "/api/estudiantes/{id}": {
+        "/api/estudiantes/:id": {
             "parameters": [
                 {
                     "name": "id",
                     "in": "path",
                     "required": true,
-                    "description": "ID del estudiante que se quiere obtener",
+                    "description": "ID del estudiante",
                     "type": "string"
                 }
             ],
@@ -241,13 +241,13 @@
                 }
             }
         },
-        "/api/docentes/{id}": {
+        "/api/docentes/:id": {
             "parameters": [
                 {
                     "name": "id",
                     "in": "path",
                     "required": true,
-                    "description": "ID del docente que se quiere obtener",
+                    "description": "ID del docente",
                     "type": "string"
                 }
             ],
@@ -331,7 +331,312 @@
                     }
                 }
             }
-        }, 
+        },
+        "/api/materias": {
+            "get": {
+                "tags": [
+                    {
+                        "name": "Materia",
+                        "description": " API para las materias"
+                    }
+                ],
+                "summary": "Obtiene todos las materias",
+                "responses": {
+                    "200": {
+                        "description": "Respuesta exitosa",
+                        "schema": {
+                            "$ref": "#/definitions/Materia"
+                        }
+                    },
+                    "400": {
+                        "description": "Datos enviados incorrectos"
+                    },
+                    "404": {
+                        "description": "No encontrado"
+                    }
+                }
+            }
+        },
+        "/api/materias/:id": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "description": "ID de la materia que se quiere obtener",
+                    "type": "string"
+                }
+            ],
+            "get": {
+                "tags": [
+                    {
+                        "name": "Materia",
+                        "description": " API para las materias"
+                    }
+                ],
+                "summary": "Obtiene la materia con el ID dado",
+                "responses": {
+                    "200": {
+                        "description": "Respuesta exitosa",
+                        "schema": {
+                            "$ref": "#/definitions/Materia"
+                        }
+                    },
+                    "400": {
+                        "description": "Datos enviados incorrectos"
+                    },
+                    "404": {
+                        "description": "No encontrado"
+                    }
+                }
+            }
+        },
+        "/api/estudiantes/:id/materias": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "description": "ID del estudiante del que se quiere obtener materias y notas",
+                    "type": "string"
+                }
+            ],
+            "get": {
+                "tags": [
+                    {
+                        "name": "Materias y notas",
+                        "description": " API para las materias y notas"
+                    }
+                ],
+                "summary": "Obtiene las materias y notas con el ID dado",
+                "responses": {
+                    "200": {
+                        "description": "Respuesta exitosa",
+                        "schema": {
+                            "$ref": "#/definitions/Estudiante_has_materia"
+                        }
+                    },
+                    "400": {
+                        "description": "Datos enviados incorrectos"
+                    },
+                    "404": {
+                        "description": "No encontrado"
+                    }
+                }
+            }
+        },
+        "/api/jefeCarrera/inscripcion": {
+            "post": {
+                "tags": [
+                    {
+                        "name": "Asignación",
+                        "description": " API para las asignaciones"
+                    }
+                ],
+                "summary": "Asigna un estudiante a una materia",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "El estudiante sera asignado, no debe incluir ninguna nota",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Estudiante_has_materia"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Respuesta exitosa",
+                        "schema": {
+                            "$ref": "#/definitions/Estudiante_has_materia"
+                        }
+                    },
+                    "400": {
+                        "description": "Datos enviados incorrectos"
+                    },
+                    "404": {
+                        "description": "No encontrado"
+                    }
+                }
+            }
+        },
+        "/api/jefeCarrera/asignacion": {
+            "post": {
+                "tags": [
+                    {
+                        "name": "Asignación",
+                        "description": " API para las asignaciones"
+                    }
+                ],
+                "summary": "Asigna un docente a una materia",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "El docente sera asignado",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Docente_has_materia"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Respuesta exitosa",
+                        "schema": {
+                            "$ref": "#/definitions/Docente_has_materia"
+                        }
+                    },
+                    "400": {
+                        "description": "Datos enviados incorrectos"
+                    },
+                    "404": {
+                        "description": "No encontrado"
+                    }
+                }
+            }
+        },
+        "/api/docentes/notas/:idEstudiante/:idMateria": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "description": "ID del estudiante",
+                    "type": "string"
+                },
+                {
+                    "name": "id2",
+                    "in": "path",
+                    "required": true,
+                    "description": "ID de la materia",
+                    "type": "string"
+                }
+            ],
+            "get": {
+                "tags": [
+                    {
+                        "name": "Notas",
+                        "description": " API para las notas"
+                    }
+                ],
+                "summary": "Obtiene las notas del estudiante con los ID dados",
+                "responses": {
+                    "200": {
+                        "description": "Respuesta exitosa",
+                        "schema": {
+                            "$ref": "#/definitions/Estudiante_has_materia"
+                        }
+                    },
+                    "400": {
+                        "description": "Datos enviados incorrectos"
+                    },
+                    "404": {
+                        "description": "No encontrado"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    {
+                        "name": "Notas",
+                        "description": " API para las notas"
+                    }
+                ],
+                "summary": "Actualiza las notas del estudiante con los ID dados",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "description": "Las notas se actulizaran, no debe incluir aula, hora_inicio y semestre_cursada",
+                        "schema": {
+                            "$ref": "#/definitions/Estudiante_has_materia"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Respuesta exitosa",
+                        "schema": {
+                            "$ref": "#/definitions/Estudiante_has_materia"
+                        }
+                    },
+                    "400": {
+                        "description": "Datos enviados incorrectos"
+                    },
+                    "404": {
+                        "description": "No encontrado"
+                    }
+                }
+            }
+        },
+        "/api/docentes/:id/materias": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "description": "ID del docente del que se quiere obtener materias",
+                    "type": "string"
+                }
+            ],
+            "get": {
+                "tags": [
+                    {
+                        "name": "Docentes y materias",
+                        "description": " API para los docentes y materias"
+                    }
+                ],
+                "summary": "Obtiene las materias que un docente dicta el ID dado",
+                "responses": {
+                    "200": {
+                        "description": "Respuesta exitosa",
+                        "schema": {
+                            "$ref": "#/definitions/Docente_has_materia"
+                        }
+                    },
+                    "400": {
+                        "description": "Datos enviados incorrectos"
+                    },
+                    "404": {
+                        "description": "No encontrado"
+                    }
+                }
+            }
+        },
+        "/api/kardex/materias": {
+            "get": {
+                "tags": [
+                    {
+                        "name": "Docentes y materias",
+                        "description": " API para los docentes y materias"
+                    }
+                ],
+                "summary": "Obtiene las materias que los docentes dictan",
+                "responses": {
+                    "200": {
+                        "description": "Respuesta exitosa",
+                        "schema": {
+                            "$ref": "#/definitions/Docente_has_materia"
+                        }
+                    },
+                    "400": {
+                        "description": "Datos enviados incorrectos"
+                    },
+                    "404": {
+                        "description": "No encontrado"
+                    }
+                }
+            }
+        },
         "/api/kardex": {
             "get": {
                 "tags": [
@@ -753,6 +1058,50 @@
                     "type": "integer"
                 },
                 "semestre": {
+                    "type": "integer"
+                }
+            }
+        },
+        "Docente_has_materia": {
+            "properties": {
+                "docente_idDocente": {
+                    "type": "integer"
+                },
+                "materias_idMateria": {
+                    "type": "integer"
+                },
+                "aula": {
+                    "type": "string"
+                },
+                "hora_inicio": {
+                    "type": "integer"
+                }
+            }
+        },
+        "Estudiante_has_materia": {
+            "properties": {
+                "materias_idMateria": {
+                    "type": "integer"
+                },
+                "estudiante_idEstudiante": {
+                    "type": "integer"
+                },
+                "aula": {
+                    "type": "string"
+                },
+                "hora_inicio": {
+                    "type": "string"
+                },
+                "nota1er": {
+                    "type": "integer"
+                },
+                "nota2do": {
+                    "type": "integer"
+                },
+                "nota3er": {
+                    "type": "integer"
+                },
+                "semestre_cursada": {
                     "type": "integer"
                 }
             }
