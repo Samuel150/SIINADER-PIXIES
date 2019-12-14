@@ -821,7 +821,7 @@
                         "description": " API para los jefes de carrera"
                     }
                 ],
-                "summary": "Crea un docente",
+                "summary": "Crea un jefe de carrera",
                 "parameters": [
                     {
                         "in": "body",
@@ -869,7 +869,7 @@
                         "description": " API para los jefes de carrera"
                     }
                 ],
-                "summary": "Obtiene el docente con el ID dado",
+                "summary": "Obtiene el jefe de carrera con el ID dado",
                 "responses": {
                     "200": {
                         "description": "Respuesta exitosa",
