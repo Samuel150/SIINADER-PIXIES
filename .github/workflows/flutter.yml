@@ -11,9 +11,8 @@ jobs:
     - uses: subosito/flutter-action@v1
       with:
         channel: 'dev'
-    # Go to frontend
-    - run: cd frontend/siinader_pixies
     # Get flutter packages
-    #- run: flutter pub get
+    - run: flutter pub get
+      working-directory: frontend/siinader_pixies
     # Build :D 
     #- run: flutter build web
