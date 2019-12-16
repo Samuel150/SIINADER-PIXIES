@@ -1,10 +1,15 @@
-const express = require('express');
-const mysql = require('mysql');
+const express = require("express");
+const mysql = require("mysql");
 const app = express();
-const cors = require('cors');
-const swaggerUi = require('swagger-ui-express')
-const swaggerDocument = require('./swagger.json')
-const connection = mysql.createConnection({ host: 'localhost', user: 'root', password: '123456789', database: 'siinader' });
+const cors = require("cors");
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./swagger.json");
+const connection = mysql.createConnection({
+        host: "localhost",
+        user: "root",
+        password: "123456789",
+        database: "siinader"
+    });
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 connection.connect(err => {
