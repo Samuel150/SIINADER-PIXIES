@@ -250,31 +250,32 @@ class _LoginPageState extends State<LoginPage> {
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 20.0),
                           child: RaisedButton(
-                              color: Colors.amber[600],
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  vertical: 20.0,
-                                  horizontal: 100.0,
-                                ),
-                                child: Text(
-                                  'INGRESAR',
-                                  style: TextStyle(color: Colors.white),
-                                ),
+                            color: Colors.amber[600],
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                vertical: 20.0,
+                                horizontal: 100.0,
                               ),
-                              onPressed: () async {
-                                if (_formKey.currentState.validate()) {
-                                  String url = 'http://localhost:3000/api/' +
-                                      _rolValue +
-                                      '/' +
-                                      _id.text;
-                                  List data;
-                                  http.Response response;
-                                  try {
-                                    response = await http.get(url);
-                                    data = jsonDecode(response.body);
-                                  } catch (e) {
-                                    print(e);
-                                  }
+                              child: Text(
+                                'INGRESAR',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                            onPressed: () async {
+                              if (_formKey.currentState.validate()) {
+                                String url = 'http://localhost:3000/api/' +
+                                    _rolValue +
+                                    '/' +
+                                    _id.text;
+                                List data;
+                                http.Response response;
+                                try {
+                                  response = await http.get(url);
+                                  data = jsonDecode(response.body);
+                                } catch (e) {
+                                  print(e);
+                                }
+                                if (data.isNotEmpty) {
                                   if (data[0]['password'] == _password.text) {
                                     Navigator.pushReplacement(
                                       context,
@@ -296,8 +297,19 @@ class _LoginPageState extends State<LoginPage> {
                                       },
                                     );
                                   }
+                                } else {
+                                  showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) {
+                                      return AlertDialog(
+                                        content: Text('Algo anda mal'),
+                                      );
+                                    },
+                                  );
                                 }
-                              }),
+                              }
+                            },
+                          ),
                         ),
                       ],
                     ),
