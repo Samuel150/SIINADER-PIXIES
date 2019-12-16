@@ -10,7 +10,9 @@ jobs:
         java-version: '12.x'
     - uses: subosito/flutter-action@v1
       with:
-        channel: 'dev'  
+        channel: 'dev'
+    # Go to frontend
+    - run: cd frontend\siinader_pixies  
     # Get flutter packages
     - run: flutter pub get
     # Build :D 
