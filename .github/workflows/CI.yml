@@ -2,12 +2,12 @@ name: Prueba CI
 
 on: [push]
 jobs: 
-  prueba 
+  prueba: 
     name: Prueba de comando 
     runs-on: ubuntu-latest
-  steps
+    steps:
     - uses: actions/checkout@v1
     - name: Listado
       run: ls
     - name: Mostrar 
-      run: car README.md 
+      run: cat README.md 
