@@ -12,8 +12,9 @@ jobs:
       with:
         channel: 'dev'
     # Go to frontend
-    - run: cd frontend/siinader_pixies  
+    - run: cd frontend/siinader_pixies
+    - run: ls  
     # Get flutter packages
-    - run: flutter pub get
+    #- run: flutter pub get
     # Build :D 
-    - run: flutter build web
+    #- run: flutter build web
