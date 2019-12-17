@@ -29,7 +29,6 @@ app.get('/api', (req, res) => res.send('SIINADER'));
 
 //obtener todos los estudiantes o uno solo
 app.get('/api/estudiantes', (req, res) => {
-    var id = req.params.id;
     connection.query('SELECT * FROM estudiantes', (err, results) => {
         if (err) {
             return res.send(err);
@@ -95,7 +94,6 @@ app.delete('/api/estudiantes/:id', (req, res) => {
 });
 //obtener todos los docentes
 app.get('/api/docentes', (req, res) => {
-    var id = req.params.id;
     connection.query('SELECT * FROM docentes', (err, results) => {
         if (err) {
             return res.send(err);
@@ -160,7 +158,6 @@ app.delete('/api/docentes/:id', (req, res) => {
 });
 //obtener todas las materias
 app.get('/api/materias', (req, res) => {
-    var id = req.params.id;
     connection.query('SELECT * FROM materias', (err, results) => {
         if (err) {
             return res.send(err);
@@ -291,7 +288,6 @@ app.get('/api/kardex/:id', (req, res) => {
 });
 //obtener todos los jefes de carrera
 app.get('/api/jefeCarrera', (req, res) => {
-    var id = req.params.id;
     connection.query('SELECT * FROM jefes_Carrera', (err, results) => {
         if (err) {
             return res.send(err);
