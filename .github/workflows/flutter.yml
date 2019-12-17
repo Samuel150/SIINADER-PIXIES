@@ -1,4 +1,4 @@
-name: Flutter CI
+name: SIINADER CI
 on: push
 jobs: 
   build: 
@@ -21,3 +21,10 @@ jobs:
     - run: flutter build web
       name: Build web
       working-directory: frontend/siinader_pixies
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: ../node_modules/.bin/jshint app.js
+        name: Jshint
+        working-directory: backend/src
