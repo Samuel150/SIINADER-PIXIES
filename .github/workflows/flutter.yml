@@ -13,8 +13,11 @@ jobs:
         flutter-version: '1.13.0'
         channel: 'dev'
     - run: flutter config --enable-web
+      name: Enable web
       working-directory: frontend/siinader_pixies
     - run: flutter pub get
+      name: Get packages
       working-directory: frontend/siinader_pixies
     - run: flutter build web
+      name: Build web
       working-directory: frontend/siinader_pixies
