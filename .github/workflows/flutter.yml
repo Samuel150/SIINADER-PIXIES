@@ -1,4 +1,4 @@
-name: SIINADER CI
+name: Frontend CI
 on: push
 jobs: 
   build: 
