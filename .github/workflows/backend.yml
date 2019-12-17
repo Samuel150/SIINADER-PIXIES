@@ -18,8 +18,7 @@ jobs:
       run: npm install
       working-directory: backend/src
     - name: chmod
-      run: sudo chmod 777 ../node_modules/.bin/eslint
-      working-directory: backend/src
-    - name: Linter
-      run: ../node_modules/.bin/eslint app.js
+      run: |
+            sudo chmod 777 ../node_modules/.bin/eslint
+            ../node_modules/.bin/jshint app.js
       working-directory: backend/src
