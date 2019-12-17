@@ -32,6 +32,6 @@ jobs:
       with:
         flutter-version: '1.13.0'
         channel: 'dev'
-    - run: flutter analize
+    - run: flutter analyze
       name: Analyze Flutter
       working-directory: frontend/siinader_pixies
