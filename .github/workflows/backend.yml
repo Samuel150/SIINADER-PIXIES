@@ -1,7 +1,5 @@
-name: Node CI
-
+name: Backend CI
 on: [push]
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -14,6 +12,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Linter
-      run: ../node_modules/.bin/jshint app.js
+    - name: Jshint
+      run: |
+        sudo chmod 777 ../node_modules/.bin/jshint
+        ../node_modules/.bin/jshint app.js
       working-directory: backend/src
