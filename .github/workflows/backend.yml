@@ -14,7 +14,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Jshint
       run: |
-        npm install
         sudo chmod 777 ../node_modules/.bin/jshint
         ../node_modules/.bin/jshint app.js
       working-directory: backend/src
