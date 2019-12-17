@@ -1,4 +1,4 @@
-name: Flutter CI
+name: Frontend CI
 on: push
 jobs: 
   build: 
@@ -20,4 +20,18 @@ jobs:
       working-directory: frontend/siinader_pixies
     - run: flutter build web
       name: Build web
+      working-directory: frontend/siinader_pixies
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1 
+    - uses: actions/setup-java@v1
+      with:
+        java-version: '12.x'
+    - uses: subosito/flutter-action@v1
+      with:
+        flutter-version: '1.13.0'
+        channel: 'dev'
+    - run: flutter analyze
+      name: Analyze Flutter
       working-directory: frontend/siinader_pixies
