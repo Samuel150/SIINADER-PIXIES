@@ -14,6 +14,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: NPM Install
+      run: npm install
+      working-directory: backend/src
     - name: Linter
       run: ../node_modules/.bin/eslint app.js
       working-directory: backend/src
