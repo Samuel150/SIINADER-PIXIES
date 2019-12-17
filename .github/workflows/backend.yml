@@ -16,3 +16,4 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Linter
       run: ../node_modules/.bin/jshint app.js
+      working-directory: backend/src
