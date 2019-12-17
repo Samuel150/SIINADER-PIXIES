@@ -19,6 +19,6 @@ jobs:
       working-directory: backend/src
     - name: chmod
       run: |
-            sudo chmod 777 ../node_modules/.bin/eslint
-            ../node_modules/.bin/jshint app.js
+        sudo chmod 777 ../node_modules/.bin/eslint
+        ../node_modules/.bin/jshint app.js
       working-directory: backend/src
