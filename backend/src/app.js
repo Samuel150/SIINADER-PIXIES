@@ -5,11 +5,11 @@ const cors = require("cors");
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger.json");
 const connection = mysql.createConnection({
-        host: "localhost",
-        user: "root",
-        password: "123456789",
-        database: "siinader"
-    });
+    host: "localhost",
+    user: "root",
+    password: "123456789",
+    database: "siinader"
+});
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 connection.connect(err => {
@@ -270,24 +270,24 @@ app.get('/api/kardex/materias', (req, res) => {
     });
 });
 //obtener todos los kardex o uno solo
-app.get('/api/kardex/:id?', (req, res) => {
+app.get('/api/kardex', (req, res) => {
+    connection.query('SELECT * FROM kardex', (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
+});
+app.get('/api/kardex/:id', (req, res) => {
     var id = req.params.id;
-    id ?
-        connection.query('SELECT * FROM kardex WHERE idKardex = ?', [id], (err, results) => {
-            if (err) {
-                return res.send(err);
-            } else {
-                return res.send(results);
-            }
-        })
-        :
-        connection.query('SELECT * FROM kardex', (err, results) => {
-            if (err) {
-                return res.send(err);
-            } else {
-                return res.send(results);
-            }
-        });
+    connection.query('SELECT * FROM kardex WHERE idKardex = ?', [id], (err, results) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.send(results);
+        }
+    });
 });
 //obtener todos los jefes de carrera
 app.get('/api/jefeCarrera', (req, res) => {
