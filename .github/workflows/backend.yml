@@ -1,6 +1,14 @@
 name: Backend CI
 on: [push]
 jobs:
+  zip:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Zip backend
+      run: zip -r backend.zip backend
+    - name: Show zip backend
+      run: unzip -v backend.zip
   test:
     runs-on: ubuntu-latest
     strategy:
@@ -12,9 +20,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Jshint test
+    - name: Jshint linter
       run: |
-        npm install
         sudo chmod 777 ../node_modules/.bin/jshint
         ../node_modules/.bin/jshint app.js
       working-directory: backend/src
